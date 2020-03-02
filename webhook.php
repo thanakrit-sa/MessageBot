@@ -31,17 +31,17 @@ if($messageText == "blog"){
                "type"=>"postback",
                "title"=>"Start Chatting",
                "payload"=>"DEVELOPER_DEFINED_PAYLOAD"
-             ],  
-             [
-                "type"=>"text",
-                "title"=>"sdfsdfsdffs",     
-                "message"=>"dsfdsf"           
-              ],  
+             ],                
              [
                 "type"=> "web_url",
                 "url"=> "http://m.me/petershats?ref=invited_by_24601", 
                 "title"=> "Take Quiz"
-              ]         
+             ],
+             [
+                "type"=>"postback",
+                "title"=>"Start",
+                "payload"=>"DEVELOPER_DEFINED_PAYLOAD"
+              ],         
              ]        
          ]
        ]
