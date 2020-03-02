@@ -33,6 +33,11 @@ if($messageText == "blog"){
                "payload"=>"DEVELOPER_DEFINED_PAYLOAD"
              ],  
              [
+                "type"=>"postback",
+                "title"=>"sdfsdfsdffs",
+                "payload"=>"DEVELOPER_DEFINED_PAYLOAD"
+              ],  
+             [
                 "type"=> "web_url",
                               "url"=> "http://m.me/petershats?ref=invited_by_24601", 
                               "title"=> "Take Quiz"
