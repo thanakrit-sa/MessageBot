@@ -24,7 +24,7 @@ function getSender($input){
  return $postdata->entry[0]->messaging[0]->sender->id;
 }
 function sendMessage($recipient, $textMessage) {
-$token = 'EAAGy9CJyURMBACoZCaXyYPspy9GUWLbavdlTGAYmZBGq35HyYemXgGYySGZCIWzzAoVp4LN5gIkTNwDg45N0qZC9Y2XwSddSs9zvaGZCrPAk5pAVdFZBEP4WmMgRUKFRBEGmxy35zEOnIZAZBopUgldo7zXhcaEQAe69yu6sd5NvkCSxlzLkzyzp';
+$token = 'EAAGy9CJyURMBAMPPo1vtbwIDTsmqTfjeBIvGal5h90J5oRVLfadZCZBDKlyFlGIPE1Dlkss9Pml92tMMUZBUeJeIFEWTyCWoGAjZB8WiXFlcsoR1tzlE7sYAm84hl7zMVVaJMixLZAOKq2Ex6KC9jZA9RgPG3aI4WNmK7xcwsjfv8xONkCRgo6';
  $json = '{
  "recipient":{"id":"' . $recipient . '"},
  "message":{
