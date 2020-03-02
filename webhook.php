@@ -14,9 +14,9 @@ $response = null;
 if($messageText == "สวัสดีครับ") {
     $answer = "สวัสดี";
 }
-else {
-    $answer = "ไม่เข้าใจ";
-}
+// else {
+//     $answer = "ไม่เข้าใจ";
+// }
 
 $response = [
     'recipient' => [ 'id' => $senderId ],
