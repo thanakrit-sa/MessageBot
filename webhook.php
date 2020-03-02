@@ -48,6 +48,7 @@ switch ($messageText) {
             ]
         ]
     ]];
+break;
 }
 // if ($messageText == "blog") {
 //     $answer = ["attachment" => [
