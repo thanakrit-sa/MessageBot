@@ -37,11 +37,11 @@ if($messageText == "blog"){
                 [
                   "type"=>"web_url",
                   "url"=>"https://petersfancybrownhats.com",
-                  "title"=>"View Website"
+                  "title"=>"aaaaa"
                 ],
                 [
                   "type"=>"postback",
-                  "title"=>"Start Chatting",
+                  "title"=>"aaaaa",
                   "payload"=>"DEVELOPER_DEFINED_PAYLOAD"
                 ]              
               ]
