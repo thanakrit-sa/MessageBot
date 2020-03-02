@@ -38,10 +38,10 @@ if($messageText == "blog"){
                 "title"=> "Take Quiz"
              ],
              [
-                "type"=>"postback",
-                "title"=>"Start",
-                "payload"=>"DEVELOPER_CUSTOM_PAYLOAD_HERE"
-              ],         
+                "type"=> "web_url",
+                "url"=> "http://m.me/petershats?ref=invited_by_24601", 
+                "title"=> "Quiz"
+             ],         
              ]        
          ]
        ]
