@@ -18,16 +18,16 @@ if($messageText == "สวัสดีครับ") {
           "template_type"=>"button",
           "text"=>"ต้องการติดต่อเรื่องอะไร ?",
           "buttons"=>[
-            [
-              "type"=>"postback",
-              "title"=>"เปิด Account",
-              "payload"=>"USER_DEFINED_PAYLOAD"
-            ],
-            [
-                "type"=>"postback",
-                "title"=>"แจ้งปัญหา",
-                "payload"=>"USER_DEFINED_PAYLOAD"
-            ],
+            // [
+            //   "type"=>"postback",
+            //   "title"=>"เปิด Account",
+            //   "payload"=>"USER_DEFINED_PAYLOAD"
+            // ],
+            // [
+            //     "type"=>"postback",
+            //     "title"=>"แจ้งปัญหา",
+            //     "payload"=>"USER_DEFINED_PAYLOAD"
+            // ],
             [
                 "type"=>"postback",
                 "title"=>"ติดต่อ",
