@@ -33,15 +33,11 @@ if($messageText == "blog"){
                "payload"=>"DEVELOPER_DEFINED_PAYLOAD"
              ],                
              [
-                "type"=> "web_url",
-                "url"=> "http://m.me/petershats?ref=invited_by_24601", 
-                "title"=> "Take Quiz"
+                "type"=>"postback",
+               "title"=>"Start Chatting",
+               "payload"=>"DEVELOPER_DEFINED_PAYLOAD"
              ],
-             [
-                "type"=> "web_url",
-                "url"=> "https://dashboard.heroku.com/apps/floating-coast-17079/deploy/github", 
-                "title"=> "Quiz"
-             ],         
+                   
              ]        
          ]
        ]
