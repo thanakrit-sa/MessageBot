@@ -10,7 +10,7 @@ $senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
 $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 $response = null;
 
-if($messageText == "blog"){
+if($messageText == $messageText){
     $answer = ["attachment"=>[
      "type"=>"template",
      "payload"=>[
