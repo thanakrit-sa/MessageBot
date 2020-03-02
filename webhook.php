@@ -12,7 +12,12 @@ $response = null;
 
 
 if($messageText == "สวัสดีครับ") {
-    $answer = "สวัสดี";
+    ["attachment"=>[
+        "type"=>"template",
+        "payload"=>[          
+          "text"=>"What do you want to do next?",         
+        ]
+        ]];
 }
 if($messageText == "more") {
 
