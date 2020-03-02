@@ -18,7 +18,7 @@ if (isset($input['entry'][0]['messaging'][0]['sender']['id'])) {
     $sender = $input['entry'][0]['messaging'][0]['sender']['id']; //sender facebook id
     $message = $input['entry'][0]['messaging'][0]['message']['text']; //text that user sent
 
-    $url = 'https://graph.facebook.com/v2.6/me/messages?access_token=0e1b0adb5ae8269b9f55e5ac9a20dcdd';
+    $url = 'https://graph.facebook.com/v2.6/me/messages?access_token=EAAGy9CJyURMBAKkLFcsaZCdn4n5bx3UtCwdPMrni4oUM8BxRC6EhcHbjWx2Q84TAVEmsdKTYjFqPDM6ZB7ZAd1Qca4cy7WVduxZBXdO7doix9WgViA5IfzNkEm2Ob3pkSg2DryZAbpjHEeIACTyFdZBBRQZCkdQ8ZC5f0tQ0S8ZCMqG7Lvjo7H8Gl';
 
     /*initialize curl*/
     $ch = curl_init($url);
