@@ -1,43 +1,84 @@
 <?php
-
-/* validate verify token needed for setting up web hook */ 
-if (isset($_GET['hub_verify_token'])) { 
-    if ($_GET['hub_verify_token'] === 'my_voice_is_my_password_verify_me') {
-        echo $_GET['hub_challenge'];
-        return;
-    } else {
-        echo 'Invalid Verify Token';
-        return;
-    }
+$access_token = "EAAGy9CJyURMBACiBp8ZA9h9ZB9eZB3Uo2Skj1V6DjJZAQJF60wGY2thfXw3KbHffBqMLUUL1ZBU82ZAOhMxxA8zZBLfZARTNFxNR9rXd6xg5MUbRKq4kjiCzJZA6vBkkDZBfCGjRL5RZA9SqhqHlY23hTJxZBQEynOhLvLeajgsWc4UgZBHJ4NVlEg2gs";
+$verify_token = "yellow_duck";
+$hub_verify_token = null;
+if(isset($_REQUEST['hub_challenge'])) {
+ $challenge = $_REQUEST['hub_challenge'];
+ $hub_verify_token = $_REQUEST['hub_verify_token'];
 }
-
-/* receive and send messages */
+if ($hub_verify_token === $verify_token) {
+ echo $challenge;
+}
 $input = json_decode(file_get_contents('php://input'), true);
-if (isset($input['entry'][0]['messaging'][0]['sender']['id'])) {
-
-    $sender = $input['entry'][0]['messaging'][0]['sender']['id']; //sender facebook id
-    $message = $input['entry'][0]['messaging'][0]['message']['text']; //text that user sent
-
-    $url = 'https://graph.facebook.com/v2.6/me/messages?access_token=EAAGy9CJyURMBANahP7VfRhZBLCUPlpXHOIMNlg0kfaQptHsqRsfSgCMLauoNcKRa8xBNz5SrdABpRItJCb5fH2fLYOdUux2TF3TC48XD0Bx9VwPwpyDDylkP9y9RqZAVt2reEl9ASIqupZBZAEYbKaEAxFmAJzZAWDE6VzxAjHfxBz6sZBF0bj';
-
-    /*initialize curl*/
-    $ch = curl_init($url);
-    /*prepare response*/
-    $jsonData = '{
-    "recipient":{
-        "id":"' . $sender . '"
-        },
-        "message":{
-            "text":"You said, ' . $message . '"
-        }
-    }';
-    /* curl setting to send a json post data */
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-    if (!empty($message)) {
-        $result = curl_exec($ch); // user will get the message
-    }
+$sender = $input['entry'][0]['messaging'][0]['sender']['id'];
+$message = $input['entry'][0]['messaging'][0]['message']['text'];
+$message_to_reply = '';
+/**
+ * Some Basic rules to validate incoming messages
+ */
+ 
+$api_key="<mLAP API KEY>";
+$url = 'https://api.mlab.com/api/1/databases/duckduck/collections/linebot?apiKey='.$api_key.'';
+$json = file_get_contents('https://api.mlab.com/api/1/databases/duckduck/collections/linebot?apiKey='.$api_key.'&q={"question":"'.$message.'"}');
+$data = json_decode($json);
+$isData=sizeof($data);
+if (strpos($message, 'สอนเป็ด') !== false) {
+  if (strpos($message, 'สอนเป็ด') !== false) {
+    $x_tra = str_replace("สอนเป็ด","", $message);
+    $pieces = explode("|", $x_tra);
+    $_question=str_replace("[","",$pieces[0]);
+    $_answer=str_replace("]","",$pieces[1]);
+    //Post New Data
+    $newData = json_encode(
+      array(
+        'question' => $_question,
+        'answer'=> $_answer
+      )
+    );
+    $opts = array(
+      'http' => array(
+          'method' => "POST",
+          'header' => "Content-type: application/json",
+          'content' => $newData
+       )
+    );
+    $context = stream_context_create($opts);
+    $returnValue = file_get_contents($url,false,$context);
+    $message_to_reply = 'ขอบคุณที่สอนเป็ด';
+  }
+}else{
+  if($isData >0){
+   foreach($data as $rec){
+     $message_to_reply = $rec->answer;
+   }
+  }else{
+    $message_to_reply = 'ก๊าบบ คุณสามารถสอนให้ฉลาดได้เพียงพิมพ์: สอนเป็ด[คำถาม|คำตอบ]';
+  }
 }
-
+//API Url
+$url = 'https://graph.facebook.com/v2.6/me/messages?access_token='.$access_token;
+//Initiate cURL.
+$ch = curl_init($url);
+//The JSON data.
+$jsonData = '{
+    "recipient":{
+        "id":"'.$sender.'"
+    },
+    "message":{
+        "text":"'.$message_to_reply.'"
+    }
+}';
+//Encode the array into JSON.
+$jsonDataEncoded = $jsonData;
+//Tell cURL that we want to send a POST request.
+curl_setopt($ch, CURLOPT_POST, 1);
+//Attach our encoded JSON string to the POST fields.
+curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonDataEncoded);
+//Set the content type to application/json
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+//curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
+//Execute the request
+if(!empty($input['entry'][0]['messaging'][0]['message'])){
+    $result = curl_exec($ch);
+}
 ?>
