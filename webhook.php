@@ -10,32 +10,23 @@ $senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
 $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 $response = null;
 
-
 if($messageText == "สวัสดีครับ") {
-    ["attachment"=>[
-        "type"=>"template",
-        "payload"=>[          
-          "text"=>"What do you want to do next?",         
-        ]
-        ]];
-}
-if($messageText == "more") {
 
     $answer = ["attachment"=>[
         "type"=>"template",
         "payload"=>[
           "template_type"=>"button",
-          "text"=>"What do you want to do next?",
+          "text"=>"ต้องการติดต่อเรื่องอะไร ?",
           "buttons"=>[
             [
               "type"=>"web_url",
               "url"=>"https://petersapparel.parseapp.com",
-              "title"=>"Show Website"
+              "title"=>"รายละเอียดเพิ่มเติม"
             ],
             [
-              "type"=>"postback",
+              "type"=>"text",
               "title"=>"Start Chatting",
-              "payload"=>"USER_DEFINED_PAYLOAD"
+              "payload"=>"fdsgfsdg"
             ]
           ]
         ]
