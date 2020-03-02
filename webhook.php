@@ -2,7 +2,7 @@
 
 /* validate verify token needed for setting up web hook */ 
 if (isset($_GET['hub_verify_token'])) { 
-    if ($_GET['hub_verify_token'] === 'c4d2bc149e31843a21aea7c9db0fd840') {
+    if ($_GET['hub_verify_token'] === 'my_voice_is_my_password_verify_me') {
         echo $_GET['hub_challenge'];
         return;
     } else {
