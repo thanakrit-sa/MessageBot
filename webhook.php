@@ -33,14 +33,14 @@ if($messageText == "blog"){
                "payload"=>"DEVELOPER_DEFINED_PAYLOAD"
              ],  
              [
-                "type"=>"postback",
-                "title"=>"sdfsdfsdffs",
-                "payload"=>"DEVELOPER_DEFINED_PAYLOAD"
+                "type"=>"text",
+                "title"=>"sdfsdfsdffs",     
+                "message"=>"dsfdsf"           
               ],  
              [
                 "type"=> "web_url",
-                              "url"=> "http://m.me/petershats?ref=invited_by_24601", 
-                              "title"=> "Take Quiz"
+                "url"=> "http://m.me/petershats?ref=invited_by_24601", 
+                "title"=> "Take Quiz"
               ]         
              ]        
          ]
