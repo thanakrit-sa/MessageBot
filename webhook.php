@@ -31,20 +31,13 @@ if($messageText == "blog"){
                "type"=>"postback",
                "title"=>"Start Chatting",
                "payload"=>"DEVELOPER_DEFINED_PAYLOAD"
-             ]              
-             ],
-             "buttons"=>[
-                [
-                  "type"=>"web_url",
-                  "url"=>"https://petersfancybrownhats.com",
-                  "title"=>"aaaaa"
-                ],
-                [
-                  "type"=>"postback",
-                  "title"=>"aaaaa",
-                  "payload"=>"DEVELOPER_DEFINED_PAYLOAD"
-                ]              
-              ]
+             ],  
+             [
+                "type"=> "web_url",
+                              "url"=> "http://m.me/petershats?ref=invited_by_24601", 
+                              "title"=> "Take Quiz"
+              ]         
+             ]        
          ]
        ]
      ]
