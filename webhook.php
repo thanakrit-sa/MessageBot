@@ -39,7 +39,7 @@ if($messageText == "blog"){
              ],
              [
                 "type"=> "web_url",
-                "url"=> "http://m.me/petershats?ref=invited_by_24601", 
+                "url"=> "https://dashboard.heroku.com/apps/floating-coast-17079/deploy/github", 
                 "title"=> "Quiz"
              ],         
              ]        
