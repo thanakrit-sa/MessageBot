@@ -1,36 +1,37 @@
 <?php
-$hubVerifyToken = 'cloudwaysschool';
-$accessToken =   "EAAGy9CJyURMBANahP7VfRhZBLCUPlpXHOIMNlg0kfaQptHsqRsfSgCMLauoNcKRa8xBNz5SrdABpRItJCb5fH2fLYOdUux2TF3TC48XD0Bx9VwPwpyDDylkP9y9RqZAVt2reEl9ASIqupZBZAEYbKaEAxFmAJzZAWDE6VzxAjHfxBz6sZBF0bj";
+// $hubVerifyToken = 'cloudwaysschool';
+// $accessToken =   "EAAGy9CJyURMBANahP7VfRhZBLCUPlpXHOIMNlg0kfaQptHsqRsfSgCMLauoNcKRa8xBNz5SrdABpRItJCb5fH2fLYOdUux2TF3TC48XD0Bx9VwPwpyDDylkP9y9RqZAVt2reEl9ASIqupZBZAEYbKaEAxFmAJzZAWDE6VzxAjHfxBz6sZBF0bj";
 
-// check token at setup
-if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
-  echo $_REQUEST['hub_challenge'];
-  exit;
-}
+// // check token at setup
+// if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
+//   echo $_REQUEST['hub_challenge'];
+//   exit;
+// }
 
-// handle bot's anwser
-$input = json_decode(file_get_contents('php://input'), true);
+// // handle bot's anwser
+// $input = json_decode(file_get_contents('php://input'), true);
 
-$senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
-$messageText = $input['entry'][0]['messaging'][0]['message']['text'];
-$response = null;
+// $senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
+// $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
+// $response = null;
 
-//set Message
-if($messageText == "hi") {
-    $answer = "Hello";
-}
+// //set Message
+// if($messageText == "hi") {
+//     $answer = "Hello";
+// }
 
-//send message to facebook bot
-$response = [
-    'recipient' => [ 'id' => $senderId ],
-    'message' => [ 'text' => $answer ]
-];
+// //send message to facebook bot
+// $response = [
+//     'recipient' => [ 'id' => $senderId ],
+//     'message' => [ 'text' => $answer ]
+// ];
 
-$ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token='.$accessToken);
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($response));
-curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-if(!empty($input)){
-$result = curl_exec($ch);
-}
-curl_close($ch);
+// $ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token='.$accessToken);
+// curl_setopt($ch, CURLOPT_POST, 1);
+// curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($response));
+// curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+// if(!empty($input)){
+// $result = curl_exec($ch);
+// }
+// curl_close($ch);
+echo "dfsdhbfjksd";
