@@ -1,7 +1,5 @@
 <?php
-$hubVerifyToken = 'yellow_duck';
-$accessToken =   "EAAGy9CJyURMBACiBp8ZA9h9ZB9eZB3Uo2Skj1V6DjJZAQJF60wGY2thfXw3KbHffBqMLUUL1ZBU82ZAOhMxxA8zZBLfZARTNFxNR9rXd6xg5MUbRKq4kjiCzJZA6vBkkDZBfCGjRL5RZA9SqhqHlY23hTJxZBQEynOhLvLeajgsWc4UgZBHJ4NVlEg2gs";
-
+ include 'config.php';
 // check token at setup
 if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
   echo $_REQUEST['hub_challenge'];
