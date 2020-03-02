@@ -37,11 +37,11 @@ if($messageText == "blog"){
                 "url"=> "http://m.me/petershats?ref=invited_by_24601", 
                 "title"=> "Take Quiz"
              ],
-             [
-                "type"=>"postback",
-                "title"=>"Start",
-                "payload"=>"DEVELOPER_DEFINED_PAYLOAD"
-              ],         
+            //  [
+            //     "type"=>"postback",
+            //     "title"=>"Start",
+            //     "payload"=>"DEVELOPER_CUSTOM_PAYLOAD_HERE"
+            //   ],         
              ]        
          ]
        ]
