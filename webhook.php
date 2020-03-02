@@ -1,5 +1,5 @@
 <?php
-$verify_token = "";
+$verify_token = "EAAGy9CJyURMBAFAoIkBA5rbtvfPfOUg00GFoQIkGuiLM9az7te2XLLqcVUpzS2PZBp4BboXJICOW8rsWtoV0T7nI99nsCPubeTdZAevFidCykJPVGzPpfB8bZCllAms1dTcQ1T2sGUCNBSmGg4NObHZA0fviqZCHcohkX0xlmSi5UGHypcyZA3";
 if(!empty($_REQUEST['hub_mode']) && $_REQUEST['hub_mode'] == 'subscribe' && $_REQUEST['hub_verify_token']) {
     echo $_REQUEST['hub_challenge'];
     die();
