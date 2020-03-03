@@ -12,7 +12,7 @@ if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
 $input = json_decode(file_get_contents('php://input'), true);
 $senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
 $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
-echo $messageText;
+
 $response = null;
 
 if ($messageText !== null) {
@@ -29,7 +29,7 @@ if ($messageText !== null) {
                     "buttons" => [
                         [
                             "type" => "postback",
-                            "title" => "เปิด Account",
+                            "title" => "เปิดบัญชี",
                             "payload" => "DEVELOPER_DEFINED_PAYLOAD"
                         ],
                         [
@@ -40,6 +40,41 @@ if ($messageText !== null) {
                         [
                             "type" => "postback",
                             "title" => "ติดต่อ",
+                            "payload" => "DEVELOPER_DEFINED_PAYLOAD"
+                        ],
+
+                    ],
+
+                ]
+            ]
+        ]
+    ]];
+}
+if (strpos($messageText, "บัญชี") == true) {
+    $answer = ["attachment" => [
+        "type" => "template",
+        "payload" => [
+            "template_type" => "generic",
+            "elements" => [
+                [
+                    "title" => "เปิดบัญชี",
+                    "item_url" => "https://www.google.com/?hl=th",
+                    "image_url" => "",
+                    "subtitle" => "กรุณาเลือกหัวข้อที่ต้องการ",
+                    "buttons" => [
+                        [
+                            "type" => "postback",
+                            "title" => "หัวข้อที่ 1",
+                            "payload" => "DEVELOPER_DEFINED_PAYLOAD"
+                        ],
+                        [
+                            "type" => "postback",
+                            "title" => "หัวข้อที่ 2",
+                            "payload" => "DEVELOPER_DEFINED_PAYLOAD"
+                        ],
+                        [
+                            "type" => "postback",
+                            "title" => "หัวข้อที่ 3",
                             "payload" => "DEVELOPER_DEFINED_PAYLOAD"
                         ],
 
