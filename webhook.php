@@ -50,7 +50,7 @@ if ($messageText !== null) {
         ]
     ]];
 }
-if (strpos($messageText, "บัญชี") == true) {
+if ($messageText = "เปิดบัญชี") {
     $answer = ["attachment" => [
         "type" => "template",
         "payload" => [
