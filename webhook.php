@@ -51,7 +51,7 @@ if ($messageText == "เปิดบัญชี") {
     ]];
 }
 else if ($messageText !== null) {
-    $answer = [
+    $answer = ["attachment" => [
         "type" => "vertical",
         "tag" => "generic",
         "elements" => [
@@ -116,7 +116,7 @@ else if ($messageText !== null) {
                 ]
               ]
             ]
-          ]]];
+          ]]]];
 }
 $response = [
     'recipient' => ['id' => $senderId],
