@@ -10,21 +10,23 @@ if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
 
 
 $input = json_decode(file_get_contents('php://input'), true);
-$senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
-$typeMessage = $input['entry'][0]['message']['type'];
-$messageText = $input['entry'][0]['messaging'][0]['message']['text'];
-$response = null;
+
+
 if (!is_null($input)) {
-switch ($typeMessage) {
-    case 'text':
-    default:
-        $textReplyMessage = " คุณไม่ได้พิมพ์ ค่า ตามที่กำหนด";
-        $response = [
-            'recipient' => ['id' => $senderId],
-            'message' => $textReplyMessage
-        ];
-        break;
-}
+    $senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
+    $typeMessage = $input['entry'][0]['message']['type'];
+    $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
+    $response = null;
+    switch ($typeMessage) {
+        case 'text':
+        default:
+            $textReplyMessage = " คุณไม่ได้พิมพ์ ค่า ตามที่กำหนด";
+            $response = [
+                'recipient' => ['id' => $senderId],
+                'message' => $textReplyMessage
+            ];
+            break;
+    }
 }
 // if ($messageText == "เริ่มต้นใช้งาน") {
 //     $answer = ["attachment" => [
