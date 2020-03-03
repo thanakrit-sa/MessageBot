@@ -15,7 +15,7 @@ $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 echo $messageText;
 $response = null;
 
-if ($userMessage !== null) {
+if ($messageText !== null) {
     $answer = ["attachment" => [
         "type" => "template",
         "payload" => [
