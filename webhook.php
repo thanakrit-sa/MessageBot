@@ -14,7 +14,7 @@ $senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
 $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 $response = null;
 
-if ($messageText == "เริ่มต้นใช้งาน") {
+if ($messageText == "เริ่มต้นใช้งาน1") {
     $answer = ["attachment" => [
         "type" => "template",
         "payload" => [
