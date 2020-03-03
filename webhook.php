@@ -51,39 +51,72 @@ if ($messageText == "เปิดบัญชี") {
     ]];
 }
 else if ($messageText !== null) {
-    $answer = ["attachment" => [
-        "type" => "template",
-        "payload" => [
-            "template_type" => "generic",
+    $answer = [
+        "type" => "vertical",
+        "tag" => "generic",
+        "elements" => [
+          [
+            "type" => "vertical",
             "elements" => [
-                [
-                    "title" => "ยินดีต้องรับ",
-                    "item_url" => "https://www.google.com/?hl=th",
-                    "image_url" => "https://i0.wp.com/dgcasino.com/wp-content/uploads/2019/01/%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%9A%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A3%E0%B9%88%E0%B8%B2-dg-casino.jpg?resize=596%2C300",
-                    "subtitle" => "กรุณาเลือกหัวข้อที่ต้องการ",
-                    "buttons" => [
-                        [
-                            "type" => "postback",
-                            "title" => "เปิดบัญชี",
-                            "payload" => "DEVELOPER_DEFINED_PAYLOAD"
-                        ],
-                        [
-                            "type" => "postback",
-                            "title" => "แจ้งปัญหา",
-                            "payload" => "DEVELOPER_DEFINED_PAYLOAD"
-                        ],
-                        [
-                            "type" => "postback",
-                            "title" => "ติดต่อ",
-                            "payload" => "DEVELOPER_DEFINED_PAYLOAD"
-                        ],
-
-                    ],
-
+              [
+                "type" => "image",
+                "url" => "https://i.pinimg.com/736x/a0/67/5e/a0675e5161d7ae5be2550987f397a641--flower-shops-paper-flowers.jpg",
+                "tooltip" => "Flowers"
+              ],
+              [
+                "type" => "text",
+                "tag" => "title",
+                "text" => "Birthday Bouquet",
+                "tooltip" => "Title"
+              ],
+              [
+                "type" => "text",
+                "tag" => "subtitle",
+                "text" => "Wild flowers",
+                "tooltip" => "subtitle"
+              ],
+              [
+                "type" => "button",
+                "tooltip" => "publish text example",
+                "title" => "publish text example",
+                "click" => [
+                  "actions" => [
+                    [
+                      "type" => "publishText",
+                      "text" => "published text button tap"
+                    ]
+                  ]
                 ]
+              ],
+              [
+                "type" => "button",
+                "tooltip" => "URL button example",
+                "title" => "URL button example",
+                "click" => [
+                  "actions" => [
+                    [
+                      "type" => "link",
+                      "name" => "URL button tap",
+                      "uri" => "https://www.pinterest.com/lyndawhite/beautiful-flowers/"
+                    ]
+                  ]
+                ]
+              ],
+              [
+                "type" => "button",
+                "title" => "Navigate",
+                "click" => [
+                     "actions" => [
+                    [
+                      "type" => "navigate",
+                      "lo" => 40.7562,
+                      "la" => -73.99861
+                    ]
+                  ]
+                ]
+              ]
             ]
-        ]
-    ]];
+          ]]];
 }
 $response = [
     'recipient' => ['id' => $senderId],
