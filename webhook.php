@@ -12,6 +12,7 @@ if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
 $input = json_decode(file_get_contents('php://input'), true);
 $senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
 $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
+echo $messageText;
 $response = null;
 
 if ($messageText == "เริ่มต้นใช้งาน") {
