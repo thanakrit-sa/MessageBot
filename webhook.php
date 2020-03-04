@@ -183,7 +183,7 @@ if ($messagePayload != null) {
       ]
     ]
   ]];
-} else if (strpos($messagePayload, "บัญชี") == true) {
+} else if ($messagePayload == "เปิดบัญชี") {
   $answer = ["attachment" => [
     "type" => "template",
     "payload" => [
@@ -216,14 +216,14 @@ if ($messagePayload != null) {
       ]
     ]
   ]];
-} else if (strpos($messagePayload, "ปัญหา") == true) {
+} else if ($messagePayload == "แจ้งปัญหา") {
   $answer = ["attachment" => [
     "type" => "template",
     "payload" => [
       "template_type" => "generic",
       "elements" => [
         [
-          "title" => "เปิดบัญชี",
+          "title" => "แจ้งปัญหา",
           "item_url" => "https://www.google.com/?hl=th",
           "image_url" => "",
           "subtitle" => "กรุณาเลือกหัวข้อที่ต้องการ",
