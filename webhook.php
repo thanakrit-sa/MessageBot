@@ -216,6 +216,22 @@ if ($messagePayload != null) {
         ]
       ]
     ]];
+  } else if ($messagePayload == "ตัวเลือกที่ 1") {
+    $answer = ["attachment" => [
+      "type" => "template",
+      "payload" => [
+        "template_type" => "generic",
+        "elements" => [
+          [
+            "title" => "ตัวเลือกที่ 1",
+            "item_url" => "",
+            "image_url" => "",
+            "subtitle" => "รายละเอียดตัวเลือกที่ 1",          
+
+          ]
+        ]
+      ]
+    ]];
   } else {
     $answer = ["attachment" => [
       "type" => "template",
