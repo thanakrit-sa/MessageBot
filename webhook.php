@@ -50,7 +50,7 @@ if (strpos($messageText,"บัญชี")  == true || strpos($messageText,"[yP=
         ]
     ]];
 }
-if (strpos($messageText,"ปัญหา")  == true || strpos($messageText,"[yP=u")  == true) {
+if (strpos($messageText,"ปัญหา")  == true || strpos($messageText,"xyPsk")  == true) {
   $answer = ["attachment" => [
       "type" => "template",
       "payload" => [
