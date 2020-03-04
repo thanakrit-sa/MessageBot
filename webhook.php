@@ -15,7 +15,7 @@ $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 
 $response = null;
 
-if (strpos($messageText,"บัญชี")  == true && strpos($messageText,"[yP=u")  == true) {
+if (strpos($messageText,"บัญชี")  == true || strpos($messageText,"[yP=u")  == true) {
     $answer = ["attachment" => [
         "type" => "template",
         "payload" => [
@@ -50,7 +50,7 @@ if (strpos($messageText,"บัญชี")  == true && strpos($messageText,"[yP=
         ]
     ]];
 }
-if (strpos($messageText,"ปัญหา")  == true && strpos($messageText,"xyPsk")  == true) {
+if (strpos($messageText,"ปัญหา")  == true || strpos($messageText,"[yP=u")  == true) {
   $answer = ["attachment" => [
       "type" => "template",
       "payload" => [
