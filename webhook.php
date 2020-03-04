@@ -130,10 +130,10 @@ if ($messagePayload != null) {
       "template_type" => "generic",
       "elements" => [
         [
-          "title" => "เปิดบัญชี",
+          "title" => "เมนูหลัก",
           "item_url" => "https://www.google.com/?hl=th",
-          "image_url" => "",
-          "subtitle" => "กรุณาเลือกหัวข้อที่ต้องการ",
+          "image_url" => "https://www.biletium.com/wp-content/uploads/2019/09/109764-rdlnnfwoyl-1546592968.jpg",
+          "subtitle" => "กรุณาเลือกหัวข้อที่ต้องการ..",
           "buttons" => [
             [
               "type" => "postback",
