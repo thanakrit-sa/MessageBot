@@ -123,7 +123,7 @@ if ($messageText != null) {
     ]];
   }
 }
-if ($messagePayload == "หัวข้อที่ 1") {
+if ($messagePayload != null) {
   $answer = ["attachment" => [
     "type" => "template",
     "payload" => [
