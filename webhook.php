@@ -50,41 +50,42 @@ if (strpos($messageText,"บัญชี")  == true || $messageText == "บั�
         ]
     ]];
 }
-// if (strpos($messageText,"ปัญหา")  == true) {
-//   $answer = ["attachment" => [
-//       "type" => "template",
-//       "payload" => [
-//           "template_type" => "generic",
-//           "elements" => [
-//               [
-//                   "title" => "เปิดบัญชี",
-//                   "item_url" => "https://www.google.com/?hl=th",
-//                   "image_url" => "",
-//                   "subtitle" => "กรุณาเลือกหัวข้อที่ต้องการ",
-//                   "buttons" => [
-//                       [
-//                           "type" => "postback",
-//                           "title" => "หัวข้อที่ 1",
-//                           "payload" => "DEVELOPER_DEFINED_PAYLOAD"
-//                       ],
-//                       [
-//                           "type" => "postback",
-//                           "title" => "หัวข้อที่ 2",
-//                           "payload" => "DEVELOPER_DEFINED_PAYLOAD"
-//                       ],
-//                       [
-//                           "type" => "postback",
-//                           "title" => "หัวข้อที่ 3",
-//                           "payload" => "DEVELOPER_DEFINED_PAYLOAD"
-//                       ],
+if (strpos($messageText,"ปัญหา")  == true || $messageText == "ปัญหา" || strpos($messageText,"xyPsk")  == true || $messageText == "xyPsk") {
+  $answer = ["attachment" => [
+      "type" => "template",
+      "payload" => [
+          "template_type" => "generic",
+          "elements" => [
+              [
+                  "title" => "เปิดบัญชี",
+                  "item_url" => "https://www.google.com/?hl=th",
+                  "image_url" => "",
+                  "subtitle" => "กรุณาเลือกหัวข้อที่ต้องการ",
+                  "buttons" => [
+                      [
+                          "type" => "postback",
+                          "title" => "หัวข้อที่ 1",
+                          "payload" => "DEVELOPER_DEFINED_PAYLOAD"
+                      ],
+                      [
+                          "type" => "postback",
+                          "title" => "หัวข้อที่ 2",
+                          "payload" => "DEVELOPER_DEFINED_PAYLOAD"
+                      ],
+                      [
+                          "type" => "postback",
+                          "title" => "หัวข้อที่ 3",
+                          "payload" => "DEVELOPER_DEFINED_PAYLOAD"
+                      ],
 
-//                   ],
+                  ],
 
-//               ]
-//           ]
-//       ]
-//   ]];
-// }
+              ]
+          ]
+      ]
+  ]];
+}
+
 
 $response = [
     'recipient' => ['id' => $senderId],
