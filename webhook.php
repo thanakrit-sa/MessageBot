@@ -15,7 +15,7 @@ $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
 
 $response = null;
 
-if (strpos($messageText,"บัญชี")  == true) {
+if (strpos($messageText,"บัญชี")  == true || $messageText == "บัญชี") {
     $answer = ["attachment" => [
         "type" => "template",
         "payload" => [
