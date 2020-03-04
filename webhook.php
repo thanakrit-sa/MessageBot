@@ -102,7 +102,7 @@ if ($messageText != null) {
               [
                 "type" => "postback",
                 "title" => "หัวข้อที่ 1",
-                "payload" => "DEVELOPER_DEFINED_PAYLOAD"
+                "payload" => "หัวข้อที่ 1"
               ],
               [
                 "type" => "postback",
@@ -123,7 +123,7 @@ if ($messageText != null) {
     ]];
   }
 }
-if ($messagePayload != null) {
+if ($messagePayload == "หัวข้อที่ 1") {
   $answer = ["attachment" => [
     "type" => "template",
     "payload" => [
