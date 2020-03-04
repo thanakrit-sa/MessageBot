@@ -19,7 +19,7 @@ $count = 0;
 
 
 if ($messageText != null) {
-  if (strpos($messageText, "บัญชี")  == true || $messageText == "บัญชี" || strpos($messageText, "[yP=u")  == true || $messageText == "[yP=u" || strpos($messagePayload, "บัญชี") == true) {
+  if (strpos($messageText, "บัญชี")  == true || $messageText == "บัญชี" || strpos($messageText, "[yP=u")  == true || $messageText == "[yP=u") {
     $answer = ["attachment" => [
       "type" => "template",
       "payload" => [
@@ -176,7 +176,73 @@ if ($messagePayload != null) {
               "type" => "postback",
               "title" => "ตัวเลือกที่ 2",
               "payload" => "ตัวเลือกที่ 2"
-            ],         
+            ],
+          ],
+
+        ]
+      ]
+    ]
+  ]];
+} else if (strpos($messagePayload, "บัญชี") == true) {
+  $answer = ["attachment" => [
+    "type" => "template",
+    "payload" => [
+      "template_type" => "generic",
+      "elements" => [
+        [
+          "title" => "เปิดบัญชี",
+          "item_url" => "https://www.google.com/?hl=th",
+          "image_url" => "",
+          "subtitle" => "กรุณาเลือกหัวข้อที่ต้องการ",
+          "buttons" => [
+            [
+              "type" => "postback",
+              "title" => "หัวข้อที่ 1",
+              "payload" => "หัวข้อที่ 1"
+            ],
+            [
+              "type" => "postback",
+              "title" => "หัวข้อที่ 2",
+              "payload" => "หัวข้อที่ 2"
+            ],
+            [
+              "type" => "postback",
+              "title" => "หัวข้อที่ 3",
+              "payload" => "หัวข้อที่ 3"
+            ],
+          ],
+
+        ]
+      ]
+    ]
+  ]];
+} else if (strpos($messagePayload, "ปัญหา") == true) {
+  $answer = ["attachment" => [
+    "type" => "template",
+    "payload" => [
+      "template_type" => "generic",
+      "elements" => [
+        [
+          "title" => "เปิดบัญชี",
+          "item_url" => "https://www.google.com/?hl=th",
+          "image_url" => "",
+          "subtitle" => "กรุณาเลือกหัวข้อที่ต้องการ",
+          "buttons" => [
+            [
+              "type" => "postback",
+              "title" => "หัวข้อที่ 1",
+              "payload" => "หัวข้อที่ 1"
+            ],
+            [
+              "type" => "postback",
+              "title" => "หัวข้อที่ 2",
+              "payload" => "หัวข้อที่ 2"
+            ],
+            [
+              "type" => "postback",
+              "title" => "หัวข้อที่ 3",
+              "payload" => "หัวข้อที่ 3"
+            ],
           ],
 
         ]
