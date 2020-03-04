@@ -12,7 +12,7 @@ if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
 $input = json_decode(file_get_contents('php://input'), true);
 $senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
 $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
-$messagePost = $input['entry'][0]['messaging'][0]['message']['postback'];
+$messagePost = $input['entry'][0]['messaging'][0]['postback']['text'];
 
 $response = null;
 $count = 0;
@@ -123,7 +123,7 @@ if ($messageText != null) {
     ]];
   }
 }
-if ($messageText == "หัวข้อที่ 1") {
+if ($messagePost == "หัวข้อที่ 1") {
   $answer = ["attachment" => [
     "type" => "template",
     "payload" => [
