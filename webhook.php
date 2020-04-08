@@ -47,38 +47,59 @@ if ($messageText != null) {
       ]
     ]];
 }else if (strpos($messageText, "ปัญหา")  == true || $messageText == "ปัญหา" || strpos($messageText, "xyPsk")  == true || $messageText == "xyPsk" || strpos($messagePayload, "ปัญหา") == true) {
-    $answer = ["attachment" => [
-      "type" => "template",
-      "payload" => [
-        "template_type" => "generic",
-        "elements" => [
-          [
-            "title" => "แจ้งปัญหา",
-            "item_url" => "https://www.google.com/?hl=th",
-            "image_url" => "",
-            "subtitle" => "กรุณาเลือกหัวข้อที่ต้องการ",
-            "buttons" => [
-              [
-                "type" => "postback",
-                "title" => "หัวข้อที่ 1",
-                "payload" => "หัวข้อที่ 1"
-              ],
-              [
-                "type" => "postback",
-                "title" => "หัวข้อที่ 2",
-                "payload" => "หัวข้อที่ 2"
-              ],
-              [
-                "type" => "postback",
-                "title" => "หัวข้อที่ 3",
-                "payload" => "หัวข้อที่ 3"
-              ],
+  $answer = ["attachment"=>[
+    "type"=>"template",
+    "payload"=>[
+      "template_type"=>"list",
+      "elements"=>[
+        [
+           "title"=> "Classic T-Shirt Collection",
+                  "image_url"=> "https://www.cloudways.com/blog/wp-content/uploads/Migrating-Your-Symfony-Website-To-Cloudways-Banner.jpg",
+                  "subtitle"=> "See all our colors",
+                  "default_action"=> [
+                      "type"=> "web_url",
+                      "url"=> "https://www.cloudways.com/blog/migrate-symfony-from-cpanel-to-cloud-hosting/",                       
+                      "webview_height_ratio"=> "tall",
+                      // "messenger_extensions"=> true,
+                      // "fallback_url"=> "https://peterssendreceiveapp.ngrok.io/"
+                  ],
+          "buttons"=>[
+            [
+              "type"=>"web_url",
+              "url"=>"https://petersfancybrownhats.com",
+              "title"=>"View Website"
             ],
-
+          ]
+        ],
+          [
+          "title"=>"Welcome to Peter\'s Hats",
+          "item_url"=>"https://www.cloudways.com/blog/migrate-symfony-from-cpanel-to-cloud-hosting/",
+          "image_url"=>"https://www.cloudways.com/blog/wp-content/uploads/Migrating-Your-Symfony-Website-To-Cloudways-Banner.jpg",
+          "subtitle"=>"We\'ve got the right hat for everyone.",
+          "buttons"=>[
+            [
+              "type"=>"web_url",
+              "url"=>"https://petersfancybrownhats.com",
+              "title"=>"View Website"
+            ],
+          ]
+        ],
+          [
+          "title"=>"Welcome to Peter\'s Hats",
+          "item_url"=>"https://www.cloudways.com/blog/migrate-symfony-from-cpanel-to-cloud-hosting/",
+          "image_url"=>"https://www.cloudways.com/blog/wp-content/uploads/Migrating-Your-Symfony-Website-To-Cloudways-Banner.jpg",
+          "subtitle"=>"We\'ve got the right hat for everyone.",
+          "buttons"=>[
+            [
+              "type"=>"web_url",
+              "url"=>"https://petersfancybrownhats.com",
+              "title"=>"View Website"
+            ],
           ]
         ]
       ]
-    ]];
+    ]
+  ]];
   } else {
     $answer = ["attachment" => [
       "type" => "template",
