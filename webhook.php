@@ -9,299 +9,150 @@ if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
 
 
 
-$input = json_decode(file_get_contents('php://input'), true);
-$senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
-$messageText = $input['entry'][0]['messaging'][0]['message']['text'];
-$messagePost = $input['entry'][0]['messaging'][0]['postback'];
-$messagePayload = $input['entry'][0]['messaging'][0]['postback']['payload'];
-$response = null;
-$count = 0;
+// $input = json_decode(file_get_contents('php://input'), true);
+// $senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
+// $messageText = $input['entry'][0]['messaging'][0]['message']['text'];
+// $messagePost = $input['entry'][0]['messaging'][0]['postback'];
+// $messagePayload = $input['entry'][0]['messaging'][0]['postback']['payload'];
+// $response = null;
+// $count = 0;
 
 
-if ($messageText != null) {
-  if (strpos($messageText, "บัญชี")  == true || $messageText == "บัญชี" || strpos($messageText, "[yP=u")  == true || $messageText == "[yP=u") {
-    $answer = ["attachment"=>[
-      "type"=>"template",
-      "payload"=>[
-        "template_type"=>"generic",
-        "elements"=>[
-          [
-            "title"=>"Welcome to Peter\'s Hats",
-            "item_url"=>"https://www.cloudways.com/blog/migrate-symfony-from-cpanel-to-cloud-hosting/",
-            "image_url"=>"https://www.cloudways.com/blog/wp-content/uploads/Migrating-Your-Symfony-Website-To-Cloudways-Banner.jpg",
-            "subtitle"=>"We\'ve got the right hat for everyone.",
-            "buttons"=>[
-              [
-                "type"=>"web_url",
-                "url"=>"https://petersfancybrownhats.com",
-                "title"=>"View Website"
-              ],
-              [
-                "type"=>"postback",
-                "title"=>"Start Chatting",
-                "payload"=>"DEVELOPER_DEFINED_PAYLOAD"
-              ]              
-            ]
-          ]
-        ]
-      ]
-    ]];
-}else if (strpos($messageText, "ปัญหา")  == true || $messageText == "ปัญหา" || strpos($messageText, "xyPsk")  == true || $messageText == "xyPsk" || strpos($messagePayload, "ปัญหา") == true) {
-  $answer = ["attachment"=>[
-    "type"=>"template",
-    "payload"=>[
-      "template_type"=>"list",
-      "elements"=>[
-        [
-           "title"=> "Classic T-Shirt Collection",
-                  "image_url"=> "https://www.cloudways.com/blog/wp-content/uploads/Migrating-Your-Symfony-Website-To-Cloudways-Banner.jpg",
-                  "subtitle"=> "See all our colors",
-                  "default_action"=> [
-                      "type"=> "web_url",
-                      "url"=> "https://www.cloudways.com/blog/migrate-symfony-from-cpanel-to-cloud-hosting/",                       
-                      "webview_height_ratio"=> "tall",
-                      // "messenger_extensions"=> true,
-                      // "fallback_url"=> "https://peterssendreceiveapp.ngrok.io/"
-                  ],
-          "buttons"=>[
-            [
-              "type"=>"web_url",
-              "url"=>"https://petersfancybrownhats.com",
-              "title"=>"View Website"
-            ],
-          ]
-        ],
-          [
-          "title"=>"Welcome to Peter\'s Hats",
-          "item_url"=>"https://www.cloudways.com/blog/migrate-symfony-from-cpanel-to-cloud-hosting/",
-          "image_url"=>"https://www.cloudways.com/blog/wp-content/uploads/Migrating-Your-Symfony-Website-To-Cloudways-Banner.jpg",
-          "subtitle"=>"We\'ve got the right hat for everyone.",
-          "buttons"=>[
-            [
-              "type"=>"web_url",
-              "url"=>"https://petersfancybrownhats.com",
-              "title"=>"View Website"
-            ],
-          ]
-        ],
-          [
-          "title"=>"Welcome to Peter\'s Hats",
-          "item_url"=>"https://www.cloudways.com/blog/migrate-symfony-from-cpanel-to-cloud-hosting/",
-          "image_url"=>"https://www.cloudways.com/blog/wp-content/uploads/Migrating-Your-Symfony-Website-To-Cloudways-Banner.jpg",
-          "subtitle"=>"We\'ve got the right hat for everyone.",
-          "buttons"=>[
-            [
-              "type"=>"web_url",
-              "url"=>"https://petersfancybrownhats.com",
-              "title"=>"View Website"
-            ],
-          ]
-        ]
-      ]
-    ]
-  ]];
-  } else {
-    $answer = ["attachment" => [
-      "type" => "template",
-      "payload" => [
-        "template_type" => "generic",
-        "elements" => [
-          [
-            "title" => "เมนูหลัก",
-            "item_url" => "https://www.google.com/?hl=th",
-            "image_url" => "https://www.biletium.com/wp-content/uploads/2019/09/109764-rdlnnfwoyl-1546592968.jpg",
-            "subtitle" => "กรุณาเลือกหัวข้อที่ต้องการ..",
-            "buttons" => [
-              [
-                "type" => "postback",
-                "title" => "เปิดบัญชี",
-                "payload" => "เปิดบัญชี"
-              ],
-              [
-                "type" => "postback",
-                "title" => "แจ้งปัญหา",
-                "payload" => "แจ้งปัญหา"
-              ],
-              [
-                "type" => "postback",
-                "title" => "ติดต่อ",
-                "payload" => "ติดต่อ"
-              ],
-              [
-                "type" => "postback",
-                "title" => "ติดต่อ",
-                "payload" => "ติดต่อ"
-              ]
-
-            ],
-
-          ]
-        ]
-      ]
-    ]];
-  }
+$fb = json_decode(file_get_contents("php://input")); //data of an incoming request
+if (isset($fb->entry[0]->messaging[0]->sender->id)) {
+   $id = $fb->entry[0]->messaging[0]->sender->id;	//a field with user's ID
+} else {
+   exit();
 }
-if ($messagePayload != null) {
-  if ($messagePayload == "หัวข้อที่ 1") {
-    $answer = ["attachment" => [
-      "type" => "template",
-      "payload" => [
-        "template_type" => "generic",
-        "elements" => [
-          [
-            "title" => "หัวข้อที่ 1",
-            "item_url" => "",
-            "image_url" => "",
-            "subtitle" => "รายละเอียดหัวข้อที่ 1",
-            "buttons" => [
-              [
-                "type" => "postback",
-                "title" => "ตัวเลือกที่ 1",
-                "payload" => "ตัวเลือกที่ 1"
-              ],
-              [
-                "type" => "postback",
-                "title" => "ตัวเลือกที่ 2",
-                "payload" => "ตัวเลือกที่ 2"
-              ],
-            ],
+if (isset($fb->entry[0]->messaging[0]->message->text)) {
+$message = $fb->entry[0]->messaging[0]->message->text;  //a field with the text of the message
+}
+if (isset($fb->entry[0]->messaging[0]->postback->payload)) {
+$payload = $fb->entry[0]->messaging[0]->postback->payload; //a field with the text on the button
+}
+if (isset($fb->entry[0]->messaging[0]->message->quick_reply->payload)) {
+$payload_quick = $fb->entry[0]->messaging[0]->message->quick_reply->payload; 
+} 								//a field with the text of the quick reply
+//The function of sending a message
+function send($data,$token)	//data and token are sent to the function
+{
+   $url = "https://graph.facebook.com/v2.7/me/messages?access_token=" . $token; 
 
-          ]
-        ]
-      ]
-    ]];
-  } else if ($messagePayload == "เปิดบัญชี") {
-    $answer = ["attachment" => [
-      "type" => "template",
-      "payload" => [
-        "template_type" => "generic",
-        "elements" => [
-          [
-            "title" => "เปิดบัญชี",
-            "item_url" => "https://www.google.com/?hl=th",
-            "image_url" => "",
-            "subtitle" => "กรุณาเลือกหัวข้อที่ต้องการ",
-            "buttons" => [
-              [
-                "type" => "postback",
-                "title" => "หัวข้อที่ 1",
-                "payload" => "หัวข้อที่ 1"
-              ],
-              [
-                "type" => "postback",
-                "title" => "หัวข้อที่ 2",
-                "payload" => "หัวข้อที่ 2"
-              ],
-              [
-                "type" => "postback",
-                "title" => "หัวข้อที่ 3",
-                "payload" => "หัวข้อที่ 3"
-              ],
-            ],
+   $data_string = json_encode($data);		//we convert data to JSON
 
-          ]
-        ]
-      ]
-    ]];
-  } else if ($messagePayload == "แจ้งปัญหา") {
-    $answer = ["attachment" => [
-      "type" => "template",
-      "payload" => [
-        "template_type" => "generic",
-        "elements" => [
-          [
-            "title" => "แจ้งปัญหา",
-            "item_url" => "https://www.google.com/?hl=th",
-            "image_url" => "",
-            "subtitle" => "กรุณาเลือกหัวข้อที่ต้องการ",
-            "buttons" => [
-              [
-                "type" => "postback",
-                "title" => "หัวข้อที่ 1",
-                "payload" => "หัวข้อที่ 1"
-              ],
-              [
-                "type" => "postback",
-                "title" => "หัวข้อที่ 2",
-                "payload" => "หัวข้อที่ 2"
-              ],
-              [
-                "type" => "postback",
-                "title" => "หัวข้อที่ 3",
-                "payload" => "หัวข้อที่ 3"
-              ],
-            ],
+   $ch = curl_init($url);				//we send POST request using curl
+   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+   curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+   curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+           'Content-Type: application/json',
+           'Content-Length: ' . strlen($data_string))
+   );
 
-          ]
-        ]
-      ]
-    ]];
-  } else if ($messagePayload == "ตัวเลือกที่ 1") {
-    $answer = ["attachment" => [
-      "type" => "template",
-      "payload" => [
-        "template_type" => "generic",
-        "elements" => [
-          [
-            "title" => "ตัวเลือกที่ 1",
-            "item_url" => "",
-            "image_url" => "",
-            "subtitle" => "รายละเอียดตัวเลือกที่ 1",          
-
-          ]
-        ]
-      ]
-    ]];
-  } else {
-    $answer = ["attachment" => [
-      "type" => "template",
-      "payload" => [
-        "template_type" => "generic",
-        "elements" => [
-          [
-            "title" => "เมนูหลัก",
-            "item_url" => "https://www.google.com/?hl=th",
-            "image_url" => "https://www.biletium.com/wp-content/uploads/2019/09/109764-rdlnnfwoyl-1546592968.jpg",
-            "subtitle" => "กรุณาเลือกหัวข้อที่ต้องการ..",
-            "buttons" => [
-              [
-                "type" => "postback",
-                "title" => "เปิดบัญชี",
-                "payload" => "เปิดบัญชี"
-              ],
-              [
-                "type" => "postback",
-                "title" => "แจ้งปัญหา",
-                "payload" => "แจ้งปัญหา"
-              ],
-              [
-                "type" => "postback",
-                "title" => "ติดต่อ",
-                "payload" => "ติดต่อ"
-              ],
-
-            ],
-
-          ]
-        ]
-      ]
-    ]];
-  }
+   curl_exec($ch);
+   curl_close($ch);
 }
 
+//choosing an answer for a user
+if ($message == "Hello") { //if there is a message from a user with the text “Hello”
+   $menu_keyboard = [		//an array with buttons
+       [
+           "content_type" => "text",
+           "title" => "I'm happy!",
+           "payload" => "happy"
+       ],
+       [
+           "content_type" => "text",
+           "title" => "I'm sad!",
+           "payload" => "sad"
+       ]
+   ];
 
+   $data = array(				//message data
+       'recipient' => array(
+           'id' => $id				//user's ID
+       ),
+       'message' => array(
+           'text' => "Hello my dear subscriber!",	//message text
+           'quick_replies' => $menu_keyboard	//adding buttons to the messages
+       )
+   );
 
-$response = [
-  'recipient' => ['id' => $senderId],
-  'message' => $answer
-];
+   send($data, $token);				//sending message
 
-$ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token=' . $accessToken);
+} elseif ($payload_quick == "happy") {  //if a user presses the button which has a payload ‘happy”
+   $menu_keyboard = [
+       [
+           "content_type" => "text",
+           "title" => "To start!",
+           "payload" => "start"
+       ]
+   ];
 
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($response));
-curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
-if (!empty($input)) {
-  $result = curl_exec($ch);
+   $data = array(
+       'recipient' => array(
+           'id' => $id
+       ),
+       'message' => array(
+           'text' => "I'm happy too!",
+           'quick_replies' => $menu_keyboard
+       )
+   );
+   send($data, $token);
+
+} elseif ($payload_quick == "sad") { 	//if a user presses the button which has a payload ‘sad”
+   $menu_keyboard = [
+       [
+           "content_type" => "text",
+           "title" => "To start!",
+           "payload" => "start"
+       ]
+   ];
+
+   $data = array(
+       'recipient' => array(
+           'id' => $id
+       ),
+       'message' => array(
+           'text' => "I'm sad too!",
+           'quick_replies' => $menu_keyboard
+
+       )
+   );
+   send($data, $token);
+
+} else { 				//the rest of cases
+   $menu_keyboard = [
+       [
+           "content_type" => "text",
+           "title" => "I'm happy!",
+           "payload" => "happy"
+       ],
+       [
+           "content_type" => "text",
+           "title" => "I'm sad!",
+           "payload" => "sad"
+       ]
+   ];
+
+   $data = array(
+       'recipient' => array(
+           'id' => $id
+       ),
+       'message' => array(
+           'text' => "I don't understand you :(",
+           'quick_replies' => $menu_keyboard
+       )
+   );
+
+   send($data, $token);
 }
-curl_close($ch);
+// $ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token=' . $accessToken);
+
+// curl_setopt($ch, CURLOPT_POST, 1);
+// curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($response));
+// curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+// if (!empty($input)) {
+//   $result = curl_exec($ch);
+// }
+// curl_close($ch);
