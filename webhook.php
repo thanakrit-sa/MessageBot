@@ -296,21 +296,17 @@ $count = 0;
 
 
 
-// $response = [
-//   'recipient' => ['id' => $senderId],
-//   'message' => $answer
-// ];
+
 
 if($messageText == 'hi') {                     
   $answer = "Hello! How may I help you today ";                    
   
   }
-
-  $response = [
-    'recipient' => [ 'id' => $senderId ],
-    'message' => [ 'text' => $answer ],
-    'access_token' => $this->accessToken                      
-    ];
+$response = [
+  'recipient' => ['id' => $senderId],
+  'message' => $answer
+];
+ 
 
 $ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token=' . $accessToken);
 
