@@ -1,4 +1,33 @@
-<!-- 
+<?php
+
+
+use BotMan\BotMan\Messages\Incoming\Answer;
+use BotMan\BotMan\Messages\Outgoing\Question;
+use BotMan\BotMan\Messages\Outgoing\Actions\Button;
+use BotMan\BotMan\Messages\Conversations\Conversation;
+
+include 'config.php';
+if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
+  echo $_REQUEST['hub_challenge'];
+  exit;
+}
+
+
+
+$input = json_decode(file_get_contents('php://input'), true);
+$senderId = $input['entry'][0]['messaging'][0]['sender']['id'];
+$messageText = $input['entry'][0]['messaging'][0]['message']['text'];
+$messagePost = $input['entry'][0]['messaging'][0]['postback'];
+$messagePayload = $input['entry'][0]['messaging'][0]['postback']['payload'];
+$response = null;
+$count = 0;
+
+if($messageText == "a") {
+  $bot->reply(ButtonTemplate::create('Do you want to know more about BotMan?')
+	->addButton(ElementButton::create('Tell me more')->type('postback')->payload('tellmemore'))
+	->addButton(ElementButton::create('Show me the docs')->url('http://botman.io/'))
+);
+}
 
 // if ($messageText != null) {
 //   if (strpos($messageText, "บัญชี")  == true || $messageText == "บัญชี" || strpos($messageText, "[yP=u")  == true || $messageText == "[yP=u") {
@@ -288,38 +317,4 @@
 // if (!empty($input)) {
 //   $result = curl_exec($ch);
 // }
-// curl_close($ch); -->
-
-namespace App\Conversations;
-
-use BotMan\BotMan\Messages\Incoming\Answer;
-use BotMan\BotMan\Messages\Outgoing\Question;
-use BotMan\BotMan\Messages\Outgoing\Actions\Button;
-use BotMan\BotMan\Messages\Conversations\Conversation;
-
-class QuickReplyConversation extends Conversation
-{
-    /**
-     * Start the conversation.
-     *
-     * @return mixed
-     */
-    public function run()
-    {
-        $this->askAboutMore();
-    }
-
-    private function askAboutMore()
-    {
-        $question = Question::create('Are you sure?')->addButtons([
-            Button::create('Yes')->value('yes'),
-            Button::create('No')->value('no'),
-        ]);
-
-        $this->ask($question, function (Answer $answer) {
-            if($answer->getValue() === 'yes') {
-                $this->bot->reply('Awesome 🤘');
-            }
-        });
-    }
-}
+// curl_close($ch);
