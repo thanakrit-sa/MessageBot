@@ -127,6 +127,11 @@ if ($messageText != null) {
                 "title" => "ติดต่อ",
                 "payload" => "ติดต่อ"
               ],
+              [
+                "type" => "postback",
+                "title" => "ติดต่อ",
+                "payload" => "ติดต่อ"
+              ]
 
             ],
 
