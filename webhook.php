@@ -21,32 +21,12 @@ $messagePayload = $input['entry'][0]['messaging'][0]['postback']['payload'];
 $response = null;
 $count = 0;
 
-class QuickReplyConversation extends Conversation
-{
-    /**
-     * Start the conversation.
-     *
-     * @return mixed
-     */
-    public function run()
-    {
-        $this->askAboutMore();
-    }
-
-    private function askAboutMore()
-    {
-        $question = Question::create('Are you sure?')->addButtons([
-            Button::create('Yes')->value('yes'),
-            Button::create('No')->value('no'),
-        ]);
-
-        $this->ask($question, function (Answer $answer) {
-            if($answer->getValue() === 'yes') {
-                $this->bot->reply('Awesome 🤘');
-            }
-        });
-    }
-}
+$botman->hears('I want more', function (BotMan $bot) {
+  $bot->reply(Question::create('Are you sure?')->addButtons([
+      Button::create('Yes')->value('yes'),
+      Button::create('No')->value('no'),
+  ]));
+});
 
 // if ($messageText != null) {
 //   if (strpos($messageText, "บัญชี")  == true || $messageText == "บัญชี" || strpos($messageText, "[yP=u")  == true || $messageText == "[yP=u") {
