@@ -45,7 +45,25 @@ if ($messageText != null) {
         ]
       ]
     ]];
-}else if (strpos($messageText, "ปัญหา")  == true || $messageText == "ปัญหา" || strpos($messageText, "xyPsk")  == true || $messageText == "xyPsk" || strpos($messagePayload, "ปัญหา") == true) {
+}
+elseif ($messageText == "test") {
+  $jsonData = '{
+    "recipient":{
+      "id":"'.$sender.'"
+    },
+    "message":{
+      "text":"bot menu:",
+      "quick_replies":[
+        {
+          "content_type":"text",
+          "title":"balance",
+          "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+        }
+      ]
+    }
+  }';
+}
+else if (strpos($messageText, "ปัญหา")  == true || $messageText == "ปัญหา" || strpos($messageText, "xyPsk")  == true || $messageText == "xyPsk" || strpos($messagePayload, "ปัญหา") == true) {
   $answer = ["attachment"=>[
     "type"=>"template",
     "payload"=>[
@@ -285,17 +303,27 @@ if ($messagePayload != null) {
 
 
 
-$response = [
-  'recipient' => ['id' => $senderId],
-  'message' => $answer
-];
+// $response = [
+//   'recipient' => ['id' => $senderId],
+//   'message' => $answer
+// ];
+
+$jsonData = '{
+  "recipient":{
+  "id":"'.$sender.'"
+  },
+  "message":{
+    "text":"'.$messageText.'",
+  }
+}';
 
 
 
 $ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token=' . $accessToken);
 
+$Data = $jsonData;
 curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($response));
+curl_setopt($ch, CURLOPT_POSTFIELDS, $Data);
 curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 if (!empty($input)) {
   $result = curl_exec($ch);
