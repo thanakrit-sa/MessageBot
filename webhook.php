@@ -338,12 +338,12 @@ use BotMan\BotMan\BotMan;
 use BotMan\BotMan\BotManFactory;
 use BotMan\BotMan\Drivers\DriverManager;
 
-$config = [
+// $config = [
     
-    "telegram" => [
-       "token" => $accessToken
-    ]
-];
+//     "telegram" => [
+//        "token" => $accessToken
+//     ]
+// ];
 
 // Load the driver(s) you want to use
 DriverManager::loadDriver(\BotMan\Drivers\Telegram\TelegramDriver::class);
