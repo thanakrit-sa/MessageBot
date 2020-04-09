@@ -407,36 +407,7 @@ $message = strtolower($message);
                 "content_type":"text",
                 "title":"โปรโมชั่นที่ 13",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 14",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 15",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 16",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 17",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 18",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 19",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 20",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },
-              
+              }
             ]
           }
         }';
