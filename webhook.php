@@ -469,10 +469,12 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
 //   $result = curl_exec($ch);
 // }
 // curl_close($ch);
-if (!empty($input['entry'][0]['messaging'][0]['message'])) {
-  $result = curl_exec($ch);
-}
+// if (!empty($input['entry'][0]['messaging'][0]['message'])) {
+//   $result = curl_exec($ch);
+// }
+
+// }
+
+// echo "hi";
 
 }
-
-echo "hi";
