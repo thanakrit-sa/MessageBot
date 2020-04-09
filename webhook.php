@@ -340,9 +340,9 @@ if(preg_match('[time|current time|now]', strtolower($message))) {
     $obj = $list["$message"];
   }
 
-  $url = "https://graph.facebook.com/v2.6/me/messages?access_token=EAADSvg5yW7UBAGyavqtG89YpW5Jep9Ul0lv0pZCZBAz3VZCjZBRQ0UfCHFgOot1K0hhLIGgR0XsW3xQ0SPAN6xBUoc4NZBOvOOZBZB0ESIC8RkCL601hovV8zX7FM5TKCCkCF4IZCUwxJqZAztEB5xUpoHocZCVuXrs26LBA4D6hlSrKjUQ6EtKsTx"
+  // $url = "https://graph.facebook.com/v2.6/me/messages?access_token=EAADSvg5yW7UBAGyavqtG89YpW5Jep9Ul0lv0pZCZBAz3VZCjZBRQ0UfCHFgOot1K0hhLIGgR0XsW3xQ0SPAN6xBUoc4NZBOvOOZBZB0ESIC8RkCL601hovV8zX7FM5TKCCkCF4IZCUwxJqZAztEB5xUpoHocZCVuXrs26LBA4D6hlSrKjUQ6EtKsTx"
 
-  $ch = curl_init($url);
+  // $ch = curl_init($url);
 
   if ($obj == 2) {
     $jsonData = '{
@@ -458,18 +458,19 @@ if(preg_match('[time|current time|now]', strtolower($message))) {
 
 
 
-// $ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token=' . $accessToken);
+
+$ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token=' . $accessToken);
 
 $Data = $jsonData;
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $Data);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-if (!empty($input)) {
-  $result = curl_exec($ch);
+// if (!empty($input)) {
+//   $result = curl_exec($ch);
+// }
+// curl_close($ch);
+
+
+
 }
-curl_close($ch);
-
-
-
-
 
