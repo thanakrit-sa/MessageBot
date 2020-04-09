@@ -16,12 +16,6 @@ $messagePayload = $input['entry'][0]['messaging'][0]['postback']['payload'];
 $response = null;
 $count = 0;
 
-if($messageText == "a") {
-  $bot->reply(ButtonTemplate::create('Do you want to know more about BotMan?')
-	->addButton(ElementButton::create('Tell me more')->type('postback')->payload('tellmemore'))
-	->addButton(ElementButton::create('Show me the docs')->url('http://botman.io/'))
-);
-}
 
 if ($messageText != null) {
   if (strpos($messageText, "บัญชี")  == true || $messageText == "บัญชี" || strpos($messageText, "[yP=u")  == true || $messageText == "[yP=u") {
