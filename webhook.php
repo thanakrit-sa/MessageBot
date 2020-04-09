@@ -6,7 +6,7 @@
 // use BotMan\BotMan\Messages\Outgoing\Actions\Button;
 // use BotMan\BotMan\Messages\Conversations\Conversation;
 
-// include 'config.php';
+include 'config.php';
 // if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
 //   echo $_REQUEST['hub_challenge'];
 //   exit;
@@ -319,18 +319,43 @@
 // }
 // curl_close($ch);
 
-require_once 'vendor/autoload.php';
+// require_once 'vendor/autoload.php';
+
+// use BotMan\BotMan\BotMan;
+// use BotMan\BotMan\Messages\Outgoing\Actions\Button;
+// use BotMan\BotMan\Messages\Outgoing\Question;
+
+// $botman = resolve('botman');
+
+// $botman -> hears('a',function (BotMan $bot) {
+//   $bot -> reply(Question::create('Are you sure?') -> addButton([
+//     Button::create('Yes') -> value('yes'),
+//     Button::create('No') -> value('no')
+//   ]));
+// });
 
 use BotMan\BotMan\BotMan;
-use BotMan\BotMan\Messages\Outgoing\Actions\Button;
-use BotMan\BotMan\Messages\Outgoing\Question;
+use BotMan\BotMan\BotManFactory;
+use BotMan\BotMan\Drivers\DriverManager;
 
-$botman = resolve('botman');
+$config = [
+    
+    "telegram" => [
+       "token" => $accessToken
+    ]
+];
 
-$botman -> hears('a',function (BotMan $bot) {
-  $bot -> reply(Question::create('Are you sure?') -> addButton([
-    Button::create('Yes') -> value('yes'),
-    Button::create('No') -> value('no')
-  ]));
+// Load the driver(s) you want to use
+DriverManager::loadDriver(\BotMan\Drivers\Telegram\TelegramDriver::class);
+
+// Create an instance
+$botman = BotManFactory::create($config);
+
+// Give the bot something to listen for.
+$botman->hears('hello', function (BotMan $bot) {
+    $bot->reply('Hello yourself.');
 });
+
+// Start listening
+$botman->listen();
 
