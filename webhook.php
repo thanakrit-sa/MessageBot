@@ -378,7 +378,7 @@ $message = strtolower($message);
   "id":"'.$sender.'"
   },
   "message":{
-    "text":"'.$message.'",
+    "text":"'.$obj.'",
   }
 }';
 }
