@@ -338,12 +338,11 @@ use BotMan\BotMan\BotMan;
 use BotMan\BotMan\BotManFactory;
 use BotMan\BotMan\Drivers\DriverManager;
 
-// $config = [
-    
-//     "telegram" => [
-//        "token" => $accessToken
-//     ]
-// ];
+$config = [
+  'token' => 'EAADSvg5yW7UBAGyavqtG89YpW5Jep9Ul0lv0pZCZBAz3VZCjZBRQ0UfCHFgOot1K0hhLIGgR0XsW3xQ0SPAN6xBUoc4NZBOvOOZBZB0ESIC8RkCL601hovV8zX7FM5TKCCkCF4IZCUwxJqZAztEB5xUpoHocZCVuXrs26LBA4D6hlSrKjUQ6EtKsTx',
+	'app_secret' => '7dea83e84129e73c078b687664f7bbe6',
+  'verification' => 'MessageAuto',
+];
 
 // Load the driver(s) you want to use
 DriverManager::loadDriver(\BotMan\Drivers\Telegram\TelegramDriver::class);
