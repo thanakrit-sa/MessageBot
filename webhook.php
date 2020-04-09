@@ -1,10 +1,10 @@
 <?php
 
-include 'config.php';
-if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
-  echo $_REQUEST['hub_challenge'];
-  exit;
-}
+// include 'config.php';
+// if ($_REQUEST['hub_verify_token'] === $hubVerifyToken) {
+//   echo $_REQUEST['hub_challenge'];
+//   exit;
+// }
 
 
 
@@ -449,7 +449,7 @@ if(preg_match('[time|current time|now]', strtolower($message))) {
   "id":"'.$sender.'"
   },
   "message":{
-    "text":"'.$messageText.'",
+    "text":"'.$obj.'",
   }
 }';
 }
