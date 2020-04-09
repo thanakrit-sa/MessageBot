@@ -319,32 +319,17 @@ if(preg_match('[time|current time|now]', strtolower($message))) {
     $message_to_reply = $result;
   }
 } else {
-  $dat = date('H:i:s');
+  
 
-  $list = array(
-    "hi" => "hiiiiii",
-    "hello" => "hello",
-    "/help" => "5",
-    "balance" => "3",
-    "price" => "4",
-    "v" => '[time|current]',
-    "contact" => "2",
-    "/" => "function not found"
-  );
-
-  $obj = $list[$message];
-
-  if($obj == "") {
-    $obj = "Please type /help";
-  } else {
-    $obj = $list[$message];
-  }
+  if($message == "") {
+    $message = "Please type /help";
+  } 
 
   $url = "https://graph.facebook.com/v2.6/me/messages?access_token=EAADSvg5yW7UBAGyavqtG89YpW5Jep9Ul0lv0pZCZBAz3VZCjZBRQ0UfCHFgOot1K0hhLIGgR0XsW3xQ0SPAN6xBUoc4NZBOvOOZBZB0ESIC8RkCL601hovV8zX7FM5TKCCkCF4IZCUwxJqZAztEB5xUpoHocZCVuXrs26LBA4D6hlSrKjUQ6EtKsTx";
 
   $ch = curl_init($url);
 
-  if ($obj == 2) {
+  if ($message == "2") {
     $jsonData = '{
       "recipient":{
         "id":"'.$sender.'"
@@ -372,30 +357,7 @@ if(preg_match('[time|current time|now]', strtolower($message))) {
       }
     }
     }';
-  } else if($obj == 3) {
-      $balance = file_get_contents("https://www.google.com");
-      $jsonData = '{
-        "recipient":{
-          "id":"'.$sender.'"
-        },
-        "message":{
-          "attachment":{
-          "type":"template",
-          "payload":{
-            "template_type":"button",
-            "text":"Need: '.$balance.'",
-            "button":[
-              {
-                "type":"web_url",
-                "url":"https://www.google.com",
-                "title":"Refill Balance"
-              }
-            ]
-          }
-        }
-      }
-      }';
-  } else if ($obj == 5) {
+  } else if ($message == "reply") {
     $jsonData = '{
           "recipient":{
             "id":"'.$sender.'"
@@ -421,35 +383,13 @@ if(preg_match('[time|current time|now]', strtolower($message))) {
             ]
           }
         }';
-  } else if ($obj == 4) {
-    $jsonData = '{
-      "recipient":{
-        "id":"'.$sender.'"
-      },
-      "message":{
-        "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"button",
-          "text":"Need: '.$balance.'",
-          "button":[
-            {
-              "type":"web_url",
-              "url":"https://www.google.com",
-              "title":"Price list"
-            }
-          ]
-        }
-      }
-    }
-    }';
   } else {
   $jsonData = '{
   "recipient":{
   "id":"'.$sender.'"
   },
   "message":{
-    "text":"'.$obj.'",
+    "text":"'.$message.'",
   }
 }';
 }
