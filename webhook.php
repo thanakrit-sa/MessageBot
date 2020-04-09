@@ -314,10 +314,7 @@ $message = $input['entry'][0]['messaging'][0]['message']['text'];
 $message = strtolower($message);
 
 
-  if($message == "") {
-    $message = "Please type /help";
-  }
-
+ 
   $url = "https://graph.facebook.com/v2.6/me/messages?access_token=EAADSvg5yW7UBAGyavqtG89YpW5Jep9Ul0lv0pZCZBAz3VZCjZBRQ0UfCHFgOot1K0hhLIGgR0XsW3xQ0SPAN6xBUoc4NZBOvOOZBZB0ESIC8RkCL601hovV8zX7FM5TKCCkCF4IZCUwxJqZAztEB5xUpoHocZCVuXrs26LBA4D6hlSrKjUQ6EtKsTx";
 
   $ch = curl_init($url);
@@ -376,16 +373,9 @@ $message = strtolower($message);
             ]
           }
         }';
-  } else {
-  $jsonData = '{
-  "recipient":{
-  "id":"'.$sender.'"
-  },
-  "message":{
-    "text":"'.$obj.'",
-  }
-}';
-}
+  } 
+  
+
 
 
 
