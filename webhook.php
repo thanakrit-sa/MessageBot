@@ -361,39 +361,79 @@ $message = strtolower($message);
                 "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
               },{
                 "content_type":"text",
-                "title":"โปรโมชั่นที่ 1",
+                "title":"โปรโมชั่นที่ 2",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
               },{
                 "content_type":"text",
-                "title":"โปรโมชั่นที่ 1",
+                "title":"โปรโมชั่นที่ 3",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
               },{
                 "content_type":"text",
-                "title":"โปรโมชั่นที่ 1",
+                "title":"โปรโมชั่นที่ 4",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
               },{
                 "content_type":"text",
-                "title":"โปรโมชั่นที่ 1",
+                "title":"โปรโมชั่นที่ 5",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
               },{
                 "content_type":"text",
-                "title":"โปรโมชั่นที่ 1",
+                "title":"โปรโมชั่นที่ 6",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
               },{
                 "content_type":"text",
-                "title":"โปรโมชั่นที่ 1",
+                "title":"โปรโมชั่นที่ 7",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
               },{
                 "content_type":"text",
-                "title":"โปรโมชั่นที่ 1",
+                "title":"โปรโมชั่นที่ 8",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
               },{
                 "content_type":"text",
-                "title":"โปรโมชั่นที่ 1",
+                "title":"โปรโมชั่นที่ 9",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
               },{
                 "content_type":"text",
-                "title":"โปรโมชั่นที่ 1",
+                "title":"โปรโมชั่นที่ 10",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 11",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 12",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 13",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 14",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 15",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 16",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 17",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 18",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 19",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 20",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
               },
               
