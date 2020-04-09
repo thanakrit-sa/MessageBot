@@ -353,23 +353,50 @@ $message = strtolower($message);
             "id":"'.$sender.'"
           },
           "message":{
-            "text":"bot menu:",
+            "text":"Quick Reply",
             "quick_replies":[
               {
                 "content_type":"text",
-                "title":"balance",
+                "title":"โปรโมชั่นที่ 1",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 1",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 1",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 1",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 1",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 1",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 1",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 1",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 1",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              },{
+                "content_type":"text",
+                "title":"โปรโมชั่นที่ 1",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
               },
-              {
-                "content_type":"text",
-                "title":"price",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_BLUE"
-              },
-              {
-                "content_type":"text",
-                "title":"contact",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_GREEN"
-              }
+              
             ]
           }
         }';
