@@ -414,11 +414,7 @@ if ($message == "reply") {
                   "type":"postback",
                   "title":"Start Chatting",
                   "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                },{
-                  "type":"postback",
-                  "title":"Start Chatting",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                }              
+                }           
               ]      
             }
           ]
