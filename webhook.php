@@ -376,7 +376,7 @@ if ($messagePayload == "สมัครสมาชิก") {
           "elements":[
             {
               "title":"Promotion 1",
-              "image_url":"https://petersfancybrownhats.com/company_image.png",
+              "image_url":"https://www.google.co.th/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-vector%2Fabstract-sales-promotion-banner_5920804.htm&psig=AOvVaw2aeGsAEbUq783NhlOhjI76&ust=1586598422692000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNDn3__J3egCFQAAAAAdAAAAABAE",
               "subtitle":"Click Promotion 1 To Continue.",
               
               "buttons":[
