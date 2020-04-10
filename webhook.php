@@ -376,7 +376,7 @@ if ($messagePayload == "สมัครสมาชิก") {
           "elements":[
             {
               "title":"Promotion 1",
-              "image_url":"https://www.prbuffet.com/wp-content/themes/stylebook/timthumb.php?src=https%3A%2F%2Fwww.prbuffet.com%2Fwp-content%2Fuploads%2F2019%2F07%2Fbanner-Promotions-web-Commart-July-1.png&q=90&w=795&h=470&zc=1",
+              "image_url":"https://www.img.in.th/image/T2Smo3",
               "subtitle":"Click Promotion 1 To Continue.",
               
               "buttons":[
