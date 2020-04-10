@@ -395,7 +395,44 @@ if ($message == "reply") {
       }
     }
   }';
-  }
+  } else if ($message == "r") {
+    $jsonData = '{
+            "recipient":{
+              "id":"' . $sender . '"
+            },
+            "message":{
+              "text":"Quick Reply",
+              "quick_replies":[
+                {
+                  "content_type":"text",
+                  "title":"โปรโมชั่นที่ 1",
+                  "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+                },{
+                  "content_type":"text",
+                  "title":"โปรโมชั่นที่ 2",
+                  "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+                },{
+                  "content_type":"text",
+                  "title":"โปรโมชั่นที่ 3",
+                  "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+                },{
+                  "content_type":"text",
+                  "title":"โปรโมชั่นที่ 4",
+                  "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+                },{
+                  "content_type":"text",
+                  "title":"โปรโมชั่นที่ 5",
+                  "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+                },{
+                  "content_type":"text",
+                  "title":"โปรโมชั่นที่ 6",
+                  "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+                
+                }
+              ]
+            }
+          }';
+  } 
 
 
 
