@@ -418,7 +418,7 @@ if ($message != null) {
                             },{
                               "type":"postback",
                               "title":"ติดต่อ",
-                              "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                              "payload":"ติดต่อ"
                             }          
                             ]      
                           }
