@@ -361,7 +361,7 @@ if ($message == "reply") {
     "recipient":{
       "id":"' . $sender . '"
     },
-    
+    "message":{
       "attachment":{
         "type":"template",
         "payload":{
@@ -392,14 +392,11 @@ if ($message == "reply") {
             }
           ]
         }
-      
+      }
     }
   }';
-  } 
-// $Data = [
-//   'recipient' => ['id' => $sender],
-//   'message' => $jsonData
-// ];
+  }
+
 
 
 
@@ -411,7 +408,7 @@ if ($message == "reply") {
 $Data = $jsonData;
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $Data);
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+curl_setopt($ch, CURLOPT_HTTPHEADER, 'Content-Type: application/json');
 
 if (!empty($input['entry'][0]['messaging'][0]['message'])) {
   $result = curl_exec($ch);
