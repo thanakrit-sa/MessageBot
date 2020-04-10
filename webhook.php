@@ -376,7 +376,7 @@ if ($messagePayload == "สมัครสมาชิก") {
           "elements":[
             {
               "title":"Promotion 1",
-              "image_url":"https://image.freepik.com/free-vector/abstract-sales-promotion-banner_23-2148340030.jpg",
+              "image_url":"https://www.prbuffet.com/wp-content/themes/stylebook/timthumb.php?src=https%3A%2F%2Fwww.prbuffet.com%2Fwp-content%2Fuploads%2F2019%2F07%2Fbanner-Promotions-web-Commart-July-1.png&q=90&w=795&h=470&zc=1",
               "subtitle":"Click Promotion 1 To Continue.",
               
               "buttons":[
