@@ -311,6 +311,8 @@
 $input = json_decode(file_get_contents('php://input'), true);
 $sender = $input['entry'][0]['messaging'][0]['sender']['id'];
 $message = $input['entry'][0]['messaging'][0]['message']['text'];
+$messagePost = $input['entry'][0]['messaging'][0]['postback'];
+$messagePayload = $input['entry'][0]['messaging'][0]['postback']['payload'];
 $message = strtolower($message);
 
 
@@ -320,111 +322,150 @@ $url = "https://graph.facebook.com/v2.6/me/messages?access_token=EAADSvg5yW7UBAG
 $ch = curl_init($url);
 
 
-
-if ($message == "reply") {
-  $jsonData = '{
-    "recipient":{
-      "id":"' . $sender . '"
-    },
-    "message":{
-      "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"generic",
-          "elements":[
-             {
-              "title":"Promotion 1",
-              "image_url":"https://petersfancybrownhats.com/company_image.png",
-              "subtitle":"Click Promotion 1 To Continue.",
-              
-              "buttons":[
-                {
-                  "type":"postback",
-                  "title":"Promotion 1",
-                  "payload":"Promotion 1"
-                }
-                ]      
-              },
+if ($message != null) {
+  if ($message == "สมัครสมาชิก") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"generic",
+            "elements":[
               {
-                "title":"Promotion 2",
+                "title":"Promotion 1",
                 "image_url":"https://petersfancybrownhats.com/company_image.png",
-                "subtitle":"Click Promotion 2 To Continue.",
+                "subtitle":"Click Promotion 1 To Continue.",
                 
                 "buttons":[
                   {
                     "type":"postback",
-                    "title":"Promotion 2",
-                    "payload":"Promotion 2"
+                    "title":"Promotion 1",
+                    "payload":"Promotion 1"
                   }
                   ]      
                 },
                 {
-                  "title":"Promotion 3",
+                  "title":"Promotion 2",
                   "image_url":"https://petersfancybrownhats.com/company_image.png",
-                  "subtitle":"Click Promotion 3 To Continue.",
+                  "subtitle":"Click Promotion 2 To Continue.",
                   
                   "buttons":[
                     {
                       "type":"postback",
-                      "title":"Promotion 3",
-                      "payload":"Promotion 3"
+                      "title":"Promotion 2",
+                      "payload":"Promotion 2"
                     }
                     ]      
                   },
                   {
-                    "title":"Promotion 4",
+                    "title":"Promotion 3",
                     "image_url":"https://petersfancybrownhats.com/company_image.png",
-                    "subtitle":"Click Promotion 4 To Continue.",
-                  
+                    "subtitle":"Click Promotion 3 To Continue.",
+                    
                     "buttons":[
                       {
                         "type":"postback",
-                        "title":"Promotion 4",
-                        "payload":"Promotion 4"
+                        "title":"Promotion 3",
+                        "payload":"Promotion 3"
                       }
                       ]      
                     },
-              
-            ]
-          }
-        }
-      }
-    }';
-} else {
-  $jsonData = '{
-    "recipient":{
-      "id":"' . $sender . '"
-    },
-    "message":{
-      "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"generic",
-          "elements":[
-             {
-              "title":"Copa69 ยินดีต้องรับค่ะ 😍",
-              "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
-              "buttons":[
-                {
-                  "type":"postback",
-                  "title":"สอบถาม",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                },{
-                  "type":"postback",
-                  "title":"สมัครสมาชิก",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                },{
-                  "type":"postback",
-                  "title":"ติดต่อ",
-                  "payload":"หกา่ดกห"
-                }          
-              ]      
+                    {
+                      "title":"Promotion 4",
+                      "image_url":"https://petersfancybrownhats.com/company_image.png",
+                      "subtitle":"Click Promotion 4 To Continue.",
+                      
+                      "buttons":[
+                        {
+                          "type":"postback",
+                          "title":"Promotion 4",
+                          "payload":"Promotion 4"
+                        }
+                        ]      
+                      },
+                      
+                      ]
+                    }
+                  }
+                }
+              }';
+  } else {
+    $jsonData = '{
+                "recipient":{
+                  "id":"' . $sender . '"
+                },
+                "message":{
+                  "attachment":{
+                    "type":"template",
+                    "payload":{
+                      "template_type":"generic",
+                      "elements":[
+                        {
+                          "title":"เกิดข้อผิดพลาด คีย์เวิร์ดไม่เข้าเงื่อนไข 😍",
+                          "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
+                          "buttons":[
+                            {
+                              "type":"postback",
+                              "title":"สอบถาม",
+                              "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                            },{
+                              "type":"postback",
+                              "title":"สมัครสมาชิก",
+                              "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                            },{
+                              "type":"postback",
+                              "title":"ติดต่อ",
+                              "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                            }          
+                            ]      
+                          }
+                          ]
+                        }
+                      }
+                    }
+                  }';
+  }
+}
+if ($messagePayload != null) {
+  if ($messagePayload == "เริ่มต้นการใช้งาน") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"generic",
+            "elements":[
+              {
+                "title":"Copa69 ยินดีต้องรับค่ะ 😍",
+                "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
+                "buttons":[
+                  {
+                    "type":"postback",
+                    "title":"สอบถาม",
+                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                  },{
+                    "type":"postback",
+                    "title":"สมัครสมาชิก",
+                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                  },{
+                    "type":"postback",
+                    "title":"ติดต่อ",
+                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                  }          
+                  ]      
+                }
+                ]
+              }
             }
-          ]
-        }
-      }
-    }
-  }';
+          }
+        }';
+  }
 }
 
 
