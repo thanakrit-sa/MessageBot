@@ -368,56 +368,58 @@ if ($message == "reply") {
           "template_type":"generic",
           "elements":[
              {
-              "title":"Welcome!",
+              "title":"Promotion 1",
               "image_url":"https://petersfancybrownhats.com/company_image.png",
-              "subtitle":"We have the right hat for everyone.",
+              "subtitle":"Click "Use Promotion" To Continue.",
               
               "buttons":[
                 {
-                  "type":"web_url",
-                  "url":"https://petersfancybrownhats.com",
-                  "title":"View Website"
-                },{
                   "type":"postback",
-                  "title":"Start Chatting",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                  "title":"Use Promotion",
+                  "payload":"Promotion 1"
                 }
                 ]      
               },
               {
-                "title":"Welcome!",
+                "title":"Promotion 2",
                 "image_url":"https://petersfancybrownhats.com/company_image.png",
-                "subtitle":"We have the right hat for everyone.",
+                "subtitle":"Click "Use Promotion" To Continue.",
                 
                 "buttons":[
                   {
-                    "type":"web_url",
-                    "url":"https://petersfancybrownhats.com",
-                    "title":"View Website"
-                  },{
                     "type":"postback",
-                    "title":"Start Chatting",
-                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                    "title":"Use Promotion",
+                    "payload":"Promotion 2"
                   }
                   ]      
                 },
                 {
-                  "title":"Welcome!",
+                  "title":"Promotion 3",
                   "image_url":"https://petersfancybrownhats.com/company_image.png",
-                  "subtitle":"We have the right hat for everyone.",
+                  "subtitle":"Click "Use Promotion" To Continue.",
                   
                   "buttons":[
                     {
-                      "type":"web_url",
-                      "url":"https://petersfancybrownhats.com",
-                      "title":"View Website"
-                    },{
                       "type":"postback",
-                      "title":"Start Chatting",
-                      "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                      "title":"Use Promotion",
+                      "payload":"Promotion 3"
                     }
                     ]      
-                  }
+                  },
+                  {
+                    "title":"Promotion 4",
+                    "image_url":"https://petersfancybrownhats.com/company_image.png",
+                    "subtitle":"Click "Use Promotion" To Continue.",
+                    
+                    "buttons":[
+                      {
+                        "type":"postback",
+                        "title":"Use Promotion",
+                        "payload":"Promotion 4"
+                      }
+                      ]      
+                    },
+              
             ]
           }
         }
