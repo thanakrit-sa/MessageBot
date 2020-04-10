@@ -389,7 +389,7 @@ if ($messagePayload == "สมัครสมาชิก") {
               },
               {
                 "title":"Promotion 2",
-                "image_url":"https://petersfancybrownhats.com/company_image.png",
+                "image_url":"https://www.prbuffet.com/wp-content/themes/stylebook/timthumb.php?src=https%3A%2F%2Fwww.prbuffet.com%2Fwp-content%2Fuploads%2F2019%2F07%2Fbanner-Promotions-web-Commart-July-1.png&q=90&w=795&h=470&zc=1",
                 "subtitle":"Click Promotion 2 To Continue.",
                 
                 "buttons":[
@@ -402,7 +402,7 @@ if ($messagePayload == "สมัครสมาชิก") {
                 },
                 {
                   "title":"Promotion 3",
-                  "image_url":"https://petersfancybrownhats.com/company_image.png",
+                  "image_url":"https://www.prbuffet.com/wp-content/themes/stylebook/timthumb.php?src=https%3A%2F%2Fwww.prbuffet.com%2Fwp-content%2Fuploads%2F2019%2F07%2Fbanner-Promotions-web-Commart-July-1.png&q=90&w=795&h=470&zc=1",
                   "subtitle":"Click Promotion 3 To Continue.",
                   
                   "buttons":[
@@ -415,7 +415,7 @@ if ($messagePayload == "สมัครสมาชิก") {
                   },
                   {
                     "title":"Promotion 4",
-                    "image_url":"https://petersfancybrownhats.com/company_image.png",
+                    "image_url":"https://www.prbuffet.com/wp-content/themes/stylebook/timthumb.php?src=https%3A%2F%2Fwww.prbuffet.com%2Fwp-content%2Fuploads%2F2019%2F07%2Fbanner-Promotions-web-Commart-July-1.png&q=90&w=795&h=470&zc=1g",
                     "subtitle":"Click Promotion 4 To Continue.",
                     
                     "buttons":[
