@@ -392,6 +392,41 @@ if ($message != null) {
                   }
                 }
               }';
+  } else if ($messagePayload == "ติดต่อ") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"generic",
+            "elements":[
+              {
+                "title":"Copa69 ยินดีต้องรับค่ะ 😍",
+                "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
+                "buttons":[
+                  {
+                    "type":"postback",
+                    "title":"สอบถาม",
+                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                  },{
+                    "type":"postback",
+                    "title":"สมัครสมาชิก",
+                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                  },{
+                    "type":"postback",
+                    "title":"ติดต่อ",
+                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                  }          
+                  ]      
+                }
+                ]
+              }
+            }
+          }
+        }';
   } else {
     $jsonData = '{
                 "recipient":{
@@ -429,44 +464,9 @@ if ($message != null) {
                   }';
   }
 }
-if ($messagePayload != null) {
+
   
-    $jsonData = '{
-      "recipient":{
-        "id":"' . $sender . '"
-      },
-      "message":{
-        "attachment":{
-          "type":"template",
-          "payload":{
-            "template_type":"generic",
-            "elements":[
-              {
-                "title":"Copa69 ยินดีต้องรับค่ะ 😍",
-                "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
-                "buttons":[
-                  {
-                    "type":"postback",
-                    "title":"สอบถาม",
-                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                  },{
-                    "type":"postback",
-                    "title":"สมัครสมาชิก",
-                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                  },{
-                    "type":"postback",
-                    "title":"ติดต่อ",
-                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                  }          
-                  ]      
-                }
-                ]
-              }
-            }
-          }
-        }';
-  
-}
+
 
 
 
