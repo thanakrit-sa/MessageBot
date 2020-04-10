@@ -359,7 +359,7 @@ if ($message == "reply") {
 } else if ($message == "test") {
   $jsonData = '{
     "recipient":{
-      "id":"' . $sender . '"
+      "id":"RECIPIENT_ID"
     },
     "message": {
       "attachment": {
