@@ -391,7 +391,7 @@ if ($message == "reply") {
       }
     }';
 } else {
-  $jasonData = '{
+  $jsonData = '{
     "recipient":{
       "id":"' . $sender . '"
     },
@@ -414,7 +414,11 @@ if ($message == "reply") {
                   "type":"postback",
                   "title":"Start Chatting",
                   "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                }           
+                },{
+                  "type":"postback",
+                  "title":"Start Chatting",
+                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                }          
               ]      
             }
           ]
