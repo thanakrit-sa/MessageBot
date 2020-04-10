@@ -370,12 +370,12 @@ if ($message == "reply") {
              {
               "title":"Promotion 1",
               "image_url":"https://petersfancybrownhats.com/company_image.png",
-              "subtitle":"Click Use Promotion To Continue.",
+              "subtitle":"Click Promotion 1 To Continue.",
               
               "buttons":[
                 {
                   "type":"postback",
-                  "title":"Use Promotion",
+                  "title":"Promotion 1",
                   "payload":"Promotion 1"
                 }
                 ]      
@@ -383,12 +383,12 @@ if ($message == "reply") {
               {
                 "title":"Promotion 2",
                 "image_url":"https://petersfancybrownhats.com/company_image.png",
-                "subtitle":"Click Use Promotion To Continue.",
+                "subtitle":"Click Promotion 2 To Continue.",
                 
                 "buttons":[
                   {
                     "type":"postback",
-                    "title":"Use Promotion",
+                    "title":"Promotion 2",
                     "payload":"Promotion 2"
                   }
                   ]      
@@ -396,12 +396,12 @@ if ($message == "reply") {
                 {
                   "title":"Promotion 3",
                   "image_url":"https://petersfancybrownhats.com/company_image.png",
-                  "subtitle":"Click Use Promotion To Continue.",
+                  "subtitle":"Click Promotion 3 To Continue.",
                   
                   "buttons":[
                     {
                       "type":"postback",
-                      "title":"Use Promotion",
+                      "title":"Promotion 3",
                       "payload":"Promotion 3"
                     }
                     ]      
@@ -409,13 +409,13 @@ if ($message == "reply") {
                   {
                     "title":"Promotion 4",
                     "image_url":"https://petersfancybrownhats.com/company_image.png",
-                    "subtitle":"Click Use Promotion To Continue.",
+                    "subtitle":"Click Promotion 4 To Continue.",
                   
                     "buttons":[
                       {
                         "type":"postback",
-                        "title":"Use Promotion",
-                        "payload":ffdgfdgdfgfdg
+                        "title":"Promotion 4",
+                        "payload":"Promotion 4"
                       }
                       ]      
                     },
