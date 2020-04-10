@@ -430,7 +430,7 @@ if ($message != null) {
   }
 }
 if ($messagePayload != null) {
-  if ($messagePayload == "เริ่มต้นการใช้งาน") {
+  if ($messagePayload == "เริ่มต้นใช้งาน") {
     $jsonData = '{
       "recipient":{
         "id":"' . $sender . '"
