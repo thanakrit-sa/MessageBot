@@ -392,7 +392,7 @@ if ($message == "reply") {
     }';
 } else {
   $jasonData = '{
-    {
+    
       "persistent_menu":[
         {
           "locale":"default",
@@ -439,7 +439,7 @@ if ($message == "reply") {
           ]    
         }
       ]
-    }
+    
   }';
 }
 
