@@ -314,43 +314,15 @@ $message = $input['entry'][0]['messaging'][0]['message']['text'];
 $message = strtolower($message);
 
 
- 
-  $url = "https://graph.facebook.com/v2.6/me/messages?access_token=EAADSvg5yW7UBAGyavqtG89YpW5Jep9Ul0lv0pZCZBAz3VZCjZBRQ0UfCHFgOot1K0hhLIGgR0XsW3xQ0SPAN6xBUoc4NZBOvOOZBZB0ESIC8RkCL601hovV8zX7FM5TKCCkCF4IZCUwxJqZAztEB5xUpoHocZCVuXrs26LBA4D6hlSrKjUQ6EtKsTx";
 
-  $ch = curl_init($url);
+$url = "https://graph.facebook.com/v2.6/me/messages?access_token=EAADSvg5yW7UBAGyavqtG89YpW5Jep9Ul0lv0pZCZBAz3VZCjZBRQ0UfCHFgOot1K0hhLIGgR0XsW3xQ0SPAN6xBUoc4NZBOvOOZBZB0ESIC8RkCL601hovV8zX7FM5TKCCkCF4IZCUwxJqZAztEB5xUpoHocZCVuXrs26LBA4D6hlSrKjUQ6EtKsTx";
 
-  if ($message == "2") {
-    $jsonData = '{
-      "recipient":{
-        "id":"'.$sender.'"
-      },
-      "message":{
-        "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"button",
-          "text":"Need further",
-          "button":[
-            {
-              "type":"phone_number",
-              "title": "Tap to call",
-              "payload":"+3q4324234324"
-            },
-            {
-              "type":"web_url",
-              "url":"https://www.google.com",
-              "title": "Address",
-              "webview_height_ratio":"compact"
-            }
-          ]
-        }
-      }
-    }
-    }';
-  } else if ($message == "reply") {
-    $jsonData = '{
+$ch = curl_init($url);
+
+if ($message == "reply") {
+  $jsonData = '{
           "recipient":{
-            "id":"'.$sender.'"
+            "id":"' . $sender . '"
           },
           "message":{
             "text":"Quick Reply",
@@ -379,40 +351,51 @@ $message = strtolower($message);
                 "content_type":"text",
                 "title":"โปรโมชั่นที่ 6",
                 "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 7",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 8",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 9",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 10",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 11",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 12",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 13",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+              
               }
             ]
           }
         }';
-  } 
-  
+} else if ($message == "test") {
+  $jsonData = '{
+    "recipient":{
+      "id":"' . $sender . '"
+    },
+    "message":{
+      "attachment":{
+        "type":"template",
+        "payload":{
+          "template_type":"generic",
+          "elements":[
+             {
+              "title":"Welcome!",
+              "image_url":"https://petersfancybrownhats.com/company_image.png",
+              "subtitle":"We have the right hat for everyone.",
+              "default_action": {
+                "type": "web_url",
+                "url": "https://petersfancybrownhats.com/view?item=103",
+                "messenger_extensions": false,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://petersfancybrownhats.com/"
+              },
+              "buttons":[
+                {
+                  "type":"web_url",
+                  "url":"https://petersfancybrownhats.com",
+                  "title":"View Website"
+                },{
+                  "type":"postback",
+                  "title":"Start Chatting",
+                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                }              
+              ]      
+            }
+          ]
+        }
+      }
+    }
+  }';
+  }
 
 
 
@@ -426,10 +409,7 @@ $Data = $jsonData;
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $Data);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-// if (!empty($input)) {
-//   $result = curl_exec($ch);
-// }
-// curl_close($ch);
+
 if (!empty($input['entry'][0]['messaging'][0]['message'])) {
   $result = curl_exec($ch);
 }
