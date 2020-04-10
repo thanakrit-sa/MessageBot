@@ -319,44 +319,9 @@ $url = "https://graph.facebook.com/v2.6/me/messages?access_token=EAADSvg5yW7UBAG
 
 $ch = curl_init($url);
 
+
+
 if ($message == "reply") {
-  $jsonData = '{
-          "recipient":{
-            "id":"' . $sender . '"
-          },
-          "message":{
-            "text":"Quick Reply",
-            "quick_replies":[
-              {
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 1",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 2",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 3",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 4",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 5",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              },{
-                "content_type":"text",
-                "title":"โปรโมชั่นที่ 6",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-              
-              }
-            ]
-          }
-        }';
-} else if ($message == "test") {
   $jsonData = '{
     "recipient":{
       "id":"' . $sender . '"
@@ -422,7 +387,35 @@ if ($message == "reply") {
               
             ]
           }
-        }
+        },
+        "quick_replies":[
+          {
+            "content_type":"text",
+            "title":"โปรโมชั่นที่ 1",
+            "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+          },{
+            "content_type":"text",
+            "title":"โปรโมชั่นที่ 2",
+            "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+          },{
+            "content_type":"text",
+            "title":"โปรโมชั่นที่ 3",
+            "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+          },{
+            "content_type":"text",
+            "title":"โปรโมชั่นที่ 4",
+            "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+          },{
+            "content_type":"text",
+            "title":"โปรโมชั่นที่ 5",
+            "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+          },{
+            "content_type":"text",
+            "title":"โปรโมชั่นที่ 6",
+            "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
+          
+          }
+        ]
       }
     }';
     }
