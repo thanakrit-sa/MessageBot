@@ -402,22 +402,21 @@ if ($message == "reply") {
           "template_type":"generic",
           "elements":[
              {
-              "title":"Welcome!",
-              "image_url":"https://petersfancybrownhats.com/company_image.png",
-              "subtitle":"We have the right hat for everyone.",
+              "title":"Copa69 ยินดีต้องรับค่ะ 😍",
+              "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
               "buttons":[
                 {
-                  "type":"web_url",
-                  "url":"https://petersfancybrownhats.com",
-                  "title":"View Website"
-                },{
                   "type":"postback",
-                  "title":"Start Chatting",
+                  "title":"สอบถาม",
                   "payload":"DEVELOPER_DEFINED_PAYLOAD"
                 },{
                   "type":"postback",
-                  "title":"Start Chatting",
+                  "title":"สมัครสมาชิก",
                   "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                },{
+                  "type":"postback",
+                  "title":"ติดต่อ",
+                  "payload":"หกา่ดกห"
                 }          
               ]      
             }
