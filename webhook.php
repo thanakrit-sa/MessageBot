@@ -370,7 +370,7 @@ if ($message == "reply") {
              {
               "title":"Promotion 1",
               "image_url":"https://petersfancybrownhats.com/company_image.png",
-              "subtitle":"Click "Use Promotion" To Continue.",
+              "subtitle":"Click Use Promotion To Continue.",
               
               "buttons":[
                 {
@@ -383,7 +383,7 @@ if ($message == "reply") {
               {
                 "title":"Promotion 2",
                 "image_url":"https://petersfancybrownhats.com/company_image.png",
-                "subtitle":"Click "Use Promotion" To Continue.",
+                "subtitle":"Click Use Promotion To Continue.",
                 
                 "buttons":[
                   {
@@ -396,7 +396,7 @@ if ($message == "reply") {
                 {
                   "title":"Promotion 3",
                   "image_url":"https://petersfancybrownhats.com/company_image.png",
-                  "subtitle":"Click "Use Promotion" To Continue.",
+                  "subtitle":"Click Use Promotion To Continue.",
                   
                   "buttons":[
                     {
@@ -409,8 +409,8 @@ if ($message == "reply") {
                   {
                     "title":"Promotion 4",
                     "image_url":"https://petersfancybrownhats.com/company_image.png",
-                    "subtitle":"Click "Use Promotion" To Continue.",
-                    
+                    "subtitle":"Click Use Promotion To Continue.",
+                  
                     "buttons":[
                       {
                         "type":"postback",
