@@ -430,7 +430,10 @@ if ($message == "reply") {
             ]
           ]];
   } 
-
+$Data = [
+  'recipient' => ['id' => $sender],
+  'message' => $jsonData
+];
 
 
 
@@ -439,7 +442,7 @@ if ($message == "reply") {
 
 // $ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token=' . $accessToken);
 
-$Data = $jsonData;
+// $Data = $jsonData;
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $Data);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
