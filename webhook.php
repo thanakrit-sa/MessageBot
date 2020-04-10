@@ -415,7 +415,7 @@ if ($message == "reply") {
                       {
                         "type":"postback",
                         "title":"Use Promotion",
-                        "payload":"Promotion 4"
+                        "payload":ffdgfdgdfgfdg
                       }
                       ]      
                     },
