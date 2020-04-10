@@ -395,51 +395,33 @@ if ($message == "reply") {
     "recipient":{
       "id":"' . $sender . '"
     },
-    "message": {
-      "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "list",
-          
-          "elements": [
-            {
-              "title": "Classic T-Shirt Collection",
-              "subtitle": "See all our colors",
-              "image_url": "https://peterssendreceiveapp.ngrok.io/img/collection.png",          
-              "buttons": [
+    "message":{
+      "attachment":{
+        "type":"template",
+        "payload":{
+          "template_type":"generic",
+          "elements":[
+             {
+              "title":"Welcome!",
+              "image_url":"https://petersfancybrownhats.com/company_image.png",
+              "subtitle":"We have the right hat for everyone.",
+              "buttons":[
                 {
-                  "title": "View",
-                  "type": "web_url",
-                  "url": "https://peterssendreceiveapp.ngrok.io/collection",
-                             
-                }
-              ]
-            },
-            {
-              "title": "Classic White T-Shirt",
-              "subtitle": "See all our colors",
-            },
-            {
-              "title": "Classic Blue T-Shirt",
-              "image_url": "https://peterssendreceiveapp.ngrok.io/img/blue-t-shirt.png",
-              "subtitle": "100% Cotton, 200% Comfortable",              
-              "buttons": [
-                {
-                  "title": "Shop Now",
-                  "type": "web_url",
-                  "url": "https://peterssendreceiveapp.ngrok.io/shop?item=101",
-                         
-                }
-              ]        
+                  "type":"web_url",
+                  "url":"https://petersfancybrownhats.com",
+                  "title":"View Website"
+                },{
+                  "type":"postback",
+                  "title":"Start Chatting",
+                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                },{
+                  "type":"postback",
+                  "title":"Start Chatting",
+                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                }              
+              ]      
             }
-          ],
-           "buttons": [
-            {
-              "title": "View More",
-              "type": "postback",
-              "payload": "payload"            
-            }
-          ]  
+          ]
         }
       }
     }
