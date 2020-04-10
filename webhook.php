@@ -430,7 +430,7 @@ if ($message != null) {
   }
 }
 if ($messagePayload != null) {
-  if ($messagePayload == "เริ่มต้นใช้งาน") {
+  if ($messagePayload == "ติดต่อ") {
     $jsonData = '{
       "recipient":{
         "id":"' . $sender . '"
