@@ -376,7 +376,7 @@ if ($messagePayload == "สมัครสมาชิก") {
           "elements":[
             {
               "title":"Promotion 1",
-              "image_url":"https://www.img.in.th/image/T2Smo3",
+              "image_url":"https://s3-ap-southeast-1.amazonaws.com/img-in-th/7d18a3d212357006ff43b95f1f52e664.png",
               "subtitle":"Click Promotion 1 To Continue.",
               
               "buttons":[
