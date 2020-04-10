@@ -502,40 +502,6 @@ if ($messagePayload == "สมัครสมาชิก") {
           }
         }
       }';
-      $test = '{
-        "recipient":{
-          "id":"' . $sender . '"
-        },
-        "message":{
-          "attachment":{
-            "type":"template",
-            "payload":{
-              "template_type":"generic",
-              "elements":[
-                {
-                  "title":"Copa69 สวัสดีค่ะ 😍",
-                  "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
-                  "buttons":[
-                    {
-                      "type":"postback",
-                      "title":"สอบถาม",
-                      "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                    },{
-                      "title":"สมัครสมาชิก",
-                      "type":"postback",
-                      "payload":"สมัครสมาชิก"
-                    },{
-                      "type":"postback",
-                      "title":"ติดต่อ",
-                      "payload":"ติดต่อ"
-                    }          
-                    ]      
-                  }
-                  ]
-                }
-              }
-            }
-          }';
 }
 }
   
@@ -552,7 +518,7 @@ if ($messagePayload == "สมัครสมาชิก") {
 
 $Data = $jsonData;
 curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $Data,$test);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $Data);
 curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 
 
@@ -562,5 +528,6 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 
 
 echo "hi";
+
 
 
