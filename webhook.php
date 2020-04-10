@@ -517,10 +517,3 @@ curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $Data);
 curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 
-if (!empty($input['entry'][0]['messaging'][0]['message'])) {
-  $result = curl_exec($ch);
-}
-
-
-
-echo "hi";
