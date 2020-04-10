@@ -314,43 +314,46 @@ $message = $input['entry'][0]['messaging'][0]['message']['text'];
 $messagePost = $input['entry'][0]['messaging'][0]['postback'];
 $messagePayload = $input['entry'][0]['messaging'][0]['postback']['payload'];
 $test = $input['entry'][0]['messaging'][0];
-if ($test['postback']['payload'] == "เริ่มต้นใช้งาน") {
-  $jsonData = '{
-    "recipient":{
-      "id":"' . $sender . '"
-    },
-    "message":{
-      "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"generic",
-          "elements":[
-            {
-              "title":"เกิดข้อผิดพลาด คีย์เวิร์ดไม่เข้าเงื่อนไข 😍",
-              "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
-              "buttons":[
-                {
-                  "type":"postback",
-                  "title":"สอบถาม",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                },{
-                  "type":"postback",
-                  "title":"สมัครสมาชิก",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                },{
-                  "type":"postback",
-                  "title":"ติดต่อ",
-                  "payload":"ติดต่อ"
-                }          
-                ]      
+if (isset($test['postback'])) {
+
+  if ($test['postback']['payload'] == "เริ่มต้นใช้งาน") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"generic",
+            "elements":[
+              {
+                "title":"เกิดข้อผิดพลาด คีย์เวิร์ดไม่เข้าเงื่อนไข 😍",
+                "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
+                "buttons":[
+                  {
+                    "type":"postback",
+                    "title":"สอบถาม",
+                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                  },{
+                    "type":"postback",
+                    "title":"สมัครสมาชิก",
+                    "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                  },{
+                    "type":"postback",
+                    "title":"ติดต่อ",
+                    "payload":"ติดต่อ"
+                  }          
+                  ]      
+                }
+                ]
               }
-              ]
             }
           }
-        }
-      }';
-      die();
-}
+        }';
+        die();
+      }
+    }
 $message = strtolower($message);
 
 
