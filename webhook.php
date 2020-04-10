@@ -323,7 +323,7 @@ $ch = curl_init($url);
 
 
 if ($message != null) {
-  if ($message == "สมัครสมาชิก") {
+  if ($message == "ติดต่อ") {
     $jsonData = '{
       "recipient":{
         "id":"' . $sender . '"
@@ -430,7 +430,7 @@ if ($message != null) {
   }
 }
 if ($messagePayload != null) {
-  if ($messagePayload == "ติดต่อ") {
+  
     $jsonData = '{
       "recipient":{
         "id":"' . $sender . '"
@@ -465,7 +465,7 @@ if ($messagePayload != null) {
             }
           }
         }';
-  }
+  
 }
 
 
