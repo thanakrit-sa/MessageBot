@@ -324,74 +324,7 @@ $ch = curl_init($url);
 
 if ($message != null) {
   if ($message == "ติดต่อ") {
-    $jsonData = '{
-      "recipient":{
-        "id":"' . $sender . '"
-      },
-      "message":{
-        "attachment":{
-          "type":"template",
-          "payload":{
-            "template_type":"generic",
-            "elements":[
-              {
-                "title":"Promotion 1",
-                "image_url":"https://petersfancybrownhats.com/company_image.png",
-                "subtitle":"Click Promotion 1 To Continue.",
-                
-                "buttons":[
-                  {
-                    "title":"Promotion 1",
-                    "type":"postback",
-                    "payload":"Promotion 1"
-                  }
-                  ]      
-                },
-                {
-                  "title":"Promotion 2",
-                  "image_url":"https://petersfancybrownhats.com/company_image.png",
-                  "subtitle":"Click Promotion 2 To Continue.",
-                  
-                  "buttons":[
-                    {
-                      "title":"Promotion 2",
-                      "type":"postback",
-                      "payload":"Promotion 2"
-                    }
-                    ]      
-                  },
-                  {
-                    "title":"Promotion 3",
-                    "image_url":"https://petersfancybrownhats.com/company_image.png",
-                    "subtitle":"Click Promotion 3 To Continue.",
-                    
-                    "buttons":[
-                      {
-                        "type":"postback",
-                        "title":"Promotion 3",
-                        "payload":"CAT_PHP_PAYLOAD"
-                      }
-                      ]      
-                    },
-                    {
-                      "title":"Promotion 4",
-                      "image_url":"https://petersfancybrownhats.com/company_image.png",
-                      "subtitle":"Click Promotion 4 To Continue.",
-                      
-                      "buttons":[
-                        {
-                          "type":"postback",
-                          "title":"Promotion 4",
-                          "payload":"Promotion 4"
-                        }
-                        ]      
-                      },
-                      
-                      ]
-                    }
-                  }
-                }
-              }';
+    
   } else {
     $jsonData = '{
                 "recipient":{
@@ -430,8 +363,7 @@ if ($message != null) {
   }
 }
 if ($messagePayload != null) {
-
-if ($messagePayload == "Promotion 1") {
+if ($messagePayload == "สมัครสมาชิก") {
   $jsonData = '{
     "recipient":{
       "id":"' . $sender . '"
@@ -443,25 +375,63 @@ if ($messagePayload == "Promotion 1") {
           "template_type":"generic",
           "elements":[
             {
-              "title":"เกิดข้อผิดพลาด คีย์เวิร์ดไม่เข้าเงื่อนไข 😍",
-              "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
+              "title":"Promotion 1",
+              "image_url":"https://petersfancybrownhats.com/company_image.png",
+              "subtitle":"Click Promotion 1 To Continue.",
+              
               "buttons":[
                 {
+                  "title":"Promotion 1",
                   "type":"postback",
-                  "title":"สอบถาม",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                },{
-                  "type":"postback",
-                  "title":"สมัครสมาชิก",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                }       
+                  "payload":"Promotion 1"
+                }
                 ]      
+              },
+              {
+                "title":"Promotion 2",
+                "image_url":"https://petersfancybrownhats.com/company_image.png",
+                "subtitle":"Click Promotion 2 To Continue.",
+                
+                "buttons":[
+                  {
+                    "title":"Promotion 2",
+                    "type":"postback",
+                    "payload":"Promotion 2"
+                  }
+                  ]      
+                },
+                {
+                  "title":"Promotion 3",
+                  "image_url":"https://petersfancybrownhats.com/company_image.png",
+                  "subtitle":"Click Promotion 3 To Continue.",
+                  
+                  "buttons":[
+                    {
+                      "type":"postback",
+                      "title":"Promotion 3",
+                      "payload":"CAT_PHP_PAYLOAD"
+                    }
+                    ]      
+                  },
+                  {
+                    "title":"Promotion 4",
+                    "image_url":"https://petersfancybrownhats.com/company_image.png",
+                    "subtitle":"Click Promotion 4 To Continue.",
+                    
+                    "buttons":[
+                      {
+                        "type":"postback",
+                        "title":"Promotion 4",
+                        "payload":"Promotion 4"
+                      }
+                      ]      
+                    },
+                    
+                    ]
+                  }
+                }
               }
-              ]
-            }
-          }
-        }
-      }';
+            }';
 } else if ($messagePayload == "Promotion 2") {
   $jsonData = '{
     "recipient":{
@@ -509,7 +479,7 @@ if ($messagePayload == "Promotion 1") {
           "template_type":"generic",
           "elements":[
             {
-              "title":"คีย์เวิร์ดไม่เข้าเงื่อนไข 😍",
+              "title":"Copa69 สวันดีค่ะ 😍",
               "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
               "buttons":[
                 {
