@@ -396,39 +396,11 @@ if ($message == "reply") {
     }
   }';
   } else if ($message == "r") {
-    $jsonData = ["attachment" => [
-            "type" => "template",
-            "payload" => [
-              "template_type" => "generic",
-              "elements" => [
-                [
-                  "title" => "เมนูหลัก",
-                  "item_url" => "https://www.google.com/?hl=th",
-                  "image_url" => "https://www.biletium.com/wp-content/uploads/2019/09/109764-rdlnnfwoyl-1546592968.jpg",
-                  "subtitle" => "กรุณาเลือกหัวข้อที่ต้องการ..",
-                  "buttons" => [
-                    [
-                      "type" => "postback",
-                      "title" => "เปิดบัญชี",
-                      "payload" => "เปิดบัญชี"
-                    ],
-                    [
-                      "type" => "postback",
-                      "title" => "แจ้งปัญหา",
-                      "payload" => "แจ้งปัญหา"
-                    ],
-                    [
-                      "type" => "postback",
-                      "title" => "ติดต่อ",
-                      "payload" => "ติดต่อ"
-                    ],
-      
-                  ],
-      
-                ]
-              ]
-            ]
-          ]];
+    $answer = "Hello! How may I help you today ";                      
+    $response = ['recipient' => [ 'id' => $senderId ],                         
+    'message' => [ 'text' => $answer ],                         
+    'access_token' => $this->$accessToken                    
+      ];
   } 
 // $Data = [
 //   'recipient' => ['id' => $sender],
