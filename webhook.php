@@ -396,42 +396,39 @@ if ($message == "reply") {
     }
   }';
   } else if ($message == "r") {
-    $jsonData = '{
-            "recipient":{
-              "id":"' . $sender . '"
-            },
-            "message":{
-              "text":"Quick Reply",
-              "quick_replies":[
-                {
-                  "content_type":"text",
-                  "title":"โปรโมชั่นที่ 1",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-                },{
-                  "content_type":"text",
-                  "title":"โปรโมชั่นที่ 2",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-                },{
-                  "content_type":"text",
-                  "title":"โปรโมชั่นที่ 3",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-                },{
-                  "content_type":"text",
-                  "title":"โปรโมชั่นที่ 4",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-                },{
-                  "content_type":"text",
-                  "title":"โปรโมชั่นที่ 5",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-                },{
-                  "content_type":"text",
-                  "title":"โปรโมชั่นที่ 6",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_RED"
-                
-                }
+    $jsonData = ["attachment" => [
+            "type" => "template",
+            "payload" => [
+              "template_type" => "generic",
+              "elements" => [
+                [
+                  "title" => "เมนูหลัก",
+                  "item_url" => "https://www.google.com/?hl=th",
+                  "image_url" => "https://www.biletium.com/wp-content/uploads/2019/09/109764-rdlnnfwoyl-1546592968.jpg",
+                  "subtitle" => "กรุณาเลือกหัวข้อที่ต้องการ..",
+                  "buttons" => [
+                    [
+                      "type" => "postback",
+                      "title" => "เปิดบัญชี",
+                      "payload" => "เปิดบัญชี"
+                    ],
+                    [
+                      "type" => "postback",
+                      "title" => "แจ้งปัญหา",
+                      "payload" => "แจ้งปัญหา"
+                    ],
+                    [
+                      "type" => "postback",
+                      "title" => "ติดต่อ",
+                      "payload" => "ติดต่อ"
+                    ],
+      
+                  ],
+      
+                ]
               ]
-            }
-          }';
+            ]
+          ]];
   } 
 
 
