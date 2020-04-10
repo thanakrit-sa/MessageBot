@@ -343,7 +343,7 @@ if ($message != null) {
                   {
                     "title":"Promotion 1",
                     "type":"postback",
-                    "payload":"Promotion 1"
+                    "payload":"Promotion 1345"
                   }
                   ]      
                 },
@@ -354,8 +354,8 @@ if ($message != null) {
                   
                   "buttons":[
                     {
-                      "type":"postback",
                       "title":"Promotion 2",
+                      "type":"postback",
                       "payload":"Promotion 2"
                     }
                     ]      
@@ -429,7 +429,38 @@ if ($message != null) {
                   }';
   }
 }
-if ($messagePayload == "Promotion 1") {
+if ($messagePayload == "Promotion 1345") {
+  $jsonData = '{
+    "recipient":{
+      "id":"' . $sender . '"
+    },
+    "message":{
+      "attachment":{
+        "type":"template",
+        "payload":{
+          "template_type":"generic",
+          "elements":[
+            {
+              "title":"เกิดข้อผิดพลาด คีย์เวิร์ดไม่เข้าเงื่อนไข 😍",
+              "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"สอบถาม",
+                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                },{
+                  "type":"postback",
+                  "title":"สมัครสมาชิก",
+                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                }       
+                ]      
+              }
+              ]
+            }
+          }
+        }
+      }';
+} else if ($messagePayload == "Promotion 2") {
   $jsonData = '{
     "recipient":{
       "id":"' . $sender . '"
