@@ -479,7 +479,7 @@ if ($messagePayload == "สมัครสมาชิก") {
           "template_type":"generic",
           "elements":[
             {
-              "title":"Copa69 สวันดีค่ะ 😍",
+              "title":"Copa69 สวัสดีค่ะ 😍",
               "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
               "buttons":[
                 {
@@ -487,8 +487,8 @@ if ($messagePayload == "สมัครสมาชิก") {
                   "title":"สอบถาม",
                   "payload":"DEVELOPER_DEFINED_PAYLOAD"
                 },{
-                  "type":"postback",
                   "title":"สมัครสมาชิก",
+                  "type":"postback",
                   "payload":"DEVELOPER_DEFINED_PAYLOAD"
                 },{
                   "type":"postback",
