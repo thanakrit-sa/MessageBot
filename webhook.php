@@ -343,7 +343,7 @@ if ($message != null) {
                   {
                     "title":"Promotion 1",
                     "type":"postback",
-                    "payload":"Promotion 1345"
+                    "payload":"Promotion 1"
                   }
                   ]      
                 },
@@ -429,7 +429,9 @@ if ($message != null) {
                   }';
   }
 }
-if ($messagePayload == "Promotion 1345") {
+if ($messagePayload != null) {
+
+if ($messagePayload == "Promotion 1") {
   $jsonData = '{
     "recipient":{
       "id":"' . $sender . '"
@@ -495,6 +497,42 @@ if ($messagePayload == "Promotion 1345") {
           }
         }
       }';
+} else {
+  $jsonData = '{
+    "recipient":{
+      "id":"' . $sender . '"
+    },
+    "message":{
+      "attachment":{
+        "type":"template",
+        "payload":{
+          "template_type":"generic",
+          "elements":[
+            {
+              "title":"คีย์เวิร์ดไม่เข้าเงื่อนไข 😍",
+              "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
+              "buttons":[
+                {
+                  "type":"postback",
+                  "title":"สอบถาม",
+                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                },{
+                  "type":"postback",
+                  "title":"สมัครสมาชิก",
+                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                },{
+                  "type":"postback",
+                  "title":"ติดต่อ",
+                  "payload":"ติดต่อ"
+                }          
+                ]      
+              }
+              ]
+            }
+          }
+        }
+      }';
+}
 }
   
 
