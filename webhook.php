@@ -489,7 +489,7 @@ if ($messagePayload == "สมัครสมาชิก") {
                 },{
                   "title":"สมัครสมาชิก",
                   "type":"postback",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                  "payload":"สมัครสมาชิก"
                 },{
                   "type":"postback",
                   "title":"ติดต่อ",
