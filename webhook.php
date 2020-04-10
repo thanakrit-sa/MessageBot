@@ -345,9 +345,9 @@ if ($message != null) {
                               "title":"สอบถาม",
                               "payload":"DEVELOPER_DEFINED_PAYLOAD"
                             },{
-                              "type":"postback",
                               "title":"สมัครสมาชิก",
-                              "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                              "type":"postback",
+                              "payload":"สมัครสมาชิก"
                             },{
                               "type":"postback",
                               "title":"ติดต่อ",
