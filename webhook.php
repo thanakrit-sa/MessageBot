@@ -476,33 +476,19 @@ if ($messagePayload != null) {
       "id":"' . $sender . '"
     },
     "message":{
-      "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"generic",
-          "elements":[
-            {
-              "title":"Copa69 สวัสดีค่ะ 😍",
-              "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
-              "buttons":[
-                {
-                  "title":"สอบถาม",
-                  "type":"postback",
-                  "payload":"สอบถาม"
-                },{
-                  "title":"สมัครสมาชิก",
-                  "type":"postback",
-                  "payload":"สมัครสมาชิก"
-                },{
-                  "title":"ติดต่อ",
-                  "type":"postback",
-                  "payload":"ติดต่อ"
-                }          
-                ]      
-              }
-              ]
-            }
-          }
+      "quick_replies":[
+        {
+          "content_type":"text",
+          "title":"Red",
+          "payload":"<POSTBACK_PAYLOAD>",
+          
+        },{
+          "content_type":"text",
+          "title":"Green",
+          "payload":"<POSTBACK_PAYLOAD>",
+         
+        }
+      ]
         }
       }';
   }
