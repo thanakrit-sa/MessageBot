@@ -438,7 +438,6 @@ if ($messagePayload != null) {
             }';
   } else if ($messagePayload == "สอบถาม") {
     $jsonData = '{
-      "messaging_type": "text",
       "recipient":{
         "id":"' . $sender . '"
       },
