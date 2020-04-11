@@ -373,6 +373,7 @@ if ($messagePayload != null) {
       "id":"' . $sender . '"
     },
     "message":{
+      "text": "Pick a color:",
       "attachment":{
         "type":"template",
         "payload":{
