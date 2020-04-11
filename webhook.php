@@ -435,26 +435,8 @@ if ($messagePayload != null) {
                     
                     ]
                   }
-                },
-                "text": "Pick a color:",
-                "quick_replies":[
-                  {
-                    "content_type":"text",
-                    "title":"Red",
-                    "payload":"<POSTBACK_PAYLOAD>",
-                    
-                  },{
-                    "content_type":"text",
-                    "title":"Green",
-                    "payload":"<POSTBACK_PAYLOAD>",
-                   
-                  }
-                ]
-       
+                }
               }
-              
-                
-              
             }';
   } else if ($messagePayload == "สอบถาม") {
     $jsonData = '{
@@ -462,31 +444,22 @@ if ($messagePayload != null) {
         "id":"' . $sender . '"
       },
       "message":{
-        "attachment":{
-          "type":"template",
-          "payload":{
-            "template_type":"button",
-            "text":"ท่านสามารถเลือกหัวข้อที่ต้องการสอบถามได้จากแถบเมนูด้านล่าง",
-            "buttons":[
-              {
-                "title":"ย้อนกลับ",
-                "type":"postback",
-                "payload":"ย้อนกลับ"
-              },
-              {
-                "title":"เมนูหลัก",
-                "type":"postback",
-                "payload":"เมนูหลัก"
-              }
-            ],
+        "text": "ท่านสามารถเลือกหัวข้อที่ต้องการสอบถามได้จากแถบเมนูด้านล่าง",
+        "quick_replies":[
+          {
+            "content_type":"text",
+            "title":"Red",
+            "payload":"<POSTBACK_PAYLOAD>",
             
+          },{
+            "content_type":"text",
+            "title":"Green",
+            "payload":"<POSTBACK_PAYLOAD>",
+           
           }
-          
-        }
-        
+        ]
       }
-     
-    }';
+     }';
   } else {
     $jsonData = '{
     "recipient":{
