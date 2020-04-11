@@ -446,6 +446,7 @@ if ($messagePayload != null) {
         "id":"' . $sender . '"
       },
       "message":{
+        "text": "Pick a color:",
         "quick_replies":[
           {
             "content_type":"text",
