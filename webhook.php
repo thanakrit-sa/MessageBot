@@ -445,6 +445,13 @@ if ($messagePayload != null) {
       },
       "message":{
         "text": "ท่านสามารถเลือกหัวข้อที่ต้องการสอบถามได้จากแถบเมนูด้านล่าง",
+        "buttons": [
+          {
+             "type": "postback",
+             "payload": "ddfsdf",
+             "title": "View Website",
+          }
+        ],
         "quick_replies":[
           {
             "content_type":"text",
