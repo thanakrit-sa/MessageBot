@@ -373,7 +373,7 @@ if ($messagePayload != null) {
       "id":"' . $sender . '"
     },
     "message":{
-      "text": "Pick a color:",
+      
       "attachment":{
         "type":"template",
         "payload":{
@@ -430,8 +430,21 @@ if ($messagePayload != null) {
                         "payload":"โปรโมชั้นที่ 4"
                       }
                       ]      
-                    }
-                    
+                    },
+                    "text": "Pick a color:",
+        "quick_replies":[
+          {
+            "content_type":"text",
+            "title":"Red",
+            "payload":"<POSTBACK_PAYLOAD>",
+            
+          },{
+            "content_type":"text",
+            "title":"Green",
+            "payload":"<POSTBACK_PAYLOAD>",
+           
+          }
+        ]
                     ]
                   }
                 }
