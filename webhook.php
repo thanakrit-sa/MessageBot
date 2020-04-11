@@ -89,7 +89,7 @@ if ($message != null) {
         ]
       }
     }';
-  } else if ($message == "โปรโมชั่น") {
+  } else if ($message == "โปรโมชั่น" || $message == "ย้อนกลับโปรโมชั่น") {
     $jsonData = '{
       "recipient":{
         "id":"' . $sender . '"
@@ -296,13 +296,45 @@ if ($message != null) {
                    "buttons": [
                     {
                        "type": "postback",
-                       "payload": "ย้อนกลับ",
-                       "title": "View Website",
+                       "payload": "ย้อนกลับโปรโมชั่น",
+                       "title": "ย้อนกลับโปรโมชั่น",
                     },
                     {
                       "type": "postback",
                       "payload": "เมนูหลัก",
-                      "title": "View Website",
+                      "title": "เมนูหลัก",
+                   }
+                  ]
+                }
+             ]
+          }
+        }    
+      }
+    }';
+  } else if ($message == "โปรโมชั่น : หัวข้อ 2") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment": {
+          "type": "template",
+          "payload": {
+             "template_type": "media",
+             "elements": [
+                {
+                   "media_type": "image",
+                   "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739975403170",
+                   "buttons": [
+                    {
+                       "type": "postback",
+                       "payload": "ย้อนกลับโปรโมชั่น",
+                       "title": "ย้อนกลับโปรโมชั่น",
+                    },
+                    {
+                      "type": "postback",
+                      "payload": "เมนูหลัก",
+                      "title": "เมนูหลัก",
                    }
                   ]
                 }
