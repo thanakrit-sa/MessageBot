@@ -376,7 +376,7 @@ if ($messagePayload == "สมัครสมาชิก") {
           "elements":[
             {
               "title":"Promotion 1",
-              "image_url":"https://sv1.picz.in.th/images/2020/04/11/UWuaxf.png",
+              "image_url":"https://www.mx7.com/view2/C3V94Q1Yej3cOyd7",
               "subtitle":"Click Promotion 1 To Continue.",
               
               "buttons":[
