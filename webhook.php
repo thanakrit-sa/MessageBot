@@ -7,8 +7,6 @@ $messagePost = $input['entry'][0]['messaging'][0]['postback'];
 $messagePayload = $input['entry'][0]['messaging'][0]['postback']['payload'];
 $message = strtolower($message);
 
-
-
 $url = "https://graph.facebook.com/v2.6/me/messages?access_token=EAADSvg5yW7UBAGyavqtG89YpW5Jep9Ul0lv0pZCZBAz3VZCjZBRQ0UfCHFgOot1K0hhLIGgR0XsW3xQ0SPAN6xBUoc4NZBOvOOZBZB0ESIC8RkCL601hovV8zX7FM5TKCCkCF4IZCUwxJqZAztEB5xUpoHocZCVuXrs26LBA4D6hlSrKjUQ6EtKsTx";
 $ch = curl_init($url);
 
@@ -281,7 +279,30 @@ if ($message != null) {
         ]
       }
     }';
-  } else { 
+  } else if ($message == "โปรโมชั่น : หัวข้อ 1") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment": {
+          "type": "template",
+          "payload": {
+             "template_type": "media",
+             "elements": [
+                {
+                   "media_type": "<image|video>",
+                   "url": "https://s3-ap-southeast-1.amazonaws.com/img-in-th/e795977e4a5a3626526fe96c6f02b561.png"
+                }
+             ]
+          }
+        }    
+      }
+    }';
+  }
+  
+  
+  else { 
     $jsonData = '{
                 "recipient":{
                   "id":"' . $sender . '"
