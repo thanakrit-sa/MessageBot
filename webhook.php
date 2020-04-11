@@ -447,12 +447,12 @@ if ($messagePayload != null) {
         "text": "ท่านสามารถเลือกหัวข้อที่ต้องการสอบถามได้จากแถบเมนูด้านล่าง",
         "quick_replies":[
           {
+            "content_type":"text",
             "title":"โปรโมชั่น",
-            "type":"postback",
             "payload":"โปรโมชั่น",
           },{
+            "content_type":"text",
             "title":"Green",
-            "type":"postback",
             "payload":"<POSTBACK_PAYLOAD>",
           }
         ]
