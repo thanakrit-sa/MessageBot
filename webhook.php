@@ -466,9 +466,9 @@ if ($messagePayload != null) {
                       ]      
                     },
                     {
-                      "title":"โปรโมชั้นที่ 4",
+                      
                       "image_url":"https://s3-ap-southeast-1.amazonaws.com/img-in-th/e795977e4a5a3626526fe96c6f02b561.png",
-                      "subtitle":"สมัครสมาชิก 200 รับโบนัส 30%",
+                     
                       "buttons":[
                         {
                           "title":"เมนูหลัก",
