@@ -464,6 +464,10 @@ if ($messagePayload != null) {
               }
             ],
             
+          }
+          
+        }
+        "text": "Pick a color:",
         "quick_replies":[
           {
             "content_type":"text",
@@ -477,10 +481,6 @@ if ($messagePayload != null) {
            
           }
         ]
-          }
-          
-        }
-        
       }
      
     }';
