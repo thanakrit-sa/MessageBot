@@ -441,10 +441,27 @@ if ($messagePayload != null) {
       "recipient":{
         "id":"' . $sender . '"
       },
-      "message":[
-      "text":"ท่านสามารถเลือกหัวข้อที่ต้องการสอบถามได้",
-      "text":"ท่านสามารถเลือกหัวข้อที่ต้องการสอบถาม"
-      ]
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"button",
+            "text":"ท่านสามารถเลือกหัวข้อที่ต้องการจะสอบถามได้จากแถบเมนูด้านล่าง",
+            "buttons":[
+              {
+                "title":"ย้อนกลับ",
+                "type":"postback",
+                "payload":"ย้อนกลับ"
+              },
+              {
+                "title":"เมนูหลัก",
+                "type":"postback",
+                "payload":"เมนูหลัก"
+              }
+            ]
+          }
+        }
+      }
     }';
   } else {
     $jsonData = '{
