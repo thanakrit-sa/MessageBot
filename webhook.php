@@ -436,6 +436,10 @@ if ($messagePayload != null) {
                     ]
                   }
                 },
+               
+       
+              },
+              "message":{
                 "text": "Pick a color:",
         "quick_replies":[
           {
@@ -450,7 +454,6 @@ if ($messagePayload != null) {
            
           }
         ]
-       
               }
             }';
   } else if ($messagePayload == "สอบถาม") {
