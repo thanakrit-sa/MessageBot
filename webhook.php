@@ -292,7 +292,19 @@ if ($message != null) {
              "elements": [
                 {
                    "media_type": "image",
-                   "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739902069844"
+                   "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739902069844",
+                   "buttons": [
+                    {
+                       "type": "postback",
+                       "payload": "ย้อนกลับ",
+                       "title": "View Website",
+                    },
+                    {
+                      "type": "postback",
+                      "payload": "เมนูหลัก",
+                      "title": "View Website",
+                   }
+                  ]
                 }
              ]
           }
