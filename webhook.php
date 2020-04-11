@@ -462,7 +462,7 @@ if ($messagePayload != null) {
           }
         }
       },
-      "message":{
+      
         "text": "Pick a color:",
         "quick_replies":[
           {
@@ -477,7 +477,7 @@ if ($messagePayload != null) {
             "image_url":"http://example.com/img/green.png"
           }
         ]
-      }
+      
     }';
   } else {
     $jsonData = '{
