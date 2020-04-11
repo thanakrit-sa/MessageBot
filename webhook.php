@@ -389,7 +389,7 @@ if ($messagePayload == "สมัครสมาชิก") {
               },
               {
                 "title":"Promotion 2",
-                "image_url":"https://sv1.picz.in.th/images/2020/04/11/UWuXzb.png",
+                "image_url":"https://s3-ap-southeast-1.amazonaws.com/img-in-th/3fff3da2a574c47dd4941b379a784617.png",
                 "subtitle":"Click Promotion 2 To Continue.",
                 
                 "buttons":[
@@ -402,7 +402,7 @@ if ($messagePayload == "สมัครสมาชิก") {
                 },
                 {
                   "title":"Promotion 3",
-                  "image_url":"https://sv1.picz.in.th/images/2020/04/11/UWup6a.png",
+                  "image_url":"https://s3-ap-southeast-1.amazonaws.com/img-in-th/cc2d248baeeff43c3360294536a184a4.png",
                   "subtitle":"Click Promotion 3 To Continue.",
                   
                   "buttons":[
@@ -415,7 +415,7 @@ if ($messagePayload == "สมัครสมาชิก") {
                   },
                   {
                     "title":"Promotion 4",
-                    "image_url":"https://sv1.picz.in.th/images/2020/04/11/UWuGWq.png",
+                    "image_url":"https://s3-ap-southeast-1.amazonaws.com/img-in-th/ea0d45cc0e20adaf953227cb74bb4ece.png",
                     "subtitle":"Click Promotion 4 To Continue.",
                     
                     "buttons":[
