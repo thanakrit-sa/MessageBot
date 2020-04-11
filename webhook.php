@@ -450,10 +450,31 @@ if ($messagePayload != null) {
             "content_type":"text",
             "title":"โปรโมชั่น",
             "payload":"โปรโมชั่น",
-          },{
+          },
+          {
             "content_type":"text",
-            "title":"Green",
-            "payload":"<POSTBACK_PAYLOAD>",
+            "title":"กลุ่ม/สูตร",
+            "payload":"กลุ่ม/สูตร",
+          },
+          {
+            "content_type":"text",
+            "title":"เว็บไซต์",
+            "payload":"เว็บไซต์",
+          },
+          {
+            "content_type":"text",
+            "title":"สอบถามเพิ่มเติม",
+            "payload":"สอบถามเพิ่มเติม",
+          },
+          {
+            "content_type":"text",
+            "title":"แจ้งปัญหา",
+            "payload":"แจ้งปัญหา",
+          },
+          {
+            "content_type":"text",
+            "title":"เมนูหลัก",
+            "payload":"เมนูหลัก",
           }
         ]
       }
