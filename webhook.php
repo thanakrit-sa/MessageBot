@@ -348,7 +348,7 @@ if ($message != null) {
               {
                 "type":"web_url",
                 "url":"https://www.google.com",
-                "title":"ย้อนกลับกลุ่ม"
+                "title":"สูตรบาคาร่า"
               },
               {
                 "type":"postback",
@@ -556,6 +556,52 @@ if ($messagePayload != null) {
             "content_type":"text",
             "title":"โปรโมชั่น : หัวข้อ 2",
             "payload":"โปรโมชั่น : หัวข้อ 2",
+          },
+          {
+            "title":"ย้อนกลับสอบถาม",
+            "content_type":"text",
+            "payload": "ย้อนกลับสอบถาม",
+          },
+          {
+            "content_type":"text",
+            "title":"เมนูหลัก",
+            "payload":"เมนูหลัก",
+          }
+        ]
+      }
+    }';
+  } else if ($messagePayload == "ย้อนกลับกลุ่ม") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message": {
+        "text":"ท่านสามารถเลือกหัวข้อที่ต้องการจะสอบถามได้ โดยมีหัวข้อดังนี้ \r\n \r\nหัวข้อที่ 1 สูตรโกงบาคาร่า \r\nหัวข้อที่ 2 กลุ่มวิเคราะห์บอล \r\nหัวข้อที่ 3 กลุ่มนำเล่นบาคาร่า \r\nหัวข้อที่ 4 วิธีเข้าเล่นบาคาร่า \r\nหัวข้อที่ 5 วิธีการเข้าแทงบอล \r\n \r\nเลือกตัวข้อโดยการคลิกที่แถบเมนูด้านล่าง",
+        "quick_replies":[
+          {
+            "content_type":"text",
+            "title":"กลุ่ม : หัวข้อ 1",
+            "payload":"กลุ่ม : หัวข้อ 1",
+          },
+          {
+            "content_type":"text",
+            "title":"กลุ่ม : หัวข้อ 2",
+            "payload":"กลุ่ม : หัวข้อ 2",
+          },
+          {
+            "content_type":"text",
+            "title":"กลุ่ม : หัวข้อ 3",
+            "payload":"กลุ่ม : หัวข้อ 3",
+          },
+          {
+            "content_type":"text",
+            "title":"กลุ่ม : หัวข้อ 4",
+            "payload":"กลุ่ม : หัวข้อ 4",
+          },
+          {
+            "content_type":"text",
+            "title":"กลุ่ม : หัวข้อ 5",
+            "payload":"กลุ่ม : หัวข้อ 5",
           },
           {
             "title":"ย้อนกลับสอบถาม",
