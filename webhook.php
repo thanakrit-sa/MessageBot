@@ -285,18 +285,8 @@ if ($message != null) {
         "id":"' . $sender . '"
       },
       "message":{
-        "attachment": {
-          "type": "template",
-          "payload": {
-             "template_type": "media",
-             "elements": [
-                {
-                   "media_type": "image",
-                   "url": "https://s3-ap-southeast-1.amazonaws.com/img-in-th/e795977e4a5a3626526fe96c6f02b561.png"
-                }
-             ]
-          }
-        }    
+        "text":"ท่านสามารถเลือกหัวข้อที่ต้องการจะสอบถามได้ โดยมีหัวข้อดังนี้ \r\n \r\nหัวข้อที่ 1 ฝาก-ถอนไม่สำเร็จ \r\nหัวข้อที่ 2 เช็คว่าเคยสมัครไปรึยัง \r\nหัวข้อที่ 3 ลืมชื่อผู้ใช้-รหัสผ่าน \r\n \r\nเลือกตัวข้อโดยการคลิกที่แถบเมนูด้านล่าง",
+
       }
     }';
   }
