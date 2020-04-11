@@ -322,20 +322,10 @@ if ($message != null) {
                    "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739975403170",
                    "buttons": [
                     {
-                       "title": "ย้อนกลับ",
+                       "title": "ย้อนกลับโปรโมชั่น",
                        "type": "postback",
-                       "payload": "ย้อนกลับ",
-                    },
-                    {
-                      "title": "เมนูหลัก",
-                      "type": "postback",
-                      "payload": "เมนูหลัก",
-                   },
-                   {
-                    "title": "สมัคร",
-                    "type": "postback",
-                    "payload": "สมัคร",
-                 }
+                       "payload": "ย้อนกลับโปรโมชั่น",
+                    }
                   ]
                 }
              ]
@@ -516,7 +506,40 @@ if ($messagePayload != null) {
         ]
       }
     }';
-  } else {
+  } else if ($messagePayload == "ย้อนกลับโปรโมชั่น") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message": {
+        "text":"ท่านสามารถเลือกหัวข้อที่ต้องการจะสอบถามได้ โดยมีหัวข้อดังนี้ \r\n \r\nหัวข้อที่ 1 โปรโมชั่นของแถม \r\nหัวข้อที่ 2 โปรโมชั่น 18+ \r\n \r\nเลือกตัวข้อโดยการคลิกที่แถบเมนูด้านล่าง",
+        "quick_replies":[
+          {
+            "content_type":"text",
+            "title":"โปรโมชั่น : หัวข้อ 1",
+            "payload":"โปรโมชั่น : หัวข้อ 1",
+          },
+          {
+            "content_type":"text",
+            "title":"โปรโมชั่น : หัวข้อ 2",
+            "payload":"โปรโมชั่น : หัวข้อ 2",
+          },
+          {
+            "title":"ย้อนกลับสอบถาม",
+            "content_type":"text",
+            "payload": "ย้อนกลับสอบถาม",
+          },
+          {
+            "content_type":"text",
+            "title":"เมนูหลัก",
+            "payload":"เมนูหลัก",
+          }
+        ]
+      }
+    }';
+  }
+  
+  else {
     $jsonData = '{
     "recipient":{
       "id":"' . $sender . '"
