@@ -291,7 +291,7 @@ if ($message != null) {
              "template_type": "media",
              "elements": [
                 {
-                   "media_type": "<image|video>",
+                   "media_type": "image",
                    "url": "https://s3-ap-southeast-1.amazonaws.com/img-in-th/e795977e4a5a3626526fe96c6f02b561.png"
                 }
              ]
