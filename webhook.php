@@ -60,13 +60,13 @@ if ($message != null) {
         "quick_replies":[
           {
             "content_type":"text",
-            "title":"โปรโมชั่น:หัวข้อ 1",
-            "payload":"โปรโมชั่น",
+            "title":"โปรโมชั่น : หัวข้อ 1",
+            "payload":"โปรโมชั่น : หัวข้อ 1",
           },
           {
             "content_type":"text",
-            "title":"โปรโมชั่น:หัวข้อ 2",
-            "payload":"กลุ่ม/สูตร",
+            "title":"โปรโมชั่น : หัวข้อ 2",
+            "payload":"โปรโมชั่น : หัวข้อ 2",
           },
           {
             "title":"ย้อนกลับสอบถาม",
