@@ -446,7 +446,7 @@ if ($messagePayload != null) {
           "type":"template",
           "payload":{
             "template_type":"button",
-            "text":"ท่านสามารถเลือกหัวข้อที่ต้องการจะสอบถามได้จากแถบเมนูด้านล่าง",
+            "text":"ท่านสามารถเลือกหัวข้อที่ต้องการสอบถามได้จากแถบเมนูด้านล่าง",
             "buttons":[
               {
                 "title":"ย้อนกลับ",
@@ -461,6 +461,22 @@ if ($messagePayload != null) {
             ]
           }
         }
+      },
+      "message":{
+        "text": "Pick a color:",
+        "quick_replies":[
+          {
+            "content_type":"text",
+            "title":"Red",
+            "payload":"<POSTBACK_PAYLOAD>",
+            "image_url":"http://example.com/img/red.png"
+          },{
+            "content_type":"text",
+            "title":"Green",
+            "payload":"<POSTBACK_PAYLOAD>",
+            "image_url":"http://example.com/img/green.png"
+          }
+        ]
       }
     }';
   } else {
