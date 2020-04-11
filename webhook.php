@@ -89,7 +89,7 @@ if ($message != null) {
         ]
       }
     }';
-  } else if ($message == "โปรโมชั่น" || $message == "ย้อนกลับโปรโมชั่น") {
+  } else if ($message == "โปรโมชั่น") {
     $jsonData = '{
       "recipient":{
         "id":"' . $sender . '"
@@ -322,9 +322,9 @@ if ($message != null) {
                    "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739975403170",
                    "buttons": [
                     {
+                       "title": "ย้อนกลับโปรโมชั่น",
                        "type": "postback",
                        "payload": "ย้อนกลับโปรโมชั่น",
-                       "title": "ย้อนกลับโปรโมชั่น",
                     }
                   ]
                 }
