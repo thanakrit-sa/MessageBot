@@ -321,10 +321,10 @@ $url = "https://graph.facebook.com/v2.6/me/messages?access_token=EAADSvg5yW7UBAG
 
 $ch = curl_init($url);
 
+// ----------------------------------------------------------------------------------------------------------------------------- Message
 
 if ($message != null) {
   if ($message == "ติดต่อ") {
-    
   } else {
     $jsonData = '{
                 "recipient":{
@@ -362,9 +362,13 @@ if ($message != null) {
                   }';
   }
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------- Message
+// ----------------------------------------------------------------------------------------------------------------------------- Payload
+
 if ($messagePayload != null) {
-if ($messagePayload == "สมัครสมาชิก") {
-  $jsonData = '{
+  if ($messagePayload == "สมัครสมาชิก") {
+    $jsonData = '{
     "recipient":{
       "id":"' . $sender . '"
     },
@@ -432,43 +436,18 @@ if ($messagePayload == "สมัครสมาชิก") {
                 }
               }
             }';
-} else if ($messagePayload == "สอบถาม") {
-  $jsonData = '{
-    "recipient":{
-      "id":"' . $sender . '"
-    },
-    "message":{
-      "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"generic",
-          "elements":[
-            {
-              "title":"เกิดเงื่อนไข 😍",
-              "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
-              "buttons":[
-                {
-                  "type":"postback",
-                  "title":"สอบถาม",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                },{
-                  "type":"postback",
-                  "title":"สมัครสมาชิก",
-                  "payload":"DEVELOPER_DEFINED_PAYLOAD"
-                },{
-                  "type":"postback",
-                  "title":"ติดต่อ",
-                  "payload":"ติดต่อ"
-                }          
-                ]      
-              }
-              ]
-            }
-          }
-        }
-      }';
-} else {
-  $jsonData = '{
+  } else if ($messagePayload == "สอบถาม") {
+    $jsonData = '{
+      "messaging_type": "text",
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+      "text":"hello, world!"
+      }
+    }';
+  } else {
+    $jsonData = '{
     "recipient":{
       "id":"' . $sender . '"
     },
@@ -502,9 +481,11 @@ if ($messagePayload == "สมัครสมาชิก") {
           }
         }
       }';
+  }
 }
-}
-  
+
+// ----------------------------------------------------------------------------------------------------------------------------- Payload
+
 
 
 
@@ -522,12 +503,9 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $Data);
 curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
 
 
-  $result = curl_exec($ch);
+$result = curl_exec($ch);
 
 
 
 
 echo "hi";
-
-
-
