@@ -465,7 +465,18 @@ if ($messagePayload != null) {
                         "payload":"โปรโมชั้นที่ 4"
                       }
                       ]      
-                    }
+                    },
+                    {
+                      
+                      "buttons":[
+                        {
+                          "title":"โปรโมชั้นที่ 4",
+                          "type":"postback",
+                          "payload":"โปรโมชั้นที่ 4"
+                        }
+                        ]      
+                      }
+                    
                     
                     ]
                   }
