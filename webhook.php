@@ -372,8 +372,7 @@ if ($messagePayload != null) {
     "recipient":{
       "id":"' . $sender . '"
     },
-    "message":{
-      "text": "Pick a color:",
+    "text": "Pick a color:",
         "quick_replies":[
           {
             "content_type":"text",
@@ -387,6 +386,8 @@ if ($messagePayload != null) {
            
           }
         ],
+    "message":{
+      
       "attachment":{
         "type":"template",
         "payload":{
