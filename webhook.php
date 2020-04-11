@@ -376,7 +376,7 @@ if ($messagePayload == "สมัครสมาชิก") {
           "elements":[
             {
               "title":"Promotion 1",
-              "image_url":"https://www.mx7.com/view2/C3V94Q1Yej3cOyd7",
+              "image_url":"https://s3-ap-southeast-1.amazonaws.com/img-in-th/28cab9e87d7572552829c7a040c51775.png",
               "subtitle":"Click Promotion 1 To Continue.",
               
               "buttons":[
