@@ -478,7 +478,7 @@ if ($messagePayload != null) {
                     {
                       "title":"Copa69 ขอบคุณค่ะ.",
                       "image_url":"https://s3-ap-southeast-1.amazonaws.com/img-in-th/e795977e4a5a3626526fe96c6f02b561.png",
-                      "ท่านสามารถเลือกเมนูที่ต้องการได้",
+                      "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้",
                       "buttons":[
                         {
                           "title":"เมนูหลัก",
