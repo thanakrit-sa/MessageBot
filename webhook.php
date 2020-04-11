@@ -435,21 +435,9 @@ if ($messagePayload != null) {
                     
                     ]
                   }
-                },
-                "text": "Pick a color:",
-        "quick_replies":[
-          {
-            "content_type":"text",
-            "title":"Red",
-            "payload":"<POSTBACK_PAYLOAD>",
-            
-          },{
-            "content_type":"text",
-            "title":"Green",
-            "payload":"<POSTBACK_PAYLOAD>",
-           
-          }
-        ]
+                }
+                
+       
               }
             }';
   } else if ($messagePayload == "สอบถาม") {
@@ -475,22 +463,22 @@ if ($messagePayload != null) {
                 "payload":"เมนูหลัก"
               }
             ]
-          }
-        },
-        "text": "Pick a color:",
-        "quick_replies":[
-          {
-            "content_type":"text",
-            "title":"Red",
-            "payload":"<POSTBACK_PAYLOAD>",
-            
-          },{
-            "content_type":"text",
-            "title":"Green",
-            "payload":"<POSTBACK_PAYLOAD>",
-           
-          }
-        ]
+          },
+          "quick_replies":[
+            {
+              "content_type":"text",
+              "title":"Red",
+              "payload":"<POSTBACK_PAYLOAD>",
+              
+            },{
+              "content_type":"text",
+              "title":"Green",
+              "payload":"<POSTBACK_PAYLOAD>",
+             
+            }
+          ]
+        }
+        
       }
      
     }';
