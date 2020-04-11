@@ -435,8 +435,21 @@ if ($messagePayload != null) {
                     
                     ]
                   }
-                }
-                
+                },
+                "text": "Pick a color:",
+        "quick_replies":[
+          {
+            "content_type":"text",
+            "title":"Red",
+            "payload":"<POSTBACK_PAYLOAD>",
+            
+          },{
+            "content_type":"text",
+            "title":"Green",
+            "payload":"<POSTBACK_PAYLOAD>",
+           
+          }
+        ]
        
               }
             }';
@@ -467,20 +480,7 @@ if ($messagePayload != null) {
           }
           
         }
-        "text": "Pick a color:",
-        "quick_replies":[
-          {
-            "content_type":"text",
-            "title":"Red",
-            "payload":"<POSTBACK_PAYLOAD>",
-            
-          },{
-            "content_type":"text",
-            "title":"Green",
-            "payload":"<POSTBACK_PAYLOAD>",
-           
-          }
-        ]
+        
       }
      
     }';
