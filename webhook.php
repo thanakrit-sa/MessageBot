@@ -468,11 +468,15 @@ if ($messagePayload != null) {
                     },
                     {
                       "title":"โปรโมชั้นที่ 4",
-                      
+                      "subtitle":"สมัครสมาชิก 200 รับโบนัส 30%",
                       
                       
                       "buttons":[
                         {
+                          "title":"โปรโมชั้นที่ 4",
+                          "type":"postback",
+                          "payload":"โปรโมชั้นที่ 4"
+                        },{
                           "title":"โปรโมชั้นที่ 4",
                           "type":"postback",
                           "payload":"โปรโมชั้นที่ 4"
