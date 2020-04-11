@@ -322,10 +322,20 @@ if ($message != null) {
                    "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739975403170",
                    "buttons": [
                     {
-                       "title": "ย้อนกลับโปรโมชั่น",
+                       "title": "ย้อนกลับ",
                        "type": "postback",
-                       "payload": "ย้อนกลับโปรโมชั่น",
-                    }
+                       "payload": "ย้อนกลับ",
+                    },
+                    {
+                      "title": "เมนูหลัก",
+                      "type": "postback",
+                      "payload": "เมนูหลัก",
+                   }
+                   {
+                    "title": "สมัคร",
+                    "type": "postback",
+                    "payload": "สมัคร",
+                 }
                   ]
                 }
              ]
