@@ -324,26 +324,7 @@ $ch = curl_init($url);
 // ----------------------------------------------------------------------------------------------------------------------------- Message
 
 if ($message != null) {
-  if ($message == "สอบถาม") {
-    $jsonData = '{
-      "recipient":{
-        "id":"' . $sender . '"
-      },
-      "message":{
-        "text": "ท่านสามารถเลือกหัวข้อที่ต้องการสอบถามได้จากแถบเมนูด้านล่าง",
-        "quick_replies":[
-          {
-            "content_type":"text",
-            "title":"โปรโมชั่น",
-            "payload":"โปรโมชั่น",
-          },{
-            "content_type":"text",
-            "title":"Green",
-            "payload":"<POSTBACK_PAYLOAD>",
-          }
-        ]
-      }
-    }';
+  if ($message == "ติดต่อ") {
   } else {
     $jsonData = '{
                 "recipient":{
@@ -361,15 +342,15 @@ if ($message != null) {
                           "buttons":[
                             {
                               "title":"สอบถาม",
-                              "content_type":"text",
+                              "type":"postback",
                               "payload":"สอบถาม"
                             },{
                               "title":"สมัครสมาชิก",
-                              "content_type":"text",
+                              "type":"postback",
                               "payload":"สมัครสมาชิก"
                             },{
                               "title":"ติดต่อ",
-                              "content_type":"text",
+                              "type":"postback",
                               "payload":"ติดต่อ"
                             }          
                             ]      
@@ -457,6 +438,26 @@ if ($messagePayload != null) {
                 }
               }
             }';
+  } else if ($messagePayload == "สอบถาม") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "text": "ท่านสามารถเลือกหัวข้อที่ต้องการสอบถามได้จากแถบเมนูด้านล่าง",
+        "quick_replies":[
+          {
+            "title":"โปรโมชั่น",
+            "type":"postback",
+            "payload":"โปรโมชั่น",
+          },{
+            "title":"Green",
+            "type":"postback",
+            "payload":"<POSTBACK_PAYLOAD>",
+          }
+        ]
+      }
+    }';
   } else {
     $jsonData = '{
     "recipient":{
@@ -474,15 +475,15 @@ if ($messagePayload != null) {
               "buttons":[
                 {
                   "title":"สอบถาม",
-                  "content_type":"text",
+                  "type":"postback",
                   "payload":"สอบถาม"
                 },{
                   "title":"สมัครสมาชิก",
-                  "content_type":"text",
+                  "type":"postback",
                   "payload":"สมัครสมาชิก"
                 },{
                   "title":"ติดต่อ",
-                  "content_type":"text",
+                  "type":"postback",
                   "payload":"ติดต่อ"
                 }          
                 ]      
