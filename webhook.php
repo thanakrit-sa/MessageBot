@@ -60,23 +60,23 @@ if ($message != null) {
         "quick_replies":[
           {
             "content_type":"text",
-            "title":"โปรโมชั่น",
+            "title":"โปรโมชั่น:หัวข้อ 1",
             "payload":"โปรโมชั่น",
           },
           {
             "content_type":"text",
-            "title":"กลุ่ม/สูตร",
+            "title":"โปรโมชั่น:หัวข้อ 2",
             "payload":"กลุ่ม/สูตร",
           },
           {
-            "title":"เว็บไซต์",
+            "title":"ย้อนกลับสอบถาม",
             "content_type":"text",
-            "payload":เว็บไซต์jbnjnm,nnm,
+            "payload": "ย้อนกลับสอบถาม",
           },
           {
             "content_type":"text",
-            "title":"สอบถามเพิ่มเติม",
-            "payload":"สอบถามเพิ่มเติม",
+            "title":"เมนูหลัก",
+            "payload":"เมนูหลัก",
           }
         ]
       }
