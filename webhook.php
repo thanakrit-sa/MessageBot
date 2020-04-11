@@ -443,7 +443,7 @@ if ($messagePayload != null) {
       "recipient":{
         "id":"' . $sender . '"
       },
-      "message":[
+      "message":{
         "attachment":{
           "type":"template",
           "payload":{
@@ -466,7 +466,7 @@ if ($messagePayload != null) {
           
         }
         
-      ]
+      }
      
     }';
   } else {
