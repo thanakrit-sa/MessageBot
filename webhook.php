@@ -333,6 +333,39 @@ if ($message != null) {
         }    
       }
     }';
+  } else if ($message == "กลุ่ม : หัวข้อ 1") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"button",
+            "text":"สูตรโกงบาคาร่า \r\n \r\n --------------------------- \r\n \r\n -แจ้งชื่อผู้ใช้งานและสลิปการโอนเงิน",
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.google.com",
+                "title":"ย้อนกลับกลุ่ม"
+              },
+              {
+                "type":"postback",
+                "payload":"ย้อนกลับกลุ่ม",
+                "title":"ย้อนกลับกลุ่ม"
+              },
+              {
+                "type":"postback",
+                "payload":"เมนูหลัก",
+                "title":"เมนูหลัก"
+              },
+              
+            ]
+          }
+        }
+      }
+    }';
   }
   
   
