@@ -446,7 +446,24 @@ if ($messagePayload != null) {
         "id":"' . $sender . '"
       },
       "message":{
-        "text": "Pick a color:",
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"button",
+            "text":"ท่านสามารถเลือกหัวข้อที่ต้องการสอบถามได้จากแถบเมนูด้านล่าง",
+            "buttons":[
+              {
+                "title":"ย้อนกลับ",
+                "type":"postback",
+                "payload":"ย้อนกลับ"
+              },
+              {
+                "title":"เมนูหลัก",
+                "type":"postback",
+                "payload":"เมนูหลัก"
+              }
+            ],
+            "text": "Pick a color:",
         "quick_replies":[
           {
             "content_type":"text",
@@ -460,6 +477,10 @@ if ($messagePayload != null) {
            
           }
         ]
+          }
+          
+        }
+        
       }
      
     }';
