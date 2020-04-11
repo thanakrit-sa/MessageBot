@@ -463,7 +463,7 @@ if ($messagePayload != null) {
                 "payload":"เมนูหลัก"
               }
             ],
-            "text": "Pick a color:",
+            
         "quick_replies":[
           {
             "content_type":"text",
