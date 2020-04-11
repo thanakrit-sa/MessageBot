@@ -330,7 +330,7 @@ if ($message != null) {
                       "title": "เมนูหลัก",
                       "type": "postback",
                       "payload": "เมนูหลัก",
-                   }
+                   },
                    {
                     "title": "สมัคร",
                     "type": "postback",
