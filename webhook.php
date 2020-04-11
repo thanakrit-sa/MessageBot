@@ -432,11 +432,8 @@ if ($messagePayload != null) {
                     },
                     
                     ]
-                  }
-                },
-              
-              
-                "text": "Pick a color:",
+                  },
+                  "text": "Pick a color:",
                 "quick_replies":[
                   {
                     "content_type":"text",
@@ -450,6 +447,10 @@ if ($messagePayload != null) {
                     "image_url":"http://example.com/img/green.png"
                   }
                 ]
+                }
+              
+              
+                
                 }
             }';
   } else if ($messagePayload == "สอบถาม") {
