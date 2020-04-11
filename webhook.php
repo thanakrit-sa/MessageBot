@@ -436,25 +436,25 @@ if ($messagePayload != null) {
                     ]
                   }
                 },
-               
-       
-              },
-              "message":{
                 "text": "Pick a color:",
-        "quick_replies":[
-          {
-            "content_type":"text",
-            "title":"Red",
-            "payload":"<POSTBACK_PAYLOAD>",
-            
-          },{
-            "content_type":"text",
-            "title":"Green",
-            "payload":"<POSTBACK_PAYLOAD>",
-           
-          }
-        ]
+                "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Red",
+                    "payload":"<POSTBACK_PAYLOAD>",
+                    
+                  },{
+                    "content_type":"text",
+                    "title":"Green",
+                    "payload":"<POSTBACK_PAYLOAD>",
+                   
+                  }
+                ]
+       
               }
+              
+                
+              
             }';
   } else if ($messagePayload == "สอบถาม") {
     $jsonData = '{
@@ -543,10 +543,8 @@ curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $Data);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
 
-if (!empty($input['entry'][0]['messaging'][0]['message'])) {
-  $result = curl_exec($ch);
-}
 
+$result = curl_exec($ch);
 
 
 
