@@ -429,30 +429,12 @@ if ($messagePayload != null) {
                         "payload":"โปรโมชั้นที่ 4"
                       }
                       ]      
-                    },
+                    }
                     
-                  ],
-                  
-                  "text": "Pick a color:",
-                "quick_replies":[
-                  {
-                    "content_type":"text",
-                    "title":"Red",
-                    "payload":"<POSTBACK_PAYLOAD>",
-                    "image_url":"http://example.com/img/red.png"
-                  },{
-                    "content_type":"text",
-                    "title":"Green",
-                    "payload":"<POSTBACK_PAYLOAD>",
-                    "image_url":"http://example.com/img/green.png"
+                    ]
                   }
-                ]
                 }
-                }
-              
-              
-                
-                }
+              }
             }';
   } else if ($messagePayload == "สอบถาม") {
     $jsonData = '{
@@ -478,24 +460,23 @@ if ($messagePayload != null) {
               }
             ]
           }
-        }
-      },
-      "message":{
-    "text": "Pick a color:",
-    "quick_replies":[
-      {
-        "content_type":"text",
-        "title":"Red",
-        "payload":"<POSTBACK_PAYLOAD>",
-        "image_url":"http://example.com/img/red.png"
-      },{
-        "content_type":"text",
-        "title":"Green",
-        "payload":"<POSTBACK_PAYLOAD>",
-        "image_url":"http://example.com/img/green.png"
+        },
+        "text": "Pick a color:",
+        "quick_replies":[
+          {
+            "content_type":"text",
+            "title":"Red",
+            "payload":"<POSTBACK_PAYLOAD>",
+            
+          },{
+            "content_type":"text",
+            "title":"Green",
+            "payload":"<POSTBACK_PAYLOAD>",
+           
+          }
+        ]
       }
-    ]
-  }
+     
     }';
   } else {
     $jsonData = '{
