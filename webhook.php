@@ -27,7 +27,7 @@ if ($message != null) {
               {
                 "title":"Copa69 สวัสดีค่ะ 😍",
                 "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
-                "image_url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739975403170",
+                "image_url": "https://s3-ap-southeast-1.amazonaws.com/img-in-th/64a5b3e6892e88806b37e231a627ddb2.jpg",
                 "buttons":[
                   {
                     "title":"สอบถาม",
