@@ -56,7 +56,7 @@ if ($message != null) {
         "id":"' . $sender . '"
       },
       "message": {
-        "text":"dsnfndsfnds"
+        "text":"ท่านสามารถเลือกหัวข้อที่ต้องการจะสอบถามได้"
       }
     }';
   }
