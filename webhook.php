@@ -71,7 +71,7 @@ if ($message != null) {
           {
             "content_type":"text",
             "title":"เว็บไซต์",
-            "text":"เว็บไซต์sdasdfasf",
+            "payload":"เว็บไซต์",
           },
           {
             "content_type":"text",
