@@ -375,54 +375,54 @@ if ($messagePayload == "สมัครสมาชิก") {
           "template_type":"generic",
           "elements":[
             {
-              "title":"Promotion 1",
+              "title":"โปรโมชั้นที่ 1",
               "image_url":"https://s3-ap-southeast-1.amazonaws.com/img-in-th/28cab9e87d7572552829c7a040c51775.png",
-              "subtitle":"Click Promotion 1 To Continue.",
+              "subtitle":"สมัครสมาชิก 1,000 รับฟรี Podไฟฟ้า หรือ หูฟังAirdots",
               
               "buttons":[
                 {
-                  "title":"Promotion 1",
+                  "title":"โปรโมชั้นที่ 1",
                   "type":"postback",
-                  "payload":"Promotion 1"
+                  "payload":"โปรโมชั้นที่ 1"
                 }
                 ]      
               },
               {
-                "title":"Promotion 2",
+                "title":"โปรโมชั้นที่ 2",
                 "image_url":"https://s3-ap-southeast-1.amazonaws.com/img-in-th/3fff3da2a574c47dd4941b379a784617.png",
-                "subtitle":"Click Promotion 2 To Continue.",
+                "subtitle":"สมัครสมาชิก 500 รับฟรี เสื้อฮู้ด หรือ หูฟัง P47 Wireless Headphones",
                 
                 "buttons":[
                   {
-                    "title":"Promotion 2",
+                    "title":"โปรโมชั้นที่ 2",
                     "type":"postback",
                     "payload":"Promotion 2"
                   }
                   ]      
                 },
                 {
-                  "title":"Promotion 3",
+                  "title":"โปรโมชั้นที่ 3",
                   "image_url":"https://s3-ap-southeast-1.amazonaws.com/img-in-th/cc2d248baeeff43c3360294536a184a4.png",
-                  "subtitle":"Click Promotion 3 To Continue.",
+                  "subtitle":"สมัครสมาชิก 300 รับฟรี หูฟังบลูทูธ",
                   
                   "buttons":[
                     {
+                      "title":"โปรโมชั้นที่ 3",
                       "type":"postback",
-                      "title":"Promotion 3",
-                      "payload":"CAT_PHP_PAYLOAD"
+                      "payload":"โปรโมชั้นที่ 3"
                     }
                     ]      
                   },
                   {
-                    "title":"Promotion 4",
+                    "title":"โปรโมชั้นที่ 4",
                     "image_url":"https://s3-ap-southeast-1.amazonaws.com/img-in-th/ea0d45cc0e20adaf953227cb74bb4ece.png",
-                    "subtitle":"Click Promotion 4 To Continue.",
+                    "subtitle":"สมัครสมาชิก 200 รับโบนัส 30%",
                     
                     "buttons":[
                       {
+                        "title":"โปรโมชั้นที่ 4",
                         "type":"postback",
-                        "title":"Promotion 4",
-                        "payload":"Promotion 4"
+                        "payload":"โปรโมชั้นที่ 4"
                       }
                       ]      
                     },
