@@ -291,6 +291,7 @@ if ($message != null) {
              "template_type": "media",
              "elements": [
                 {
+                   "text":"dsvsdsdgdfsf",
                    "media_type": "image",
                    "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739902069844",
                    "buttons": [
@@ -322,14 +323,19 @@ if ($message != null) {
              "template_type": "media",
              "elements": [
                 {
+                   "text":"dsvsdsdgdfsf",
                    "media_type": "image",
                    "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739975403170",
                    "buttons": [
                     {
-                      "title": "ย้อนกลับโปรโมชั่น",
-                      "type": "postback",
-                      "payload": "ย้อนกลับโปรโมชั่น",
-                    } 
+                      "title":"ย้อนกลับโปรโมชั่น",
+                      "type":"postback",
+                      "payload":"ย้อนกลับโปรโมชั่น"
+                    },{
+                      "title":"กลับเมนูหลัก",
+                      "type":"postback",
+                      "payload":"กลับเมนูหลัก"
+                    }
                   ]
                 }
               ]
