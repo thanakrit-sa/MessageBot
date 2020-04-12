@@ -627,34 +627,34 @@ if ($messagePayload != null) {
       "id":"' . $sender . '"
     },
     "message":{
-      "attachment":{
-        "type":"template",
-        "payload":{
-          "template_type":"generic",
-          "elements":[
-            {
-              "title":"Copa69 สวัสดีค่ะ 😍",
-              "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
-              "buttons":[
-                {
-                  "title":"สอบถาม",
-                  "type":"postback",
-                  "payload":"สอบถาม"
-                },{
-                  "title":"สมัครสมาชิก",
-                  "type":"postback",
-                  "payload":"สมัครสมาชิก"
-                },{
-                  "title":"ติดต่อ",
-                  "type":"postback",
-                  "payload":"ติดต่อ"
-                }          
-                ]      
+      "attachment": {
+        "type": "template",
+        "payload": {
+           "template_type": "media",
+           "elements": [
+              {
+                 "media_type": "image",
+                 "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739975403170",
+                 "buttons":[
+                  {
+                    "title":"สอบถาม",
+                    "type":"postback",
+                    "payload":"สอบถาม"
+                  },{
+                    "title":"สมัครสมาชิก",
+                    "type":"postback",
+                    "payload":"สมัครสมาชิก"
+                  },{
+                    "title":"ติดต่อ",
+                    "type":"postback",
+                    "payload":"ติดต่อ"
+                  }          
+                  ]
               }
-              ]
-            }
-          }
+            ]
         }
+      }    
+    }
       }';
   }
 }
