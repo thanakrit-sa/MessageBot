@@ -27,24 +27,21 @@ if ($message != null) {
                 {
                    "media_type": "image",
                    "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739975403170",
-                   "buttons": [
+                   "buttons":[
                     {
-                       "type": "web_url",
-                       "url": "http://www.google.com",
-                       "title": "View Website \r\n d",
-                    },
-                    {
-                      "type": "web_url",
-                      "text-align": "center",
-                      "url": "http://www.google.com",
-                      "title": "View Website",
-                   },
-                   {
-                    "type": "web_url",
-                    "url": "http://www.google.com",
-                    "title": "View Website",
-                 }
-                 ]
+                      "title":"สอบถาม",
+                      "type":"postback",
+                      "payload":"สอบถาม"
+                    },{
+                      "title":"สมัครสมาชิก",
+                      "type":"postback",
+                      "payload":"สมัครสมาชิก"
+                    },{
+                      "title":"ติดต่อ",
+                      "type":"postback",
+                      "payload":"ติดต่อ"
+                    }          
+                    ]
                 }
               ]
           }
