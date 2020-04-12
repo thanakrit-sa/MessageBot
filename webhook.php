@@ -520,8 +520,8 @@ if ($message != null) {
             "buttons":[
               {
                 "type":"postback",
-                "payload":"ย้อนกลับเว็บไซต๋์",
-                "title":"ย้อนกลับเว็บไซต๋์"
+                "payload":"ย้อนกลับเว็บไซต์",
+                "title":"ย้อนกลับเว็บไซต์"
               },
               {
                 "type":"postback",
