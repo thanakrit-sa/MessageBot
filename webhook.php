@@ -295,18 +295,14 @@ if ($message != null) {
                    "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739902069844",
                    "buttons": [
                     {
-                      "title":"ย้อนกลับโปรโมชั่น",
+                      "title":"โปรโมชั่น",
                       "type":"postback",
-                      "payload":"ย้อนกลับโปรโมชั่น"
+                      "payload":"โปรโมชั่น"
                     },{
                       "title":"เมนูหลัก",
                       "type":"postback",
                       "payload":"เมนูหลัก"
-                    },{
-                      "title":"สมัคร",
-                      "type":"postback",
-                      "payload":"สมัคร"
-                    } 
+                    }
                   ]
                 }
              ]
