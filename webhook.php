@@ -32,7 +32,17 @@ if ($message != null) {
                        "type": "web_url",
                        "url": "http://www.google.com",
                        "title": "View Website",
-                    }
+                    },
+                    {
+                      "type": "web_url",
+                      "url": "http://www.google.com",
+                      "title": "View Website",
+                   },
+                   {
+                    "type": "web_url",
+                    "url": "http://www.google.com",
+                    "title": "View Website",
+                 }
                  ]
                 }
               ]
