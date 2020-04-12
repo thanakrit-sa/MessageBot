@@ -299,9 +299,9 @@ if ($message != null) {
                       "type":"postback",
                       "payload":"ย้อนกลับโปรโมชั่น"
                     },{
-                      "title":"ย้อนกลับเมนูหลัก",
+                      "title":"กลับเมนูหลัก",
                       "type":"postback",
-                      "payload":"ย้อนกลับเมนูหลัก"
+                      "payload":"กลับเมนูหลัก"
                     }
                   ]
                 }
