@@ -30,7 +30,7 @@ if ($message != null) {
                    "buttons": [
                     {
                        "type": "web_url",
-                       "url": "<WEB_URL>",
+                       "url": "http://www.google.com",
                        "title": "View Website",
                     }
                  ]
