@@ -295,9 +295,9 @@ if ($message != null) {
                    "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739902069844",
                    "buttons": [
                     {
-                      "title":"โปรโมชั่น",
+                      "title":"ย้อนกลับโปรโมชั่น",
                       "type":"postback",
-                      "payload":"โปรโมชั่น"
+                      "payload":"ย้อนกลับโปรโมชั่น"
                     },{
                       "title":"เมนูหลัก",
                       "type":"postback",
