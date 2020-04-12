@@ -35,6 +35,7 @@ if ($message != null) {
                     },
                     {
                       "type": "web_url",
+                      "text-align": "center",
                       "url": "http://www.google.com",
                       "title": "View Website",
                    },
