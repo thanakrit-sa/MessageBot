@@ -595,6 +595,128 @@ if ($message != null) {
         }
       }
     }';
+  } else if ($message == "เพิ่มเติม : หัวข้อ 2") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"button",
+            "text":"ฝาถอนขั้นต่ำเท่าไหร่ \r\n \r\n - ฝากถอนขั้นต่ำ 100 ค่ะ \r\n _____________________________ ",
+            "buttons":[
+              {
+                "type":"postback",
+                "payload":"ย้อนกลับเพิ่มเติม",
+                "title":"ย้อนกลับเพิ่มเติม"
+              },
+              {
+                "type":"postback",
+                "payload":"เมนูหลัก",
+                "title":"เมนูหลัก"
+              },
+              
+            ]
+          }
+        }
+      }
+    }';
+  } else if ($message == "เพิ่มเติม : หัวข้อ 3") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"button",
+            "text":"ถอนกี่ครั้งต่อวัน \r\n \r\n - ไม่จำกัดจำนวนค่ะ \r\n _____________________________ ",
+            "buttons":[
+              {
+                "type":"postback",
+                "payload":"ย้อนกลับเพิ่มเติม",
+                "title":"ย้อนกลับเพิ่มเติม"
+              },
+              {
+                "type":"postback",
+                "payload":"เมนูหลัก",
+                "title":"เมนูหลัก"
+              },
+              
+            ]
+          }
+        }
+      }
+    }';
+  } else if ($message == "เพิ่มเติม : หัวข้อ 4") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"button",
+            "text":"วิธีฝากเงิน \r\n \r\n - วิธีฝากเงินคลิกลิ้งได้เลยค่ะ \r\n _____________________________ ",
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.google.com",
+                "title":"วิธีฝากเงิน"
+              },
+              {
+                "type":"postback",
+                "payload":"ย้อนกลับเพิ่มเติม",
+                "title":"ย้อนกลับเพิ่มเติม"
+              },
+              {
+                "type":"postback",
+                "payload":"เมนูหลัก",
+                "title":"เมนูหลัก"
+              },
+              
+            ]
+          }
+        }
+      }
+    }';
+  } else if ($message == "เพิ่มเติม : หัวข้อ 5") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"button",
+            "text":"วิธีถอนเงิน \r\n \r\n - วิธีถอนเงินคลิกลิ้งได้เลยค่ะ \r\n _____________________________ ",
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.google.com",
+                "title":"วิธีฝากเงิน"
+              },
+              {
+                "type":"postback",
+                "payload":"ย้อนกลับเพิ่มเติม",
+                "title":"ย้อนกลับเพิ่มเติม"
+              },
+              {
+                "type":"postback",
+                "payload":"เมนูหลัก",
+                "title":"เมนูหลัก"
+              },
+              
+            ]
+          }
+        }
+      }
+    }';
   }
   
   
