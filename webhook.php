@@ -534,6 +534,39 @@ if ($message != null) {
         }
       }
     }';
+  } else if ($message == "เว็บ : หัวข้อ 2") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"button",
+            "text":"วิธีเข้าหน้าเว็บ \r\n \r\n - วิธีเข้าหน้าเว็บคลิกลิ้งได้เลยค่ะ \r\n _____________________________ ",
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.google.com",
+                "title":"เข้าสู่เว็บไซต์"
+              },
+              {
+                "type":"postback",
+                "payload":"ย้อนกลับเว็บไซต์",
+                "title":"ย้อนกลับเว็บไซต์"
+              },
+              {
+                "type":"postback",
+                "payload":"เมนูหลัก",
+                "title":"เมนูหลัก"
+              },
+              
+            ]
+          }
+        }
+      }
+    }';
   }
   
   
