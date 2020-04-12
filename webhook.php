@@ -28,8 +28,7 @@ if ($message != null) {
                    "media_type": "image",
                    "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739975403170",
                    "buttons":[
-                    {
-                      "title":"สอบถาม",
+                    {"title":"สอบถาม",
                       "type":"postback",
                       "payload":"สอบถาม"
                     },{
