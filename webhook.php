@@ -780,7 +780,7 @@ if ($message != null) {
                 url: "https://www.google.com",
                 title: "Set preferences",
                 webview_height_ratio: "compact",
-                messenger_extensions: true
+                messenger_extensions: false
               },
               {
                 "type":"postback",
