@@ -777,7 +777,7 @@ if ($message != null) {
             "buttons":[
               {
                 type: "web_url",
-                url: "https://www.google.com",
+                url: "https://www.google.com/",
                 title: "Set preferences",
                 webview_height_ratio: "compact",
                 messenger_extensions: false
