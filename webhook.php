@@ -28,7 +28,8 @@ if ($message != null) {
                    "media_type": "image",
                    "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739975403170",
                    "buttons":[
-                    {"title":"สอบถาม",
+                    {
+                      "title":"สอบถาม",
                       "type":"postback",
                       "payload":"สอบถาม"
                     },{
@@ -294,9 +295,13 @@ if ($message != null) {
                    "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739902069844",
                    "buttons": [
                     {
-                       "type": "postback",
-                       "payload": "ย้อนกลับโปรโมชั่น",
-                       "title": "ย้อนกลับโปรโมชั่น",
+                      "title":"สอบถาม",
+                      "type":"postback",
+                      "payload":"สอบถาม"
+                    },{
+                      "title":"สมัครสมาชิก",
+                      "type":"postback",
+                      "payload":"สมัครสมาชิก"
                     }
                   ]
                 }
@@ -319,15 +324,13 @@ if ($message != null) {
                 {
                    "media_type": "image",
                    "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739975403170",
-                   
-                }
-                
-              ],
-              "buttons": [
-                {
-                   "title": "ย้อนกลับโปรโมชั่น",
-                   "type": "postback",
-                   "payload": "ย้อนกลับโปรโมชั่น",
+                   "buttons": [
+                    {
+                      "title": "ย้อนกลับโปรโมชั่น",
+                      "type": "postback",
+                      "payload": "ย้อนกลับโปรโมชั่น",
+                    } 
+                  ]
                 }
               ]
           }
@@ -367,10 +370,7 @@ if ($message != null) {
         }
       }
     }';
-  }
-  
-  
-  else { 
+  } else {
     $jsonData = '{
                 "recipient":{
                   "id":"' . $sender . '"
@@ -617,9 +617,7 @@ if ($messagePayload != null) {
         ]
       }
     }';
-  }
-  
-  else {
+  } else {
     $jsonData = '{
     "recipient":{
       "id":"' . $sender . '"
