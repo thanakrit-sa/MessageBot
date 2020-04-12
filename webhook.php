@@ -779,7 +779,7 @@ if ($message != null) {
                 type: "web_url",
                 url: "https://www.google.com/",
                 title: "Set preferences",
-                webview_height_ratio: "compact",
+                webview_height_ratio: "tall",
                 messenger_extensions: false
               },
               {
