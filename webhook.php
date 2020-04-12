@@ -48,7 +48,7 @@ if ($message != null) {
                     },{
                       "title":"สมัครสมาชิก",
                       "type":"postback",
-                      "payload":"สมัครสมาชิก"
+                      "payload":"สมัครสมาชิก8fgdgdf"
                     },{
                       "title":"ติดต่อ",
                       "type":"postback",
