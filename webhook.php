@@ -633,7 +633,7 @@ if ($message != null) {
           "type":"template",
           "payload":{
             "template_type":"button",
-            "text":"ถอนกี่ครั้งต่อวัน \r\n \r\n - ไม่จำกัดจำนวนค่ะ \r\n _____________________________ ",
+            "text":"ถอนกี่ครั้งต่อวัน \r\n \r\n - ไม่จำกัดจำนวนสามารถทำการถอนได้ทุกเวลาค่ะ \r\n _____________________________ ",
             "buttons":[
               {
                 "type":"postback",
@@ -1047,7 +1047,7 @@ if ($messagePayload != null) {
   } else {
     $jsonData = '{
     "recipient":{
-      "id":"' . $sender . '"
+      "id":"' . $sender . '" 
     },
     "message":{
       "attachment": {
