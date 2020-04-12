@@ -717,6 +717,105 @@ if ($message != null) {
         }
       }
     }';
+  } else if ($message == "ปัญหา : หัวข้อ 1") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"button",
+            "text":"ฝาก-ถอนไม่สำเร็จ \r\n \r\n - กรุณารอสักครู่ระบบกำลังดำเนินการตามคิวนะคะหรือสามารถติดต่อผู้ดูแลโดยการคลิกที่ลิ้งด้านล่างได้เลยค่ะ \r\n _____________________________ ",
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.google.com",
+                "title":"ติดต่อผู้ดูแล"
+              },
+              {
+                "type":"postback",
+                "payload":"ย้อนกลับปัญหา",
+                "title":"ย้อนกลับปัญหา"
+              },
+              {
+                "type":"postback",
+                "payload":"เมนูหลัก",
+                "title":"เมนูหลัก"
+              },
+              
+            ]
+          }
+        }
+      }
+    }';
+  } else if ($message == "ปัญหา : หัวข้อ 2") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"button",
+            "text":"เช็คว่าเคยสมัครไปรึยัง \r\n \r\n -  สามารถตรวจสอบได้โดยการคลิกลิ้งด้านล่างเพื่อติดต่อผู้ดูแลค่ะ\r\n _____________________________ ",
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.google.com",
+                "title":"ติดต่อผู้ดูแล"
+              },
+              {
+                "type":"postback",
+                "payload":"ย้อนกลับปัญหา",
+                "title":"ย้อนกลับปัญหา"
+              },
+              {
+                "type":"postback",
+                "payload":"เมนูหลัก",
+                "title":"เมนูหลัก"
+              },
+              
+            ]
+          }
+        }
+      }
+    }';
+  } else if ($message == "ปัญหา : หัวข้อ 3") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"button",
+            "text":ลืมชื่อผู้ใช้-รหัสผ่าน \r\n \r\n - สามารถแจ้งผู้ดูแลโดยการคลิกลิ้งด้านล่างค่ะ \r\n _____________________________ ",
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.google.com",
+                "title":"ติดต่อผู้ดูแล"
+              },
+              {
+                "type":"postback",
+                "payload":"ย้อนกลับปัญหา",
+                "title":"ย้อนกลับปัญหา"
+              },
+              {
+                "type":"postback",
+                "payload":"เมนูหลัก",
+                "title":"เมนูหลัก"
+              },
+              
+            ]
+          }
+        }
+      }
+    }';
   }
   
   
@@ -1030,6 +1129,42 @@ if ($messagePayload != null) {
             "content_type":"text",
             "title":"เพิ่มเติม : หัวข้อ 5",
             "payload":"เพิ่มเติม : หัวข้อ 5",
+          },
+          {
+            "title":"ย้อนกลับสอบถาม",
+            "content_type":"text",
+            "payload": "ย้อนกลับสอบถาม",
+          },
+          {
+            "content_type":"text",
+            "title":"เมนูหลัก",
+            "payload":"เมนูหลัก",
+          }
+        ]
+      }
+    }';
+  } else if ($messagePayload == "ย้อนกลับปัญหา") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message": {
+        "text":"ท่านสามารถเลือกหัวข้อที่ต้องการจะสอบถามได้ โดยมีหัวข้อดังนี้ \r\n \r\nหัวข้อที่ 1 ฝาก-ถอนไม่สำเร็จ \r\nหัวข้อที่ 2 เช็คว่าเคยสมัครไปรึยัง \r\nหัวข้อที่ 3 ลืมชื่อผู้ใช้-รหัสผ่าน \r\n \r\nเลือกตัวข้อโดยการคลิกที่แถบเมนูด้านล่าง",
+        "quick_replies":[
+          {
+            "content_type":"text",
+            "title":"ปัญหา : หัวข้อ 1",
+            "payload":"ปัญหา : หัวข้อ 1",
+          },
+          {
+            "content_type":"text",
+            "title":"ปัญหา : หัวข้อ 2",
+            "payload":"ปัญหา : หัวข้อ 2",
+          },
+          {
+            "content_type":"text",
+            "title":"ปัญหา : หัวข้อ 3",
+            "payload":"ปัญหา : หัวข้อ 3",
           },
           {
             "title":"ย้อนกลับสอบถาม",
