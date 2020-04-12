@@ -506,8 +506,35 @@ if ($message != null) {
         }
       }
     }';
+  } else if ($message == "เว็บ : หัวข้อ 1") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"button",
+            "text":"ภายในเว็บมีอะไรบ้าง \r\n \r\n _____________________________ \r\n \r\n - เล่นทุกอย่างได้ในยูสเดียว บอล มวย หวย คาสิโน เกม สล็อต มีให้เลือกเล่นครบวงจรค่ะ",
+            "buttons":[
+              {
+                "type":"postback",
+                "payload":"ย้อนกลับเว็บไซต๋์",
+                "title":"ย้อนกลับเว็บไซต๋์"
+              },
+              {
+                "type":"postback",
+                "payload":"เมนูหลัก",
+                "title":"เมนูหลัก"
+              },
+              
+            ]
+          }
+        }
+      }
+    }';
   }
-  
   
   
   else {
@@ -743,6 +770,37 @@ if ($messagePayload != null) {
             "content_type":"text",
             "title":"กลุ่ม : หัวข้อ 5",
             "payload":"กลุ่ม : หัวข้อ 5",
+          },
+          {
+            "title":"ย้อนกลับสอบถาม",
+            "content_type":"text",
+            "payload": "ย้อนกลับสอบถาม",
+          },
+          {
+            "content_type":"text",
+            "title":"เมนูหลัก",
+            "payload":"เมนูหลัก",
+          }
+        ]
+      }
+    }';
+  } else if ($messagePayload == "ย้อนกลับเว็บไซต์") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message": {
+        "text":"ท่านสามารถเลือกหัวข้อที่ต้องการจะสอบถามได้ โดยมีหัวข้อดังนี้ \r\n \r\nหัวข้อที่ 1 ภายในเว็บมีอะไรบ้าง \r\nหัวข้อที่ 2 วิธีเข้าหน้าเว็บ \r\n \r\nเลือกตัวข้อโดยการคลิกที่แถบเมนูด้านล่าง",
+        "quick_replies":[
+          {
+            "content_type":"text",
+            "title":"เว็บ : หัวข้อ 1",
+            "payload":"เว็บ : หัวข้อ 1",
+          },
+          {
+            "content_type":"text",
+            "title":"เว็บ : หัวข้อ 2",
+            "payload":"เว็บ : หัวข้อ 2",
           },
           {
             "title":"ย้อนกลับสอบถาม",
