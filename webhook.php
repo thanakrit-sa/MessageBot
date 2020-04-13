@@ -1363,7 +1363,7 @@ if ($messagePayload != null) {
       }';
   }
 }
-if ($messagePayload == null && $message == null) {
+if ($messageImage != null) {
   $jsonData = '{
     "recipient":{
       "id":"' . $sender . '" 
