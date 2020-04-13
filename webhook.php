@@ -778,7 +778,7 @@ if ($message != null) {
               {
                 type: "web_url",
                 url: "https://www.google.com/",
-                title: "ติดต่อผู้ดูแลs",
+                title: "ติดต่อผู้ดูแล",
                 // webview_height_ratio: "tall",
                 // messenger_extensions: false
               },
