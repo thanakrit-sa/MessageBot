@@ -1004,7 +1004,7 @@ if ($messagePayload != null) {
         ]
       }
     }';
-  } else if ($messagePayload == "โปรโมชั่นที่ 1") {
+  } else if ($messagePayload == "โปรโมชั้นที่ 1") {
     $jsonData = '{
       "recipient":{
         "id":"' . $sender . '"
