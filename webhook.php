@@ -18,6 +18,7 @@
 $input = json_decode(file_get_contents('php://input'), true);
 $sender = $input['entry'][0]['messaging'][0]['sender']['id'];
 $message = $input['entry'][0]['messaging'][0]['message']['text'];
+$messageImage = $input['entry'][0]['messaging'][0]['message']['image'];
 $messagePost = $input['entry'][0]['messaging'][0]['postback'];
 $messagePayload = $input['entry'][0]['messaging'][0]['postback']['payload'];
 $message = strtolower($message);
@@ -1046,7 +1047,7 @@ if ($messagePayload != null) {
           "type":"template",
           "payload":{
             "template_type":"button",
-            "text":"สมัครสมาชิก 500 รับ เสื้อฮู้ด หรือ หูฟัง P47 Wireless Headphones \r\n \r\n- คลิกที่ลิ้งเพื่อสมัครได้เลยค่ะ \r\n \r\n* อย่าลืมแจ้ง JP99 แนะนำเพื่อรับสิทธิ์นะคะ \r\n** แจ้งรับของแถมจากคนแนะนำด้วยนะคะ \r\n _____________________________ \r\n \r\nสมัครเสร็จแล้วแจ้งสลิปการโอนสมัครกลับมาที่นี่เพื่อรับของแถมได้เลบยค่ะ",
+            "text":"สมัครสมาชิก 500 รับ เสื้อฮู้ด หรือ หูฟัง P47 Wireless Headphone\r\n \r\n- คลิกที่ลิ้งเพื่อสมัครได้เลยค่ะ \r\n \r\n* อย่าลืมแจ้ง JP99 แนะนำเพื่อรับสิทธิ์นะคะ \r\n** แจ้งรับของแถมจากคนแนะนำด้วยนะคะ \r\n _____________________________ \r\n \r\nสมัครเสร็จแล้วแจ้งสลิปการโอนสมัครกลับมาที่นี่เพื่อรับของแถมได้เลบยค่ะ",
             "buttons":[
               {
                 "type":"web_url",
@@ -1361,6 +1362,42 @@ if ($messagePayload != null) {
     }
       }';
   }
+}
+if ($messageImage != null) {
+  $jsonData = '{
+    "recipient":{
+      "id":"' . $sender . '" 
+    },
+    "message":{
+      "attachment": {
+        "type": "template",
+        "payload": {
+           "template_type": "media",
+           "elements": [
+              {
+                 "media_type": "image",
+                 "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739975403170",
+                 "buttons":[
+                  {
+                    "title":"สอบถาม",
+                    "type":"postback",
+                    "payload":"สอบถาม"
+                  },{
+                    "title":"สมั",
+                    "type":"postback",
+                    "payload":"สมัครสมาชิก"
+                  },{
+                    "title":"ติดต่อ",
+                    "type":"postback",
+                    "payload":"ติดต่อ"
+                  }          
+                  ]
+              }
+            ]
+        }
+      }    
+    }
+      }';
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------- Payload
