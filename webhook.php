@@ -17,10 +17,10 @@
 
 $input = json_decode(file_get_contents('php://input'), true);
 $sender = $input['entry'][0]['messaging'][0]['sender']['id'];
-$message = $input['entry'][0]['messaging'][0]['message']['text'];
-$messageImage = $input['entry'][0]['messaging'][0]['message'];
+// $message = $input['entry'][0]['messaging'][0]['message']['text'];
+$messageImage = $input['entry'][0]['messaging'][0]['message'][0]['images'];
 $messagePost = $input['entry'][0]['messaging'][0]['postback'];
-$messagePayload = $input['entry'][0]['messaging'][0]['postback']['payload'];
+// $messagePayload = $input['entry'][0]['messaging'][0]['postback']['payload'];
 $message = strtolower($message);
 
 // ----------------------------------------------------------------------------------------------------------------------------- Input
@@ -1364,42 +1364,8 @@ if ($messagePayload != null) {
   }
 }
 if ($messageImage != null) {
-  if ($messageImage != null) {
-    $jsonData = '{
-      "recipient":{
-        "id":"' . $sender . '"
-      },
-      "message":{
-        "attachment":{
-          "type":"template",
-          "payload":{
-            "template_type":"generic",
-            "elements":[
-              {
-                "title":"😍",
-                "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
-                "buttons":[
-                  {
-                    "title":"สอบถาม",
-                    "type":"postback",
-                    "payload":"สอบถาม"
-                  },{
-                    "title":"สมัครสมาชิก",
-                    "type":"postback",
-                    "payload":"สมัครสมาชิก"
-                  },{
-                    "title":"ติดต่อ",
-                    "type":"postback",
-                    "payload":"ติดต่อ"
-                  }          
-                  ]      
-                }
-                ]
-              }
-            }
-          }
-        }';
-  } else {
+  
+    
     $jsonData = '{
       "recipient":{
         "id":"' . $sender . '"
@@ -1434,7 +1400,7 @@ if ($messageImage != null) {
             }
           }
         }';
-  }
+  
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------- Payload
