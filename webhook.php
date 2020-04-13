@@ -1364,26 +1364,27 @@ if ($messagePayload != null) {
   }
 }
 if ($messageImage != null) {
-  $jsonData = '{
-    "recipient":{
-      "id":"' . $sender . '" 
-    },
-    "message":{
-      "attachment": {
-        "type": "template",
-        "payload": {
-           "template_type": "media",
-           "elements": [
+  if ($messageImage != null) {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"generic",
+            "elements":[
               {
-                 "media_type": "image",
-                 "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739975403170",
-                 "buttons":[
+                "title":"😍",
+                "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
+                "buttons":[
                   {
                     "title":"สอบถาม",
                     "type":"postback",
                     "payload":"สอบถาม"
                   },{
-                    "title":"สมั",
+                    "title":"สมัครสมาชิก",
                     "type":"postback",
                     "payload":"สมัครสมาชิก"
                   },{
@@ -1391,13 +1392,49 @@ if ($messageImage != null) {
                     "type":"postback",
                     "payload":"ติดต่อ"
                   }          
-                  ]
+                  ]      
+                }
+                ]
               }
-            ]
-        }
-      }    
-    }
-      }';
+            }
+          }
+        }';
+  } else {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"generic",
+            "elements":[
+              {
+                "title":"คีย์เวิร์ดไม่เข้าเงื่อนไข 😍",
+                "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
+                "buttons":[
+                  {
+                    "title":"สอบถาม",
+                    "type":"postback",
+                    "payload":"สอบถาม"
+                  },{
+                    "title":"สมัครสมาชิก",
+                    "type":"postback",
+                    "payload":"สมัครสมาชิก"
+                  },{
+                    "title":"ติดต่อ",
+                    "type":"postback",
+                    "payload":"ติดต่อ"
+                  }          
+                  ]      
+                }
+                ]
+              }
+            }
+          }
+        }';
+  }
 }
 
 // ----------------------------------------------------------------------------------------------------------------------------- Payload
