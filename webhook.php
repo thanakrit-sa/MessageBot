@@ -910,7 +910,7 @@ if ($messagePayload != null) {
                   {
                     "title":"โปรโมชั้นที่ 2",
                     "type":"postback",
-                    "payload":"Promotion 2"
+                    "payload":"โปรโมชั้นที่ 2"
                   }
                   ]      
                 },
