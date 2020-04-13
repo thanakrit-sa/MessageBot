@@ -963,6 +963,41 @@ if ($messagePayload != null) {
                 }
               }
             }';
+  } elseif ($messagePayload == "ทำรายการอื่นๆ") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment": {
+          "type": "template",
+          "payload": {
+             "template_type": "media",
+             "elements": [
+                {
+                   "media_type": "image",
+                   "url": "https://business.facebook.com/106357340974767/photos/pcb.128740035403164/128739975403170",
+                   "buttons":[
+                    {
+                      "title":"สอบถาม",
+                      "type":"postback",
+                      "payload":"สอบถาม"
+                    },{
+                      "title":"สมัครสมาชิก",
+                      "type":"postback",
+                      "payload":"สมัครสมาชิกmn,nm"
+                    },{
+                      "title":"ติดต่อ",
+                      "type":"postback",
+                      "payload":"ติดต่อ"
+                    }          
+                    ]
+                }
+              ]
+          }
+        }    
+      }
+        }';
   } else if ($messagePayload == "สอบถาม") {
     $jsonData = '{
       "recipient":{
@@ -1140,6 +1175,10 @@ if ($messagePayload != null) {
                 "type":"web_url",
                 "url":"สมัครโปรโมชั่น",
                 "title":"สมัครโปรโมชั่น"
+              },{
+                "type":"postback",
+                "payload":"ทำรายการอื่นๆ",
+                "title":"ทำรายการอื่นๆ"
               }
             ]
           }
