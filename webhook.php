@@ -18,7 +18,7 @@
 $input = json_decode(file_get_contents('php://input'), true);
 $sender = $input['entry'][0]['messaging'][0]['sender']['id'];
 $message = $input['entry'][0]['messaging'][0]['message']['text'];
-$messageImage = $input['entry'][0]['messaging'][0]['message']['image'];
+$messageImage = $input['entry'][0]['messaging'][0]['message']['images'];
 $messagePost = $input['entry'][0]['messaging'][0]['postback'];
 $messagePayload = $input['entry'][0]['messaging'][0]['postback']['payload'];
 $message = strtolower($message);
@@ -846,7 +846,7 @@ if ($message != null) {
                       "template_type":"generic",
                       "elements":[
                         {
-                          "title":"ย์เวิร์ดไม่เข้าเงื่อนไข 😍",
+                          "title":"คีย์เวิร์ดไม่เข้าเงื่อนไข 😍",
                           "subtitle":"ท่านสามารถเลือกเมนูที่ต้องการได้เลยค่ะ",
                           "buttons":[
                             {
