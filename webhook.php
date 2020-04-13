@@ -875,7 +875,7 @@ if ($message != null) {
 // ----------------------------------------------------------------------------------------------------------------------------- Message
 // ----------------------------------------------------------------------------------------------------------------------------- Payload
 
-if ($messagePayload != null) {
+else if ($messagePayload != null) {
   if ($messagePayload == "สมัครสมาชิก" || $messagePayload == "เปลี่ยนโปรโมชั่น") {
     $jsonData = '{
     "recipient":{
@@ -1363,7 +1363,7 @@ if ($messagePayload != null) {
       }';
   }
 }
-if ($messageImage != null) {
+else {
   $jsonData = '{
     "recipient":{
       "id":"' . $sender . '" 
