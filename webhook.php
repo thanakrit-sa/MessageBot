@@ -875,7 +875,7 @@ if ($message != null) {
 // ----------------------------------------------------------------------------------------------------------------------------- Payload
 
 if ($messagePayload != null) {
-  if ($messagePayload == "สมัครสมาชิก") {
+  if ($messagePayload == "สมัครสมาชิก" || $messagePayload == "เปลี่ยนโปรโมชั่น") {
     $jsonData = '{
     "recipient":{
       "id":"' . $sender . '"
@@ -1022,8 +1022,8 @@ if ($messagePayload != null) {
               },
               {
                 "type":"postback",
-                "payload":"ย้อนกลับเพิ่มเติม",
-                "title":"ย้อนกลับเพิ่มเติม"
+                "payload":"เปลี่ยนโปรโมชั่น",
+                "title":"เปลี่ยนโปรโมชั่น"
               },
               {
                 "type":"postback",
