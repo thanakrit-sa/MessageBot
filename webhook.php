@@ -778,9 +778,9 @@ if ($message != null) {
               {
                 type: "web_url",
                 url: "https://www.google.com/",
-                title: "Set preferences",
-                webview_height_ratio: "tall",
-                messenger_extensions: false
+                title: "ติดต่อผู้ดูแลs",
+                // webview_height_ratio: "tall",
+                // messenger_extensions: false
               },
               {
                 "type":"postback",
@@ -995,6 +995,37 @@ if ($messagePayload != null) {
             "content_type":"text",
             "title":"แจ้งปัญหา",
             "payload":"แจ้งปัญหา",
+          },
+          {
+            "content_type":"text",
+            "title":"เมนูหลัก",
+            "payload":"เมนูหลัก",
+          }
+        ]
+      }
+    }';
+  } else if ($messagePayload == "โปรโมชั่น 1") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message": {
+        "text":"สมัครสมาชิก 1000 รับ Pod ไฟฟ้่า หรือ หูฟัง Redmi Airdots \r\n \r\n- คลิกที่ลิ้งเพื่อสมัครได้เลยค่ะ \r\n \r\n* อย่าลืมแจ้ง JP99 แนะนำเพื่อรับสิทธิ์นะคะ \r\n** แจ้งรับของแถมจากคนแนะนำด้วยนะคะ \r\n \r\nสมัครเสร็จแล้วแจ้งสลิปการโอนสมัครกลับมาที่นี่เพื่อรับของแถมได้เลบยค่ะ",
+        "quick_replies":[
+          {
+            "content_type":"text",
+            "title":"โปรโมชั่น : หัวข้อ 1",
+            "payload":"โปรโมชั่น : หัวข้อ 1",
+          },
+          {
+            "content_type":"text",
+            "title":"โปรโมชั่น : หัวข้อ 2",
+            "payload":"โปรโมชั่น : หัวข้อ 2",
+          },
+          {
+            "title":"ย้อนกลับสอบถาม",
+            "content_type":"text",
+            "payload": "ย้อนกลับสอบถาม",
           },
           {
             "content_type":"text",
