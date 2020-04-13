@@ -17,8 +17,8 @@
 
 $input = json_decode(file_get_contents('php://input'), true);
 $sender = $input['entry'][0]['messaging'][0]['sender']['id'];
-$message = $input['entry'][0]['messaging'][0]['message']['text'];
-// $messageImage = $input['entry'][0]['messaging'][0]['message']['images'];
+// $message = $input['entry'][0]['messaging'][0]['message']['text'];
+$messageImage = $input['entry'][0]['messaging'][0]['message']['images'];
 $messagePost = $input['entry'][0]['messaging'][0]['postback'];
 // $messagePayload = $input['entry'][0]['messaging'][0]['postback']['payload'];
 $message = strtolower($message);
@@ -1363,7 +1363,7 @@ if ($messagePayload != null) {
       }';
   }
 }
-if ($message == null) {
+if ($messageImage != null) {
   
     
     $jsonData = '{
