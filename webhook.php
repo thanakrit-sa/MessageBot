@@ -1159,7 +1159,6 @@ if ($messagePayload != null) {
         }
       }
     }';
-
   } else if ($messagePayload == "สมัครโปรโมชั่น") {
     $jsonData = '{
       "recipient":{
@@ -1170,20 +1169,16 @@ if ($messagePayload != null) {
           "type":"template",
           "payload":{
             "template_type":"button",
-            "text":"สมัครสมาชิกเรียบร้อยละค่ะ สามารถติดต่อผู้ดูแลเพื่อรับของแถามได้เลยค่ะ \r\n \r\n- คลิกที่ลิ้งเพื่อติดต่อผู้ดูแล \r\n _____________________________ \r\n \r\Copa69 ขอขอบคุณค่ะ",
-            "buttons":[
+            "text":"สมัครสมาชิกเรียบร้อยละค่ะ สามารถติดต่อผู้ดูแลเพื่อรับของแถามได้เลยค่ะ \r\n \r\n- คลิกที่ลิ้งเพื่อติดต่อผู้ดูแล \r\n _____________________________ \r\n \r\n Copa69 ขอขอบคุณค่ะ",
+            "buttons":[ 
               {
-                "type":"postback",
-                "payload":"สมัครโปรโมชั่น",
-                "title":"สมัครโปรโมชั่น"
+                "type":"web_url",
+                "url":"https://www.google.com",
+                "title":"ติดดต่อผู้ดูแล"
               },{
                 "type":"postback",
-                "payload":"เปลี่ยนโปรโมชั่น",
-                "title":"เปลี่ยนโปรโมชั่น"
-              },{
-                "type":"postback",
-                "payload":"เมนูหลัก",
-                "title":"เมนูหลัก"
+                "payload":"ทำรายการอื่นๆ",
+                "title":"ทำรายการอื่นๆ"
               }
             ]
           }
