@@ -1036,6 +1036,105 @@ if ($messagePayload != null) {
         }
       }
     }';
+  } else if ($messagePayload == "โปรโมชั้นที่ 2") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"button",
+            "text":"สมัครสมาชิก 500 รับ เสื้อฮู้ด หรือ หูฟัง P47 Wireless Headphones \r\n \r\n- คลิกที่ลิ้งเพื่อสมัครได้เลยค่ะ \r\n \r\n* อย่าลืมแจ้ง JP99 แนะนำเพื่อรับสิทธิ์นะคะ \r\n** แจ้งรับของแถมจากคนแนะนำด้วยนะคะ \r\n _____________________________ \r\n \r\nสมัครเสร็จแล้วแจ้งสลิปการโอนสมัครกลับมาที่นี่เพื่อรับของแถมได้เลบยค่ะ",
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.google.com",
+                "title":"สมัครโปรโมชั่น"
+              },
+              {
+                "type":"postback",
+                "payload":"เปลี่ยนโปรโมชั่น",
+                "title":"เปลี่ยนโปรโมชั่น"
+              },
+              {
+                "type":"postback",
+                "payload":"เมนูหลัก",
+                "title":"เมนูหลัก"
+              },
+              
+            ]
+          }
+        }
+      }
+    }';
+  } else if ($messagePayload == "โปรโมชั้นที่ 3") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"button",
+            "text":"สมัครสมาชิก 300 รับหูฟังบลูทูธ \r\n \r\n- คลิกที่ลิ้งเพื่อสมัครได้เลยค่ะ \r\n \r\n* อย่าลืมแจ้ง JP99 แนะนำเพื่อรับสิทธิ์นะคะ \r\n** แจ้งรับของแถมจากคนแนะนำด้วยนะคะ \r\n _____________________________ \r\n \r\nสมัครเสร็จแล้วแจ้งสลิปการโอนสมัครกลับมาที่นี่เพื่อรับของแถมได้เลบยค่ะ",
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.google.com",
+                "title":"สมัครโปรโมชั่น"
+              },
+              {
+                "type":"postback",
+                "payload":"เปลี่ยนโปรโมชั่น",
+                "title":"เปลี่ยนโปรโมชั่น"
+              },
+              {
+                "type":"postback",
+                "payload":"เมนูหลัก",
+                "title":"เมนูหลัก"
+              },
+              
+            ]
+          }
+        }
+      }
+    }';
+  } else if ($messagePayload == "โปรโมชั้นที่ 4") {
+    $jsonData = '{
+      "recipient":{
+        "id":"' . $sender . '"
+      },
+      "message":{
+        "attachment":{
+          "type":"template",
+          "payload":{
+            "template_type":"button",
+            "text":"สมัครสมาชิก 200 รับโบนัส 30% \r\n \r\n- คลิกที่ลิ้งเพื่อสมัครได้เลยค่ะ \r\n \r\n* อย่าลืมแจ้ง JP99 แนะนำเพื่อรับสิทธิ์นะคะ \r\n** แจ้งรับของแถมจากคนแนะนำด้วยนะคะ \r\n _____________________________ \r\n \r\nสมัครเสร็จแล้วแจ้งสลิปการโอนสมัครกลับมาที่นี่เพื่อรับของแถมได้เลบยค่ะ",
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.google.com",
+                "title":"สมัครโปรโมชั่น"
+              },
+              {
+                "type":"postback",
+                "payload":"เปลี่ยนโปรโมชั่น",
+                "title":"เปลี่ยนโปรโมชั่น"
+              },
+              {
+                "type":"postback",
+                "payload":"เมนูหลัก",
+                "title":"เมนูหลัก"
+              },
+              
+            ]
+          }
+        }
+      }
+    }';
   } else if ($messagePayload == "ย้อนกลับโปรโมชั่น") {
     $jsonData = '{
       "recipient":{
