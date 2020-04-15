@@ -6,6 +6,10 @@
     js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'Messenger'));
+
+  window.extAsyncInit = function() {
+  // the Messenger Extensions JS SDK is done loading 
+};
 </script>
 <?php
 
@@ -835,7 +839,7 @@ if ($message != null) {
                 "url":"http://fe741861.ngrok.io/test/",
                 "title":"ติดต่อผู้ดูแล",
                 webview_height_ratio: "tall",
-                messenger_extensions: true
+                messenger_extensions: "true"
               },
               {
                 "type":"postback",
