@@ -818,7 +818,7 @@ if ($message != null) {
             "buttons":[
               {
                 "type":"web_url",
-                "url":"http://www.google.com",
+                "url":"https://www.google.com",
                 "title":"ติดต่อผู้ดูแล",
                 webview_height_ratio: "tall",
                 messenger_extensions: true
