@@ -1,4 +1,21 @@
+<script>
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+        return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.com/en_US/messenger.Extensions.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'Messenger'));
 
+MessengerExtensions.requestCloseBrowser(function success() {
+  // webview closed
+}, function error(err) {
+  // an error occurred
+});
+</script>
 <?php
 
 
@@ -804,8 +821,7 @@ if ($message != null) {
                 "url":"https://www.google.com",
                 "title":"ติดต่อผู้ดูแล",
                 webview_height_ratio: "tall",
-                messenger_extensions: true,
-                "fallback_url": "https://www.google.com"
+                messenger_extensions: true
               },
               {
                 "type":"postback",
