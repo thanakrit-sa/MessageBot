@@ -813,7 +813,9 @@ if ($message != null) {
               {
                 "type":"web_url",
                 "url":"https://www.google.com",
-                "title":"ติดต่อผู้ดูแล"
+                "title":"ติดต่อผู้ดูแล",
+                webview_height_ratio: "tall",
+                messenger_extensions: false
               },
               {
                 "type":"postback",
