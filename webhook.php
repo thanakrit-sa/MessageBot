@@ -7,7 +7,7 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'Messenger'));
 
-app.post('/sendOnWebviewClose', (req, res) => {
+app.post('http://fe741861.ngrok.io/test/', (req, res) => {
   let psid = req.body.psid;
   sendMessage(psid);
 })
