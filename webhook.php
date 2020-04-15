@@ -840,7 +840,7 @@ if ($message != null) {
                 "url":"http://fe741861.ngrok.io/test/",
                 "title":"ติดต่อผู้ดูแล",
                 webview_height_ratio: "tall",
-                messenger_extensions: false
+                messenger_extensions: true
               },
               {
                 "type":"postback",
