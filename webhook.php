@@ -1,7 +1,7 @@
 <script>
   (function(d, s, id) {
-    X_FRAME_OPTIONS = 'ALLOW-FROM https://www.facebook.com/ https://www.messenger.com/';
-    X_FRAME_OPTIONS = 'ALLOW-FROM https://www.facebook.com/ https://www.facebook.com/';
+    X_FRAME_OPTIONS = 'ALLOW-FROM https://www.messenger.com/';
+    X_FRAME_OPTIONS = 'ALLOW-FROM https://www.facebook.com/';
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) {
       return;
