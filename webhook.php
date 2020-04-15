@@ -1,4 +1,7 @@
+X-Frame-Options: ALLOW-FROM https://www.messenger.com/
+X-Frame-Options: ALLOW-FROM https://www.facebook.com/
 <script>
+  
 (function (d, s, id){
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) {return;}
