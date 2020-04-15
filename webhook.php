@@ -804,7 +804,8 @@ if ($message != null) {
                 "url":"https://www.google.com",
                 "title":"ติดต่อผู้ดูแล",
                 webview_height_ratio: "tall",
-                messenger_extensions: true
+                messenger_extensions: true,
+                "fallback_url": "https://www.google.com"
               },
               {
                 "type":"postback",
