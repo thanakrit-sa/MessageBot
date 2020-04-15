@@ -852,11 +852,11 @@ if ($message != null) {
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://fe741861.ngrok.io/test/",
+                "url":"https://1bb6e22c.ngrok.io/test/",
                 "title":"ติดต่อผู้ดูแล",
                 webview_height_ratio: "tall",
                 messenger_extensions: true,
-                "fallback_url": "https://fe741861.ngrok.io/test/"
+                
               },
               {
                 "type":"postback",
