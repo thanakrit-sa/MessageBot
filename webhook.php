@@ -1,7 +1,6 @@
 <script>
   (function(d, s, id) {
-    X_FRAME_OPTIONS = 'ALLOW-FROM https://www.messenger.com/';
-    X_FRAME_OPTIONS = 'ALLOW-FROM https://www.facebook.com/';
+    
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) {
       return;
@@ -26,8 +25,8 @@
   };
 </script>
 <?php
-// header('X-Frame-Options: ALLOW-FROM https://www.messenger.com/');
-// header('X-Frame-Options: ALLOW-FROM https://www.facebook.com/');
+header('X-Frame-Options: ALLOW-FROM https://www.messenger.com/');
+header('X-Frame-Options: ALLOW-FROM https://www.facebook.com/');
 
 // ----------------------------------------------------------------------------------------------------------------------------- Input
 
@@ -857,6 +856,7 @@ if ($message != null) {
                 "title":"ติดต่อผู้ดูแล",
                 webview_height_ratio: "tall",
                 messenger_extensions: true,
+                "fallback_url": "https://fe741861.ngrok.io/test?fallback=1"
               },
               {
                 "type":"postback",
