@@ -1,30 +1,33 @@
-
 <script>
-
-(function (d, s, id){
+  (function(d, s, id) {
+    X_FRAME_OPTIONS = 'ALLOW-FROM https://www.facebook.com/ https://www.messenger.com/';
+    X_FRAME_OPTIONS = 'ALLOW-FROM https://www.facebook.com/ https://www.facebook.com/';
     var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {return;}
-    js = d.createElement(s); js.id = id;
+    if (d.getElementById(id)) {
+      return;
+    }
+    js = d.createElement(s);
+    js.id = id;
     js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'Messenger'));
 
-  MessengerExtensions.getContext('231713727994805', 
-  function success(thread_context){
-    // success
-  },
-  function error(err){
-    // error
-  }
-);
+  MessengerExtensions.getContext('231713727994805',
+    function success(thread_context) {
+      // success
+    },
+    function error(err) {
+      // error
+    }
+  );
 
   window.extAsyncInit = function() {
-  // the Messenger Extensions JS SDK is done loading 
-};
+    // the Messenger Extensions JS SDK is done loading 
+  };
 </script>
 <?php
-header('X-Frame-Options: ALLOW-FROM https://www.messenger.com/');
-header('X-Frame-Options: ALLOW-FROM https://www.facebook.com/');
+// header('X-Frame-Options: ALLOW-FROM https://www.messenger.com/');
+// header('X-Frame-Options: ALLOW-FROM https://www.facebook.com/');
 
 // ----------------------------------------------------------------------------------------------------------------------------- Input
 
@@ -39,8 +42,9 @@ $message = strtolower($message);
 // ----------------------------------------------------------------------------------------------------------------------------- Input
 // ----------------------------------------------------------------------------------------------------------------------------- Message
 
-function parse_signed_request($signed_request) {
-  list($encoded_sig, $payload) = explode('.', $signed_request, 2); 
+function parse_signed_request($signed_request)
+{
+  list($encoded_sig, $payload) = explode('.', $signed_request, 2);
 
   $secret = "7dea83e84129e73c078b687664f7bbe6"; // Use your app secret here
 
@@ -58,7 +62,8 @@ function parse_signed_request($signed_request) {
   return $data;
 }
 
-function base64_url_decode($input) {
+function base64_url_decode($input)
+{
   return base64_decode(strtr($input, '-_', '+/'));
 }
 
@@ -490,7 +495,7 @@ if ($message != null) {
         }
       }
     }';
-  }  else if ($message == "กลุ่ม : หัวข้อ 4") {
+  } else if ($message == "กลุ่ม : หัวข้อ 4") {
     $jsonData = '{
       "recipient":{
         "id":"' . $sender . '"
@@ -869,10 +874,7 @@ if ($message != null) {
         }
       }
     }';
-  }
-  
-  
-  else {
+  } else {
     $jsonData = '{
                 "recipient":{
                   "id":"' . $sender . '"
