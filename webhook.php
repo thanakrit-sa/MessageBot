@@ -33,7 +33,7 @@ $message = strtolower($message);
 function parse_signed_request($signed_request) {
   list($encoded_sig, $payload) = explode('.', $signed_request, 2); 
 
-  $secret = "appsecret"; // Use your app secret here
+  $secret = "7dea83e84129e73c078b687664f7bbe6"; // Use your app secret here
 
   // Decode the data
   $sig = base64_url_decode($encoded_sig);
