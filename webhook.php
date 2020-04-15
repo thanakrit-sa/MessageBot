@@ -1,7 +1,5 @@
 <script>
-
-MessengerExtensions.requestCloseBrowser(function success() {
-  (function (d, s, id) {
+ (function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) {
         return;
@@ -11,6 +9,9 @@ MessengerExtensions.requestCloseBrowser(function success() {
     js.src = "//connect.facebook.com/en_US/messenger.Extensions.js";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'Messenger'));
+
+MessengerExtensions.requestCloseBrowser(function success() {
+ 
 }, function error(err) {
   // an error occurred
 });
@@ -820,7 +821,7 @@ if ($message != null) {
                 "url":"http://fe741861.ngrok.io/test/",
                 "title":"ติดต่อผู้ดูแล",
                 webview_height_ratio: "tall",
-                messenger_extensions: true
+                messenger_extensions: false
               },
               {
                 "type":"postback",
