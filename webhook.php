@@ -842,7 +842,8 @@ if ($message != null) {
                 "url":"http://fe741861.ngrok.io/test/",
                 "title":"ติดต่อผู้ดูแล",
                 webview_height_ratio: "tall",
-                messenger_extensions: true
+                messenger_extensions: true,
+                "fallback_url": "http://fe741861.ngrok.io/test/?fallback=1"
               },
               {
                 "type":"postback",
