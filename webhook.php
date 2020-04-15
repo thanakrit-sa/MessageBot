@@ -1,4 +1,7 @@
 <script>
+  
+
+MessengerExtensions.requestCloseBrowser(function success() {
   (function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) {
@@ -9,9 +12,6 @@
     js.src = "//connect.facebook.com/en_US/messenger.Extensions.js";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'Messenger'));
-
-MessengerExtensions.requestCloseBrowser(function success() {
-  // webview closed
 }, function error(err) {
   // an error occurred
 });
@@ -821,7 +821,7 @@ if ($message != null) {
                 "url":"https://www.google.com",
                 "title":"ติดต่อผู้ดูแล",
                 webview_height_ratio: "tall",
-                messenger_extensions: false
+                messenger_extensions: true
               },
               {
                 "type":"postback",
