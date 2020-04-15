@@ -10,6 +10,11 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'Messenger'));
 
+MessengerExtensions.requestCloseBrowser(function success() {
+  // webview closed
+}, function error(err) {
+  // an error occurred
+});
 </script>
 <?php
 
