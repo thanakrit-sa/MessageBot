@@ -9,6 +9,15 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'Messenger'));
 
+  MessengerExtensions.getContext('231713727994805', 
+  function success(thread_context){
+    // success
+  },
+  function error(err){
+    // error
+  }
+);
+
   window.extAsyncInit = function() {
   // the Messenger Extensions JS SDK is done loading 
 };
