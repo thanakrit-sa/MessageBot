@@ -6,11 +6,6 @@
     js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'Messenger'));
-
-app.post('http://fe741861.ngrok.io/test/', (req, res) => {
-  let psid = req.body.psid;
-  sendMessage(psid);
-})
 </script>
 <?php
 
