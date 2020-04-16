@@ -852,7 +852,7 @@ if ($message != null) {
             "buttons":[
               {
                 "type":"web_url",
-                "url":"https://30b1f17d.ngrok.io/test/",
+                "url":"https://30b1f17d.ngrok.io/",
                 "title":"ติดต่อผู้ดูแล",
                 webview_height_ratio: "tall",
                 messenger_extensions: true,
