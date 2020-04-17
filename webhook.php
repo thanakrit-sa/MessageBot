@@ -1,32 +1,6 @@
-<script>
-  (function(d, s, id) {
-    
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) {
-      return;
-    }
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_US/messenger.Extensions.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'Messenger'));
 
-  MessengerExtensions.getContext('231713727994805',
-    function success(thread_context) {
-      // success
-    },
-    function error(err) {
-      // error
-    }
-  );
-
-  window.extAsyncInit = function() {
-    // the Messenger Extensions JS SDK is done loading 
-  };
-</script>
 <?php
-header('X-Frame-Options: ALLOW-FROM https://www.messenger.com/');
-header('X-Frame-Options: ALLOW-FROM https://www.facebook.com/');
+
 
 // ----------------------------------------------------------------------------------------------------------------------------- Input
 
@@ -40,31 +14,6 @@ $message = strtolower($message);
 
 // ----------------------------------------------------------------------------------------------------------------------------- Input
 // ----------------------------------------------------------------------------------------------------------------------------- Message
-
-function parse_signed_request($signed_request)
-{
-  list($encoded_sig, $payload) = explode('.', $signed_request, 2);
-
-  $secret = "7dea83e84129e73c078b687664f7bbe6"; // Use your app secret here
-
-  // Decode the data
-  $sig = base64_url_decode($encoded_sig);
-  $data = json_decode(base64_url_decode($payload), true);
-
-  // Confirm the signature
-  $expected_sig = hash_hmac('sha256', $payload, $secret, $raw = true);
-  if ($sig !== $expected_sig) {
-    error_log('Bad Signed JSON signature!');
-    return null;
-  }
-
-  return $data;
-}
-
-function base64_url_decode($input)
-{
-  return base64_decode(strtr($input, '-_', '+/'));
-}
 
 if ($message != null) {
   if ($message == "เมนูหลัก") {
