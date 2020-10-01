@@ -29,7 +29,7 @@ if (isset($input['entry'][0]['messaging'][0]['sender']['id'])) {
         "id":"' . $sender . '"
         },
         "message":{
-            "text":"You said, ' . $message . '"
+            "text":"You said, ' . $sender . '"
         }
     }';
     /* curl setting to send a json post data */
